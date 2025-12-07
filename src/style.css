@@ -276,7 +276,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 .hero-stats {
@@ -1384,5 +1383,183 @@ main > section:first-child {
 @media (max-width: 480px) {
   .notification {
     font-size: 0.95rem;
+  }
+}
+
+/* 404 Not Found Page */
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.not-found-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.not-found-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-code {
+  font-size: 12rem;
+  font-weight: 900;
+  opacity: 0.15;
+  line-height: 1;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+}
+
+.not-found-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.not-found-text > p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.not-found-actions .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.not-found-actions .btn-primary {
+  background: white;
+  color: var(--primary-color);
+}
+
+.not-found-actions .btn-primary:hover {
+  background: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.not-found-actions .btn-outline {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.not-found-actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.not-found-suggestions {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.not-found-suggestions h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.not-found-suggestions ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.not-found-suggestions li {
+  padding: 0.5rem 0;
+}
+
+.not-found-suggestions a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.not-found-suggestions a:hover {
+  color: white;
+  border-bottom-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .not-found-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .error-code {
+    font-size: 8rem;
+  }
+
+  .not-found-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .not-found-text > p {
+    font-size: 1.125rem;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .not-found-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .not-found-suggestions ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 5rem;
+  }
+
+  .not-found-text h1 {
+    font-size: 2rem;
+  }
+
+  .not-found-text > p {
+    font-size: 1rem;
+  }
+
+  .not-found-suggestions {
+    padding: 1.5rem;
+  }
+
+  .not-found-suggestions h3 {
+    font-size: 1.125rem;
   }
 }

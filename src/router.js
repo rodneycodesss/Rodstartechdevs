@@ -5,6 +5,7 @@ import { setupPricingPage } from './pages/pricing.js'
 import { setupPortfolioPage } from './pages/portfolio.js'
 import { setupTeamPage } from './pages/team.js'
 import { setupContactPage } from './pages/contact.js'
+import { setupNotFoundPage } from './pages/notFound.js'
 import { setupNavigation } from './components/navigation.js'
 import { setupFooter } from './components/footer.js'
 
@@ -21,25 +22,43 @@ const routes = {
 export function router() {
   const path = window.location.pathname
   
-  const route = routes[path] || routes['/']
+  const route = routes[path] || setupNotFoundPage
   
   // Setup the HTML structure first
   const app = document.querySelector('#app')
-  app.innerHTML = `
-    <div class="app">
-      <nav id="navigation"></nav>
-      <main>
-        <section id="hero"></section>
-        <section id="about"></section>
-        <section id="services"></section>
-        <section id="pricing"></section>
-        <section id="portfolio"></section>
-        <section id="team"></section>
-        <section id="contact"></section>
-      </main>
-      <footer id="footer"></footer>
-    </div>
-  `
+  
+  // Check if this is a 404 route
+  const isNotFound = !routes[path]
+  
+  if (isNotFound) {
+    // 404 page has its own layout
+    app.innerHTML = `
+      <div class="app">
+        <nav id="navigation"></nav>
+        <main>
+          <section id="notFound"></section>
+        </main>
+        <footer id="footer"></footer>
+      </div>
+    `
+  } else {
+    // Standard page layout
+    app.innerHTML = `
+      <div class="app">
+        <nav id="navigation"></nav>
+        <main>
+          <section id="hero"></section>
+          <section id="about"></section>
+          <section id="services"></section>
+          <section id="pricing"></section>
+          <section id="portfolio"></section>
+          <section id="team"></section>
+          <section id="contact"></section>
+        </main>
+        <footer id="footer"></footer>
+      </div>
+    `
+  }
   
   // Setup navigation and footer
   setupNavigation()
