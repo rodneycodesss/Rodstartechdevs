@@ -20,7 +20,9 @@ const routes = {
 }
 
 export function router() {
-  const path = window.location.pathname
+  // Use hash-based routing for production compatibility
+  const hash = window.location.hash.slice(1) || '/'
+  const path = hash.startsWith('/') ? hash : '/' + hash
   
   const route = routes[path] || setupNotFoundPage
   
@@ -89,6 +91,11 @@ window.addEventListener('popstate', () => {
   router()
 })
 
+// Handle hash change for navigation
+window.addEventListener('hashchange', () => {
+  router()
+})
+
 // Handle navigation clicks
 document.addEventListener('click', (e) => {
   if (e.target.matches('.nav-link') || e.target.closest('.nav-link')) {
@@ -97,8 +104,8 @@ document.addEventListener('click', (e) => {
     const href = link.getAttribute('href')
     
     if (href.startsWith('/')) {
-      window.history.pushState({}, '', href)
-      router()
+      // Use hash-based navigation for production
+      window.location.hash = href
     }
   }
 }) 
