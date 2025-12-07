@@ -32,7 +32,7 @@ export function setupPricing() {
               </ul>
             </div>
             <div class="pricing-footer">
-              <a href="/contact" class="btn btn-primary">Get Started</a>
+              <a href="/contact" class="btn btn-primary nav-link">Get Started</a>
             </div>
           </div>
           
@@ -61,7 +61,7 @@ export function setupPricing() {
               </ul>
             </div>
             <div class="pricing-footer">
-              <a href="/contact" class="btn btn-primary">Get Started</a>
+              <a href="/contact" class="btn btn-primary nav-link">Get Started</a>
             </div>
           </div>
           
@@ -90,7 +90,7 @@ export function setupPricing() {
               </ul>
             </div>
             <div class="pricing-footer">
-              <a href="/contact" class="btn btn-primary">Get Started</a>
+              <a href="/contact" class="btn btn-primary nav-link">Get Started</a>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@ export function setupPricing() {
                 </div>
                 <p class="custom-note">Pricing varies based on project complexity, features, and timeline requirements.</p>
                 <div class="custom-cta">
-                  <a href="/contact" class="btn btn-primary btn-large">
+                  <a href="/contact" class="btn btn-primary btn-large nav-link">
                     <i class="fas fa-comments"></i>
                     Get Custom Quote
                   </a>

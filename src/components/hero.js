@@ -17,11 +17,11 @@ export function setupHero() {
           </h1>
           <p class="fade-in-up">We build cutting-edge web applications, mobile apps, and custom software solutions that drive business growth and digital transformation.</p>
           <div class="cta-buttons fade-in-up">
-            <a href="/pricing" class="btn btn-primary">
+            <a href="/pricing" class="btn btn-primary nav-link">
               <i class="fas fa-rocket"></i>
               Get Started
             </a>
-            <a href="/portfolio" class="btn btn-outline">
+            <a href="/portfolio" class="btn btn-outline nav-link">
               <i class="fas fa-eye"></i>
               View Our Work
             </a>
@@ -149,11 +149,11 @@ export function setupHero() {
           <h2 class="fade-in-up">Ready to Transform Your Business?</h2>
           <p class="fade-in-up">Let's discuss your project and create something amazing together</p>
           <div class="cta-buttons fade-in-up">
-            <a href="/contact" class="btn btn-primary btn-large">
+            <a href="/contact" class="btn btn-primary btn-large nav-link">
               <i class="fas fa-paper-plane"></i>
               Start Your Project
             </a>
-            <a href="/pricing" class="btn btn-outline btn-large">
+            <a href="/pricing" class="btn btn-outline btn-large nav-link">
               <i class="fas fa-dollar-sign"></i>
               View Pricing
             </a>

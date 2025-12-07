@@ -12,19 +12,19 @@ export function setupFooter() {
           
           <div class="footer-section">
             <h3>Services</h3>
-            <p><a href="/services">Web Development</a></p>
-            <p><a href="/services">Mobile App Development</a></p>
-            <p><a href="/services">UI/UX Design</a></p>
-            <p><a href="/services">Cloud Solutions</a></p>
-            <p><a href="/services">Custom Software</a></p>
+            <p><a href="/services" class="nav-link">Web Development</a></p>
+            <p><a href="/services" class="nav-link">Mobile App Development</a></p>
+            <p><a href="/services" class="nav-link">UI/UX Design</a></p>
+            <p><a href="/services" class="nav-link">Cloud Solutions</a></p>
+            <p><a href="/services" class="nav-link">Custom Software</a></p>
           </div>
           
           <div class="footer-section">
             <h3>Company</h3>
-            <p><a href="/about">About Us</a></p>
-            <p><a href="/team">Our Team</a></p>
-            <p><a href="/portfolio">Portfolio</a></p>
-            <p><a href="/contact">Contact</a></p>
+            <p><a href="/about" class="nav-link">About Us</a></p>
+            <p><a href="/team" class="nav-link">Our Team</a></p>
+            <p><a href="/portfolio" class="nav-link">Portfolio</a></p>
+            <p><a href="/contact" class="nav-link">Contact</a></p>
           </div>
           
           <div class="footer-section">
