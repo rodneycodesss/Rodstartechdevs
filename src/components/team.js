@@ -9,14 +9,14 @@ export function setupTeam() {
         
         <div class="team-grid">
           <div class="team-member">
-            <div class="member-avatar">RS</div>
+            <div class="member-avatar">RG</div>
             <h3>Rodney Gilbert</h3>
             <p class="role">CEO & Lead Developer</p>
             <p>Full-stack developer with expertise in modern web technologies and team leadership. Passionate about creating innovative solutions.</p>
           </div>
           
           <div class="team-member">
-            <div class="member-avatar">SM</div>
+            <div class="member-avatar">EF</div>
             <h3>Eddy Frank</h3>
             <p class="role">Senior Developer & Designer</p>
             <p>Specializes in React, Vue.js, backend development, and modern CSS frameworks. Creates beautiful and responsive user interfaces.</p>
