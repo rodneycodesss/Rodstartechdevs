@@ -11,13 +11,15 @@ export function setupPortfolio() {
           <div class="portfolio-item">
             <div class="portfolio-image"></div>
             <div class="portfolio-content">
-              <h3>E-Commerce Platform</h3>
-              <p>A full-featured e-commerce solution with payment integration, inventory management, and analytics dashboard.</p>
+              <h3>NusuFi</h3>
+              <p>A full-featured web3 platform for managing and investing in digital assets with a focus on security and low-cost investment.</p>
               <div class="portfolio-tags">
                 <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">Stripe</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Web3</span>
+                <span class="tag">Blockchain</span>
+                <span class="tag">DeFi</span>
+                <span class="tag">NFTs</span>
               </div>
             </div>
           </div>
@@ -25,13 +27,13 @@ export function setupPortfolio() {
           <div class="portfolio-item">
             <div class="portfolio-image"></div>
             <div class="portfolio-content">
-              <h3>Healthcare Management System</h3>
-              <p>A comprehensive healthcare management platform for clinics and hospitals with patient records and appointment scheduling.</p>
+              <h3>ElimuNexus LMS</h3>
+              <p>A comprehensive learning management system for schools and  with student records with AI integration.</p>
               <div class="portfolio-tags">
-                <span class="tag">Vue.js</span>
-                <span class="tag">Python</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">AWS</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">AI</span>
               </div>
             </div>
           </div>
@@ -39,60 +41,17 @@ export function setupPortfolio() {
           <div class="portfolio-item">
             <div class="portfolio-image"></div>
             <div class="portfolio-content">
-              <h3>Mobile Banking App</h3>
-              <p>Secure mobile banking application with biometric authentication, transaction history, and real-time notifications.</p>
+              <h3>DevSoko</h3>
+              <p>A platform for freelancers to find clients and projects, with a focus on security and reliability.</p>
               <div class="portfolio-tags">
-                <span class="tag">React Native</span>
-                <span class="tag">Firebase</span>
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
                 <span class="tag">Biometrics</span>
                 <span class="tag">Security</span>
               </div>
             </div>
           </div>
-          
-          <div class="portfolio-item">
-            <div class="portfolio-image"></div>
-            <div class="portfolio-content">
-              <h3>Learning Management System</h3>
-              <p>Online learning platform with course management, video streaming, progress tracking, and certification system.</p>
-              <div class="portfolio-tags">
-                <span class="tag">Angular</span>
-                <span class="tag">Express.js</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">Video Streaming</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="portfolio-item">
-            <div class="portfolio-image"></div>
-            <div class="portfolio-content">
-              <h3>Real Estate Platform</h3>
-              <p>Property listing and management platform with advanced search, virtual tours, and agent management features.</p>
-              <div class="portfolio-tags">
-                <span class="tag">Next.js</span>
-                <span class="tag">GraphQL</span>
-                <span class="tag">Prisma</span>
-                <span class="tag">Maps API</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="portfolio-item">
-            <div class="portfolio-image"></div>
-            <div class="portfolio-content">
-              <h3>IoT Dashboard</h3>
-              <p>Real-time IoT device monitoring dashboard with data visualization, alerts, and remote device control capabilities.</p>
-              <div class="portfolio-tags">
-                <span class="tag">React</span>
-                <span class="tag">WebSocket</span>
-                <span class="tag">InfluxDB</span>
-                <span class="tag">IoT</span>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   `
 }

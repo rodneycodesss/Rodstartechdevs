@@ -16,15 +16,15 @@ export function setupAbout() {
             
             <div class="stats">
               <div class="stat">
-                <span class="stat-number">50+</span>
+                <span class="stat-number">5+</span>
                 <span class="stat-label">Projects Completed</span>
               </div>
               <div class="stat">
-                <span class="stat-number">30+</span>
+                <span class="stat-number">10+</span>
                 <span class="stat-label">Happy Clients</span>
               </div>
               <div class="stat">
-                <span class="stat-number">5+</span>
+                <span class="stat-number">2+</span>
                 <span class="stat-label">Years Experience</span>
               </div>
               <div class="stat">

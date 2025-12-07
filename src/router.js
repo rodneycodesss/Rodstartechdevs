@@ -1,0 +1,85 @@
+import { setupHomePage } from './pages/home.js'
+import { setupAboutPage } from './pages/about.js'
+import { setupServicesPage } from './pages/services.js'
+import { setupPricingPage } from './pages/pricing.js'
+import { setupPortfolioPage } from './pages/portfolio.js'
+import { setupTeamPage } from './pages/team.js'
+import { setupContactPage } from './pages/contact.js'
+import { setupNavigation } from './components/navigation.js'
+import { setupFooter } from './components/footer.js'
+
+const routes = {
+  '/': setupHomePage,
+  '/about': setupAboutPage,
+  '/services': setupServicesPage,
+  '/pricing': setupPricingPage,
+  '/portfolio': setupPortfolioPage,
+  '/team': setupTeamPage,
+  '/contact': setupContactPage
+}
+
+export function router() {
+  const path = window.location.pathname
+  
+  const route = routes[path] || routes['/']
+  
+  // Setup the HTML structure first
+  const app = document.querySelector('#app')
+  app.innerHTML = `
+    <div class="app">
+      <nav id="navigation"></nav>
+      <main>
+        <section id="hero"></section>
+        <section id="about"></section>
+        <section id="services"></section>
+        <section id="pricing"></section>
+        <section id="portfolio"></section>
+        <section id="team"></section>
+        <section id="contact"></section>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+  `
+  
+  // Setup navigation and footer
+  setupNavigation()
+  setupFooter()
+  
+  // Setup the specific page content
+  route()
+  
+  // Update active navigation link
+  updateActiveNavLink(path)
+}
+
+function updateActiveNavLink(path) {
+  // Remove active class from all nav links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active')
+  })
+  
+  // Add active class to current page link
+  const currentLink = document.querySelector(`[href="${path}"]`)
+  if (currentLink) {
+    currentLink.classList.add('active')
+  }
+}
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', () => {
+  router()
+})
+
+// Handle navigation clicks
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.nav-link') || e.target.closest('.nav-link')) {
+    e.preventDefault()
+    const link = e.target.matches('.nav-link') ? e.target : e.target.closest('.nav-link')
+    const href = link.getAttribute('href')
+    
+    if (href.startsWith('/')) {
+      window.history.pushState({}, '', href)
+      router()
+    }
+  }
+}) 

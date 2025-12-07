@@ -16,7 +16,7 @@ export function setupContact() {
               <div class="contact-icon">📧</div>
               <div class="contact-details">
                 <h4>Email</h4>
-                <p>hello@rodstartechdevs.com</p>
+                <p> rodstartechdevs@gmail.com</p>
               </div>
             </div>
             
@@ -24,7 +24,7 @@ export function setupContact() {
               <div class="contact-icon">📞</div>
               <div class="contact-details">
                 <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
+                <p>+254 780 48 22 90</p>
               </div>
             </div>
             
@@ -32,7 +32,7 @@ export function setupContact() {
               <div class="contact-icon">📍</div>
               <div class="contact-details">
                 <h4>Office</h4>
-                <p>123 Tech Street, Digital City, DC 12345</p>
+                <p> Nairobi, Kenya</p>
               </div>
             </div>
             
@@ -40,12 +40,13 @@ export function setupContact() {
               <div class="contact-icon">⏰</div>
               <div class="contact-details">
                 <h4>Business Hours</h4>
-                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
           
           <form class="contact-form" id="contactForm">
+            <div id="contactStatus" class="contact-status" aria-live="polite" aria-atomic="true"></div>
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" required>
@@ -80,25 +81,83 @@ export function setupContact() {
   
   // Handle form submission
   const form = document.querySelector('#contactForm')
-  form.addEventListener('submit', (e) => {
+  const status = document.querySelector('#contactStatus')
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xvgvayno'
+
+  // Notification helper (accessible, dismissible, auto-hide)
+  let notificationTimer = null
+  function showNotification(message, type = 'success', timeout = 5000) {
+    if (!status) return
+    // clear existing timer
+    if (notificationTimer) {
+      clearTimeout(notificationTimer)
+      notificationTimer = null
+    }
+
+    status.innerHTML = `
+      <div class="notification notification--${type}" role="status">
+        <div class="notification__content">${message}</div>
+        <button class="notification__close" aria-label="Dismiss notification">&times;</button>
+      </div>
+    `
+
+    const notif = status.querySelector('.notification')
+    const closeBtn = status.querySelector('.notification__close')
+
+    function remove() {
+      if (!status) return
+      status.innerHTML = ''
+      if (notificationTimer) {
+        clearTimeout(notificationTimer)
+        notificationTimer = null
+      }
+    }
+
+    closeBtn && closeBtn.addEventListener('click', remove)
+
+    // Auto-hide after timeout
+    if (timeout > 0) {
+      notificationTimer = setTimeout(remove, timeout)
+    }
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault()
-    
-    // Get form data
-    const formData = new FormData(form)
-    const data = Object.fromEntries(formData)
-    
-    // Simulate form submission
+
     const submitBtn = form.querySelector('button[type="submit"]')
     const originalText = submitBtn.textContent
-    
     submitBtn.textContent = 'Sending...'
     submitBtn.disabled = true
-    
-    setTimeout(() => {
-      alert('Thank you for your message! We\'ll get back to you soon.')
-      form.reset()
+
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+
+      if (res.ok) {
+        // Formspree accepted the submission
+        showNotification('Thank you — your message has been sent!', 'success', 6000)
+        form.reset()
+      } else {
+        // Try to read response for debugging
+        const payload = await res.json().catch(() => null)
+        console.error('Formspree error', res.status, payload)
+        showNotification('There was a problem sending your message. Please try again later.', 'error', 8000)
+      }
+    } catch (err) {
+      console.error('Network error while sending form', err)
+      showNotification('Network error. Please check your connection and try again.', 'error', 8000)
+    } finally {
       submitBtn.textContent = originalText
       submitBtn.disabled = false
-    }, 2000)
+    }
   })
 }
