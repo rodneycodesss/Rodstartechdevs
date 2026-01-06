@@ -36,7 +36,7 @@ export function setupHero() {
               <div class="stat-label">Happy Clients</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number" data-target="2">0</div>
+              <div class="stat-number" data-target="3">0</div>
               <div class="stat-label">Years Experience</div>
             </div>
           </div>
