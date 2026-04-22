@@ -8,7 +8,7 @@ export function setupFooter() {
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <img src="/public/RODSTAR.png" alt="Rodstar Logo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem; display: block; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);">
+            <img src="/RODSTAR.png" alt="Rodstar Logo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem; display: block; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);">
             <p>We are a minimalist digital infrastructure company. Delivering premium managed hosting, enterprise emails, custom domains, and bespoke software systems designed for scale.</p>
             <div class="social-links" style="display: flex; align-items: center; gap: 1rem;">
               <a href="#" class="social-icon" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram" style="font-size: 18px; margin: 0; padding: 0; line-height: 1;"></i></a>
