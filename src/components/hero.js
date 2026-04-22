@@ -5,12 +5,12 @@ export function setupHero() {
   
   hero.innerHTML = `
     <section class="hero">
-      <video autoplay muted loop playsinline class="hero-video-bg">
+      <video muted loop playsinline class="hero-video-bg" autoplay preload="none" loading="lazy" style="--hero-video-preload: none;">
         <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
-      <div class="glow-orb-1" style="z-index: 2;"></div>
-      <div class="glow-orb-2" style="z-index: 2;"></div>
+      <div class="glow-orb-1" style="z-index: 2;\"></div>
+      <div class="glow-orb-2" style="z-index: 2;\"></div>
       <div class="container">
         <div class="hero-layout">
           <div class="hero-content">
@@ -46,7 +46,7 @@ export function setupHero() {
           </div>
           
           <div class="hero-image fade-in-up">
-            <img src="/RODSTAR.png" alt="Rodstar Logo" loading="eager" fetchpriority="high" decoding="sync">
+            <img src="/RODSTAR.png" alt="Rodstar Logo" width="400" height="400" loading="eager" fetchpriority="high" decoding="sync" style="width: auto; height: auto; max-width: 400px;">
           </div>
         </div>
       </div>

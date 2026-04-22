@@ -6,7 +6,7 @@ export function setupNavigation() {
       <div class="container">
         <div class="nav-container">
           <a href="/" class="logo">
-            <img src="/RODSTAR.png" alt="Rodstar Tech Devs" style="height: 38px; width: auto; object-fit: contain;">
+            <img src="/RODSTAR.png" alt="Rodstar Tech Devs" width="120" height="120" style="height: 38px; width: auto; object-fit: contain;" loading="eager" fetchpriority="high">
           </a>
           <ul class="nav-menu">
             <li><a href="/" class="nav-link">Home</a></li>
