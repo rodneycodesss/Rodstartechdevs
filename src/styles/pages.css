@@ -1598,6 +1598,345 @@ input:focus, textarea:focus {
   background: rgba(255,255,255,0.08) !important;
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.2) !important;
 }
+
+/* ==================== PAGE HERO SECTION RESPONSIVENESS ==================== */
+.page-hero {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 1024px) {
+  .page-hero {
+    padding: 8rem 0 4rem !important;
+  }
+
+  .page-hero .section-title {
+    font-size: 2.5rem !important;
+  }
+
+  .page-hero .section-subtitle {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 6rem 0 3rem !important;
+    background-attachment: scroll !important;
+    margin-top: -3rem !important;
+  }
+
+  .page-hero .section-title {
+    font-size: 2rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .page-hero .section-subtitle {
+    font-size: 1rem !important;
+    margin: -1rem auto 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 4rem 0 2rem !important;
+    margin-top: -2rem !important;
+  }
+
+  .page-hero .section-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .page-hero .section-subtitle {
+    font-size: 0.9rem !important;
+    margin: -0.5rem auto 1rem !important;
+  }
+}
+
+/* ==================== PRICING PAGE MOBILE ==================== */
+.pricing-section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 2rem 0;
+  }
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.pricing-card {
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-card {
+    padding: 1rem;
+  }
+}
+
+.pricing-header {
+  margin-bottom: 2rem;
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .pricing-title {
+    font-size: 1.25rem;
+  }
+}
+
+.pricing-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .pricing-price {
+    font-size: 2rem;
+  }
+}
+
+.pricing-period {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.pricing-features {
+  list-style: none;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: 0.75rem 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .pricing-features li {
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+  }
+}
+
+.pricing-features i {
+  color: var(--primary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.pricing-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .pricing-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* ==================== CONTACT FORM MOBILE ==================== */
+.contact-form {
+  max-width: 500px;
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .form-group label {
+    font-size: 0.85rem;
+  }
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+
+@media (max-width: 480px) {
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 16px;
+  }
+}
+
+/* ==================== PORTFOLIO PAGE MOBILE ==================== */
+.portfolio-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .portfolio-filters {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* ==================== TEAM PAGE MOBILE ==================== */
+.team-section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 3rem 0;
+  }
+}
+
+/* ==================== SERVICES PAGE MOBILE ==================== */
+.services-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .services-intro {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-intro {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.services-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .services-intro h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-intro h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.services-intro p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .services-intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-intro p {
+    font-size: 0.95rem;
+  }
+}
 .contact-info, .contact-form, .pricing-card, .feature-card, .team-member, .portfolio-item, .contact-item {
   background: rgba(255,255,255,0.02) !important;
   border: 1px solid rgba(255,255,255,0.05) !important;
