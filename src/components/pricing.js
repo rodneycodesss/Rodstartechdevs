@@ -2,12 +2,14 @@ export function setupPricing() {
   const pricing = document.querySelector('#pricing')
   
   pricing.innerHTML = `
-    <section class="pricing-section">
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/src/public/cloud.png') center/cover; padding: 12rem 0 6rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); margin-top: -5rem;">
       <div class="container">
-        <div class="section-header">
-          <h2>Our Pricing Plans</h2>
-          <p>Choose the perfect plan for your business needs</p>
-        </div>
+        <h2 class="section-title fade-in-up" style="font-size: 3.5rem; margin-bottom: 1rem; color: white !important;">Our Pricing Plans</h2>
+        <p class="section-subtitle fade-in-up" style="font-size: 1.25rem;">Choose the perfect scalable plan for your business needs</p>
+      </div>
+    </section>
+    <section class="pricing-section section" style="padding-top: 4rem;">
+      <div class="container">
         
                 <div class="pricing-grid">
           <div class="pricing-card">

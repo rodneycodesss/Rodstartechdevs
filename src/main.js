@@ -1,4 +1,7 @@
-import './style.css'
+import './styles/variables.css'
+import './styles/global.css'
+import './styles/pages.css'
+import './components/styles/navigation.css'
 import { router } from './router.js'
 
 // Wait for DOM to be ready

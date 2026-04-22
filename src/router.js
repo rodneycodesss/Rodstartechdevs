@@ -6,6 +6,8 @@ import { setupPortfolioPage } from './pages/portfolio.js'
 import { setupTeamPage } from './pages/team.js'
 import { setupContactPage } from './pages/contact.js'
 import { setupNotFoundPage } from './pages/notFound.js'
+import { setupPrivacyPage } from './pages/privacy.js'
+import { setupTermsPage } from './pages/terms.js'
 import { setupNavigation } from './components/navigation.js'
 import { setupFooter } from './components/footer.js'
 
@@ -16,7 +18,9 @@ const routes = {
   '/pricing': setupPricingPage,
   '/portfolio': setupPortfolioPage,
   '/team': setupTeamPage,
-  '/contact': setupContactPage
+  '/contact': setupContactPage,
+  '/privacy': setupPrivacyPage,
+  '/terms': setupTermsPage
 }
 
 export function router() {
@@ -56,6 +60,8 @@ export function router() {
           <section id="portfolio"></section>
           <section id="team"></section>
           <section id="contact"></section>
+          <section id="privacy"></section>
+          <section id="terms"></section>
         </main>
         <footer id="footer"></footer>
       </div>
@@ -68,6 +74,9 @@ export function router() {
   
   // Setup the specific page content
   route()
+  
+  // Snap viewport to absolute top on route swap natively
+  window.scrollTo(0, 0)
   
   // Update active navigation link
   updateActiveNavLink(path)

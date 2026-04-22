@@ -1,0 +1,92 @@
+.footer {
+  background: #050505 !important;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.6) !important;
+  padding: 6rem 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+.footer-content { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr 1.5fr; 
+  gap: 4rem; 
+}
+.footer h3 { 
+  color: white !important; 
+  font-size: 0.9rem; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  margin-bottom: 1.5rem; 
+}
+.footer p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.footer a, .footer p { 
+  color: rgba(255,255,255,0.6) !important; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+  display: block; 
+}
+.footer a:hover { color: #007BFF !important; }
+.footer-bottom { 
+  border-top: 1px solid rgba(255,255,255,0.05); 
+  margin-top: 5rem; 
+  padding-top: 2rem; 
+  text-align: center; 
+  font-size: 0.9rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.whatsapp-btn { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  background: rgba(37, 211, 102, 0.1) !important; 
+  color: #25D366 !important; 
+  padding: 0.5rem 1rem !important; 
+  border-radius: 50px; 
+  border: 1px solid rgba(37, 211, 102, 0.2); 
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+.whatsapp-btn:hover { 
+  background: rgba(37, 211, 102, 0.2) !important; 
+}
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+  margin-bottom: 1rem;
+  display: block;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  transition: all 0.3s;
+}
+.social-icon:hover {
+  background: #007BFF;
+  transform: translateY(-3px);
+}
+@media (max-width: 992px) {
+  .footer-content { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+@media (max-width: 576px) {
+  .footer-content { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
+}
