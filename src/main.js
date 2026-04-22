@@ -12,8 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Mobile menu toggle
 document.addEventListener('click', (e) => {
-  if (e.target.matches('.mobile-menu-btn') || e.target.closest('.mobile-menu-btn')) {
+  const btn = e.target.closest('.mobile-menu-btn')
+  if (btn) {
+    e.stopPropagation()
     const mobileMenu = document.querySelector('.mobile-menu')
     mobileMenu.classList.toggle('active')
+  }
+  
+  // Close menu when a link is clicked
+  const navLink = e.target.closest('.mobile-menu .nav-link')
+  if (navLink) {
+    const mobileMenu = document.querySelector('.mobile-menu')
+    mobileMenu.classList.remove('active')
   }
 })

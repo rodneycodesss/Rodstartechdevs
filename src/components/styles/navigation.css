@@ -70,23 +70,28 @@
 
 .mobile-menu {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 60px;
   left: 0;
   right: 0;
   background: var(--bg-white);
   border-bottom: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
+  z-index: 999;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
 }
 
 .mobile-menu.active {
-  display: block;
+  display: flex !important;
 }
 
 .mobile-menu .nav-menu {
+  display: flex !important;
   flex-direction: column;
   padding: 1rem 0;
   gap: 0;
+  width: 100%;
 }
 
 .mobile-menu .nav-link {
