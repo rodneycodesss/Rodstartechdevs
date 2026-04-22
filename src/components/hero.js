@@ -46,7 +46,7 @@ export function setupHero() {
           </div>
           
           <div class="hero-image fade-in-up">
-            <img src="/src/public/RODSTAR.png" alt="Rodstar Logo" loading="eager" fetchpriority="high" decoding="sync">
+            <img src="/public/RODSTAR.png" alt="Rodstar Logo" loading="eager" fetchpriority="high" decoding="sync">
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ export function setupHero() {
     </section>
     
     <!-- Features Section -->
-    <section class="features-section" id="infrastructure" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('/src/public/home_network.png') center/cover !important;">
+    <section class="features-section" id="infrastructure" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('/public/home_network.png') center/cover !important;">
       <div class="container">
         <div class="section-header">
           <h2 class="fade-in-up">Core Infrastructure</h2>
@@ -124,7 +124,7 @@ export function setupHero() {
     
     
     <!-- CTA Section -->
-    <section class="cta-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/src/public/homepage_hero.png') center/cover !important;">
+    <section class="cta-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/public/homepage_hero.png') center/cover !important;">
       <div class="container">
         <div class="cta-content">
           <h2 class="fade-in-up">Ready to deploy?</h2>

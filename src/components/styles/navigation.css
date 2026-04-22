@@ -109,3 +109,26 @@
     display: block;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .nav-container {
+    padding: 0.75rem 0;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu .nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+}

@@ -1216,7 +1216,371 @@ main > section:first-child {
   }
 }
 
-/* Glassmorphism Forms & Cards Global Overrides */
+/* ==================== COMPREHENSIVE MOBILE RESPONSIVENESS ==================== */
+
+@media (max-width: 1024px) {
+  .about-content, .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  /* About Section */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Services Section */
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+  }
+
+  /* Portfolio Section */
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .portfolio-image {
+    height: 150px;
+  }
+
+  /* Team Section */
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .team-member {
+    padding: 1.5rem;
+  }
+
+  .member-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  /* Contact Section */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    gap: 0.75rem;
+  }
+
+  .contact-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  /* CTA Section */
+  .cta-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Pricing Section */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* About Section */
+  .about-image img {
+    height: 200px;
+  }
+
+  .about-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* Services Section */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Portfolio Section */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-image {
+    height: 120px;
+  }
+
+  .portfolio-content {
+    padding: 1rem;
+  }
+
+  .portfolio-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-content p {
+    font-size: 0.85rem;
+  }
+
+  /* Team Section */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member {
+    padding: 1rem;
+  }
+
+  .member-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .team-member h3 {
+    font-size: 1rem;
+  }
+
+  .team-member .role {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .team-member p {
+    font-size: 0.8rem;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+
+  .contact-icon {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    font-size: 1rem;
+  }
+
+  .contact-details h4 {
+    font-size: 0.95rem;
+  }
+
+  .contact-details p {
+    font-size: 0.85rem;
+  }
+
+  /* CTA Section */
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Pricing Section */
+  .pricing-card {
+    padding: 1rem;
+  }
+
+  .pricing-header {
+    margin-bottom: 1rem;
+  }
+
+  .pricing-title {
+    font-size: 1.1rem;
+  }
+
+  .pricing-price {
+    font-size: 1.75rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-large {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Form elements */
+  input, textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .about-image img {
+    height: 150px;
+  }
+
+  .portfolio-image {
+    height: 100px;
+  }
+
+  .member-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .service-card,
+  .team-member,
+  .contact-form {
+    padding: 0.75rem;
+  }
+}
+
+/* ==================== BACKGROUND IMAGE FIXES ==================== */
+.features-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    background-attachment: scroll;
+  }
+}
+
+/* ==================== GLASSMORPHISM FOR MOBILE ==================== */
 input, textarea {
   background: rgba(255,255,255,0.03) !important;
   border: 1px solid rgba(255,255,255,0.1) !important;

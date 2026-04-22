@@ -2,7 +2,7 @@ export function setupAbout() {
   const about = document.querySelector('#about')
   
   about.innerHTML = `
-    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/src/public/boardroom.png') center/cover; padding: 12rem 0 6rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); margin-top: -5rem;">
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/public/boardroom.png') center/cover; padding: 12rem 0 6rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); margin-top: -5rem;">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: 3.5rem; margin-bottom: 1rem; color: white !important;">About Rodstar Tech</h2>
         <p class="section-subtitle fade-in-up" style="font-size: 1.25rem;">We are a team of passionate developers and designers committed to delivering exceptional digital solutions.</p>
@@ -38,7 +38,7 @@ export function setupAbout() {
           </div>
           
           <div class="about-image">
-            <img src="/src/public/boardroom.png" alt="Engineering Boardroom" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2); border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;"/>
+            <img src="/public/boardroom.png" alt="Engineering Boardroom" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2); border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;"/>
           </div>
         </div>
       </div>
