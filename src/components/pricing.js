@@ -23,14 +23,14 @@ export function setupPricing() {
             </div>
             <div class="pricing-features">
               <ul>
-                <li><i class="fas fa-check"></i> Basic Website (5 pages)</li>
-                <li><i class="fas fa-check"></i> Responsive Design</li>
-                <li><i class="fas fa-check"></i> Contact Form</li>
-                <li><i class="fas fa-check"></i> SEO Optimization</li>
-                <li><i class="fas fa-check"></i> 1 Month Support</li>
-                <li><i class="fas fa-check"></i> Basic Analytics</li>
-                <li><i class="fas fa-check"></i> Mobile Optimization</li>
-                <li><i class="fas fa-check"></i> Social Media Integration</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic Website (5 pages)</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Responsive Design</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Contact Form</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Optimization</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Month Support</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic Analytics</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Mobile Optimization</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Social Media Integration</li>
               </ul>
             </div>
             <div class="pricing-footer">
@@ -50,16 +50,16 @@ export function setupPricing() {
             </div>
             <div class="pricing-features">
               <ul>
-                <li><i class="fas fa-check"></i> Custom Website (10 pages)</li>
-                <li><i class="fas fa-check"></i> Advanced UI/UX Design</li>
-                <li><i class="fas fa-check"></i> E-commerce Integration</li>
-                <li><i class="fas fa-check"></i> Content Management System</li>
-                <li><i class="fas fa-check"></i> 3 Months Support</li>
-                <li><i class="fas fa-check"></i> Advanced Analytics</li>
-                <li><i class="fas fa-check"></i> Performance Optimization</li>
-                <li><i class="fas fa-check"></i> Security Features</li>
-                <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
-                <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Website (10 pages)</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced UI/UX Design</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> E-commerce Integration</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Content Management System</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 Months Support</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced Analytics</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Performance Optimization</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Security Features</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Payment Gateway Integration</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Admin Dashboard</li>
               </ul>
             </div>
             <div class="pricing-footer">
@@ -78,17 +78,17 @@ export function setupPricing() {
             </div>
             <div class="pricing-features">
               <ul>
-                <li><i class="fas fa-check"></i> Full-Stack Application</li>
-                <li><i class="fas fa-check"></i> Custom Features & APIs</li>
-                <li><i class="fas fa-check"></i> Database Design</li>
-                <li><i class="fas fa-check"></i> Third-party Integrations</li>
-                <li><i class="fas fa-check"></i> 6 Months Support</li>
-                <li><i class="fas fa-check"></i> Advanced Security</li>
-                <li><i class="fas fa-check"></i> Scalability Planning</li>
-                <li><i class="fas fa-check"></i> Performance Monitoring</li>
-                <li><i class="fas fa-check"></i> Training & Documentation</li>
-                <li><i class="fas fa-check"></i> Multi-language Support</li>
-                <li><i class="fas fa-check"></i> Advanced Reporting</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Full-Stack Application</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Features & APIs</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Database Design</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Third-party Integrations</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> 6 Months Support</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced Security</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Scalability Planning</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Performance Monitoring</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Training & Documentation</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-language Support</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced Reporting</li>
               </ul>
             </div>
             <div class="pricing-footer">
@@ -100,21 +100,21 @@ export function setupPricing() {
         <div class="custom-pricing-section">
           <div class="custom-pricing-card">
             <div class="custom-pricing-header">
-              <h3><i class="fas fa-crown"></i> Custom Solutions</h3>
+              <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: inline; margin-right: 8px; color: #00D4FF;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg> Custom Solutions</h3>
               <p>Tailored to your specific business needs</p>
             </div>
             <div class="custom-pricing-content">
               <div class="custom-features">
                 <h4>What's Included:</h4>
                 <ul>
-                  <li><i class="fas fa-check"></i> Personalized consultation & planning</li>
-                  <li><i class="fas fa-check"></i> Custom feature development</li>
-                  <li><i class="fas fa-check"></i> Scalable architecture design</li>
-                  <li><i class="fas fa-check"></i> Integration with existing systems</li>
-                  <li><i class="fas fa-check"></i> Dedicated project manager</li>
-                  <li><i class="fas fa-check"></i> Extended support & maintenance</li>
-                  <li><i class="fas fa-check"></i> Performance optimization</li>
-                  <li><i class="fas fa-check"></i> Security audit & implementation</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Personalized consultation & planning</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom feature development</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Scalable architecture design</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Integration with existing systems</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated project manager</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Extended support & maintenance</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Performance optimization</li>
+                  <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; margin-right: 8px; color: #00D4FF;"><polyline points="20 6 9 17 4 12"></polyline></svg> Security audit & implementation</li>
                 </ul>
               </div>
               <div class="custom-pricing-info">
@@ -125,7 +125,7 @@ export function setupPricing() {
                 <p class="custom-note">Pricing varies based on project complexity, features, and timeline requirements.</p>
                 <div class="custom-cta">
                   <a href="/contact" class="btn btn-primary btn-large nav-link">
-                    <i class="fas fa-comments"></i>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     Get Custom Quote
                   </a>
                   <p class="response-time">Response within 24 hours</p>

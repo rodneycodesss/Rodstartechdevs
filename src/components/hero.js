@@ -19,11 +19,11 @@ export function setupHero() {
             <div class="cta-buttons fade-in-up">
               <a href="/contact" class="btn btn-primary nav-link">
                 Start Building
-                <i class="fas fa-arrow-right"></i>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
               <a href="/services" class="btn btn-primary nav-link" style="color: rgba(255,255,255,0.8) !important;">
                 Explore Services
-                <i class="fas fa-arrow-right" style="border-color: rgba(255,255,255,0.3); color: white;"></i>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px; border-color: rgba(255,255,255,0.3);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
             
@@ -90,28 +90,28 @@ export function setupHero() {
         <div class="features-grid">
           <div class="feature-card fade-in-up">
             <div class="feature-icon">
-              <i class="fas fa-server"></i>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8"></rect><rect x="2" y="14" width="20" height="8"></rect><line x1="6" y1="6" x2="6" y2="6.01"></line><line x1="6" y1="18" x2="6" y2="18.01"></line></svg>
             </div>
             <h3>Managed Hosting</h3>
             <p>High-performance hosting for websites, enterprise emails, and domains with 99.9% uptime guarantees.</p>
           </div>
           <div class="feature-card fade-in-up">
             <div class="feature-icon">
-              <i class="fas fa-network-wired"></i>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v12M6 12h12"></path></svg>
             </div>
             <h3>Cloud Architecture</h3>
             <p>Scalable, secure, and distributed systems architected for modern digital products and massive traffic.</p>
           </div>
           <div class="feature-card fade-in-up">
             <div class="feature-icon">
-              <i class="fas fa-code"></i>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
             <h3>Bespoke Engineering</h3>
             <p>Custom software and web applications built with clean code and minimalist design principles.</p>
           </div>
           <div class="feature-card fade-in-up">
             <div class="feature-icon">
-              <i class="fas fa-robot"></i>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><circle cx="6" cy="12" r="2"></circle><circle cx="18" cy="12" r="2"></circle></svg>
             </div>
             <h3>Digital Automation</h3>
             <p>Streamline your operations with automated pipelines, robust APIs, and intelligent workflow integrations.</p>
@@ -130,7 +130,7 @@ export function setupHero() {
           <div class="cta-buttons fade-in-up" style="justify-content: center !important;">
             <a href="/contact" class="btn btn-primary btn-large nav-link">
               Contact Engineering
-              <i class="fas fa-arrow-right"></i>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 8px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
             <a href="/pricing" class="btn btn-outline btn-large nav-link" style="border-radius: 50px;">
               View Solutions
