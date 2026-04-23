@@ -18,6 +18,20 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  will-change: transform;
+  content-visibility: auto;
+}
+/* Preload optimization - defer autoplay until after FCP */
+.hero-video-bg[preload="none"] {
+  display: none;
+}
+.hero-video-bg.ready {
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .hero-overlay {
