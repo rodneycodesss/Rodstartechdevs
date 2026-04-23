@@ -20,7 +20,7 @@ export function setupContact() {
               <div class="contact-icon">📧</div>
               <div class="contact-details">
                 <h4>Email</h4>
-                <p> rodstartechdevs@gmail.com</p>
+                <p> enquiries@rodstartechdevs.co.ke</p>
               </div>
             </div>
             

@@ -40,7 +40,7 @@ export function setupFooter() {
           
           <div class="footer-section">
             <h3>Reach Out</h3>
-            <p><i class="far fa-envelope" style="margin-right: 8px;"></i> <a href="mailto:rodstartechdevs@gmail.com" style="display:inline;">rodstartechdevs@gmail.com</a></p>
+            <p><i class="far fa-envelope" style="margin-right: 8px;"></i> <a href="mailto:enquiries@rodstartechdevs.co.ke" style="display:inline;">enquiries@rodstartechdevs.co.ke</a></p>
             <p><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> <a href="tel:+254780482290" style="display:inline;">+254780482290</a></p>
             <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Nairobi, Kenya (Remote)</p>
             <a href="https://wa.me/254780482290" class="whatsapp-btn" target="_blank" rel="noopener">
