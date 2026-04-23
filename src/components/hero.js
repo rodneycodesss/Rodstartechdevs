@@ -5,7 +5,7 @@ export function setupHero() {
   
   hero.innerHTML = `
     <section class="hero">
-      <video muted loop playsinline class="hero-video-bg" autoplay preload="none" loading="lazy" style="--hero-video-preload: none;">
+      <video muted loop playsinline class="hero-video-bg" autoplay loading="lazy">
         <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
@@ -240,31 +240,3 @@ function addScrollAnimations() {
     observer.observe(el)
   })
 }
-
-// Defer hero video loading until after FCP for better performance
-function deferHeroVideo() {
-  const video = document.querySelector('.hero-video-bg')
-  if (!video) return
-  
-  // Only start loading video after page is interactive
-  if (document.readyState === 'complete') {
-    startVideoPlayback()
-  } else {
-    window.addEventListener('load', startVideoPlayback, { once: true })
-  }
-  
-  function startVideoPlayback() {
-    // Small delay to ensure FCP is measured
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        video.classList.add('ready')
-        // Enable autoplay after initial page load
-        video.autoplay = true
-        video.load()
-      }, 100)
-    })
-  }
-}
-
-// Call this after hero setup
-deferHeroVideo()

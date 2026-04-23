@@ -927,6 +927,60 @@ html {
   font-style: italic;
 }
 
+/* Custom pricing mobile responsiveness */
+@media (max-width: 768px) {
+  .custom-pricing-card {
+    padding: 2rem;
+  }
+
+  .custom-pricing-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .custom-pricing-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .custom-features h4 {
+    font-size: 1.1rem;
+  }
+
+  .custom-features li {
+    font-size: 0.9rem;
+  }
+
+  .range-price {
+    font-size: 2rem;
+  }
+
+  .custom-note {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-pricing-card {
+    padding: 1.5rem;
+  }
+
+  .custom-pricing-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .custom-pricing-header p {
+    font-size: 1rem;
+  }
+
+  .custom-features h4 {
+    font-size: 1rem;
+  }
+
+  .range-price {
+    font-size: 1.75rem;
+  }
+}
+
 /* Active navigation link */
 .nav-link.active {
   color: var(--primary-color);
