@@ -5,7 +5,8 @@ export function setupHero() {
   
   hero.innerHTML = `
     <section class="hero">
-      <video muted loop playsinline class="hero-video-bg" autoplay loading="lazy">
+      <div class="hero-video-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #000 0%, #1a1a2e 100%); z-index: 0;"></div>
+      <video muted loop playsinline class="hero-video-bg" style="display: none; z-index: 1;">
         <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
@@ -240,3 +241,40 @@ function addScrollAnimations() {
     observer.observe(el)
   })
 }
+
+// Aggressively defer hero video loading to unblock FCP/LCP
+function deferVideoLoad() {
+  // Load video after page is interactive (reduces render-blocking from 2700ms)
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => loadHeroVideo(), { timeout: 2000 })
+  } else {
+    // Fallback for browsers without requestIdleCallback
+    setTimeout(loadHeroVideo, 2000)
+  }
+}
+
+function loadHeroVideo() {
+  const video = document.querySelector('.hero-video-bg')
+  const placeholder = document.querySelector('.hero-video-placeholder')
+  
+  if (!video) return
+  
+  // Load the video source
+  video.style.display = 'block'
+  video.autoplay = true
+  video.load()
+  
+  // Fade out placeholder
+  if (placeholder) {
+    placeholder.style.transition = 'opacity 0.3s ease'
+    placeholder.style.opacity = '0'
+    setTimeout(() => {
+      if (placeholder && placeholder.parentNode) {
+        placeholder.style.display = 'none'
+      }
+    }, 300)
+  }
+}
+
+// Trigger deferred video loading after page load
+window.addEventListener('load', deferVideoLoad, { once: true })

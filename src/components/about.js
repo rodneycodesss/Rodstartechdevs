@@ -38,7 +38,7 @@ export function setupAbout() {
           </div>
           
           <div class="about-image">
-            <img src="/boardroom.png" alt="Engineering Boardroom" width="800" height="600" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2); border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;" loading="lazy"/>
+            <img src="/boardroom.png" alt="Engineering Boardroom" width="800" height="600" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2); border: 1px solid rgba(255,255,255,0.1); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;" loading="lazy" decoding="async"/>
           </div>
         </div>
       </div>

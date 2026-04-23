@@ -6,8 +6,16 @@ import { router } from './router.js'
 
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize the router
-  router()
+  // Defer router initialization to prevent long main-thread tasks
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+      router()
+    }, { timeout: 1000 })
+  } else {
+    setTimeout(() => {
+      router()
+    }, 100)
+  }
 })
 
 // Mobile menu toggle
