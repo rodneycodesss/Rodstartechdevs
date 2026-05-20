@@ -1,0 +1,2 @@
+# Netlify and compatible static hosts: SPA fallback so /shop, /development, etc. serve the app shell.
+/*    /index.html   200

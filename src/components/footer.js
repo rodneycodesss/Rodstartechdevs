@@ -35,6 +35,8 @@ export function setupFooter() {
             <a href="/about" class="nav-link">About Us</a>
             <a href="/team" class="nav-link">Engineering Team</a>
             <a href="/portfolio" class="nav-link">Portfolio</a>
+            <a href="/development" class="nav-link">Development</a>
+            <a href="/shop" class="nav-link">Shop</a>
             <a href="/contact" class="nav-link">Contact Sales</a>
           </div>
           

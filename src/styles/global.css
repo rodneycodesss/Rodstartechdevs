@@ -19,7 +19,7 @@ body {
 @media (max-width: 768px) {
   .section { padding: 3rem 0; }
   .section-title { font-size: 1.75rem; margin-bottom: 2rem; }
-  .section-subtitle { margin: -1remupx auto 2rem; font-size: 0.95rem; }
+  .section-subtitle { margin: -1rem auto 2rem; font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {
@@ -52,9 +52,90 @@ html { scroll-behavior: smooth; }
 /* Glassmorphism Forms & Cards Global Overrides */
 input, textarea { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.1) !important; backdrop-filter: blur(10px) !important; color: white !important; padding: 1rem; border-radius: 8px; width: 100%; font-family: inherit; transition: all 0.3s; }
 input:focus, textarea:focus { outline: none; border-color: var(--primary-color) !important; background: rgba(255,255,255,0.08) !important; box-shadow: 0 0 15px rgba(0, 123, 255, 0.2) !important; }
-.contact-info, .contact-form, .pricing-card, .feature-card, .team-member, .portfolio-item, .contact-item { background: rgba(255,255,255,0.02) !important; border: 1px solid rgba(255,255,255,0.05) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px); border-radius: 16px; padding: 2rem; transition: transform 0.3s ease; }
-.pricing-card:hover, .feature-card:hover, .team-member:hover, .portfolio-item:hover { transform: translateY(-5px); border-color: rgba(0, 123, 255, 0.3) !important; }
+.contact-info, .contact-form, .pricing-card, .feature-card, .team-member, .portfolio-item, .contact-item, .shop-category-card, .shop-inquiry-card { background: rgba(255,255,255,0.02) !important; border: 1px solid rgba(255,255,255,0.05) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px); border-radius: 16px; padding: 2rem; transition: transform 0.3s ease; }
+.pricing-card:hover, .feature-card:hover, .team-member:hover, .portfolio-item:hover, .shop-category-card:hover { transform: translateY(-5px); border-color: rgba(0, 123, 255, 0.3) !important; }
+
+
+/* Theme Switching transition */
+body {
+  transition: var(--body-transition);
+}
+
+/* Light Theme Overrides */
+body.light-theme input,
+body.light-theme textarea {
+  background: var(--input-bg) !important;
+  border-color: var(--input-border) !important;
+  color: var(--input-color) !important;
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus {
+  background: rgba(15, 23, 42, 0.05) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 15px rgba(0, 92, 230, 0.12) !important;
+}
+
+body.light-theme .contact-info,
+body.light-theme .contact-form,
+body.light-theme .pricing-card,
+body.light-theme .feature-card,
+body.light-theme .team-member,
+body.light-theme .portfolio-item,
+body.light-theme .contact-item,
+body.light-theme .shop-category-card,
+body.light-theme .shop-inquiry-card,
+body.light-theme .urgent-order-card {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+body.light-theme .pricing-card:hover,
+body.light-theme .feature-card:hover,
+body.light-theme .team-member:hover,
+body.light-theme .portfolio-item:hover,
+body.light-theme .shop-category-card:hover {
+  border-color: rgba(0, 92, 230, 0.25) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 92, 230, 0.15);
+}
+
+/* Scrollbar styles for light mode */
+body.light-theme ::-webkit-scrollbar-track {
+  background: var(--bg-light);
+  border-left-color: rgba(0,0,0,0.05);
+}
+body.light-theme ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+}
+
+/* Navbar light theme overrides */
+body.light-theme .navbar {
+  background: var(--navbar-bg) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+body.light-theme .nav-dropdown-menu {
+  background: var(--select-option-bg) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+body.light-theme .nav-dropdown-link:hover {
+  background: rgba(0, 92, 230, 0.06) !important;
+  color: var(--primary-color) !important;
+}
+
+body.light-theme .mobile-menu {
+  background: var(--bg-white) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+body.light-theme .nav-mobile-summary::after {
+  filter: invert(1);
+}
 
 @media (max-width: 768px) {
-  .contact-info, .contact-form, .pricing-card, .feature-card, .team-member, .portfolio-item, .contact-item { padding: 1.5rem; }
+  .contact-info, .contact-form, .pricing-card, .feature-card, .team-member, .portfolio-item, .contact-item, .shop-category-card, .shop-inquiry-card { padding: 1.5rem !important; }
 }
+
+
