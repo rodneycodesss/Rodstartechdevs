@@ -3,9 +3,12 @@ import './styles/hero.css'
 export function setupHero() {
   const hero = document.querySelector('#hero')
   
+  // Set unified single background image for the entire homepage
+  hero.style.background = "linear-gradient(180deg, rgba(10, 10, 26, 0.88) 0%, rgba(26, 10, 46, 0.92) 50%, rgba(10, 10, 26, 0.96) 100%), url('/homepage_hero.png') center/cover no-repeat"
+  hero.style.position = "relative"
+  
   hero.innerHTML = `
     <section class="hero">
-      <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 10, 46, 0.85) 50%, rgba(22, 33, 62, 0.8) 100%), url('/homepage_hero.png') center/cover no-repeat; z-index: 0;"></div>
       <div class="hero-overlay"></div>
       <div class="glow-orb-1" style="z-index: 2;\"></div>
       <div class="glow-orb-2" style="z-index: 2;\"></div>
@@ -81,7 +84,7 @@ export function setupHero() {
     </section>
     
     <!-- Features Section -->
-    <section class="features-section" id="infrastructure" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('/home_network.png') center/cover !important;">
+    <section class="features-section" id="infrastructure" style="background: transparent !important;">
       <div class="container">
         <div class="section-header">
           <h2 class="fade-in-up">Core Infrastructure</h2>
@@ -122,7 +125,7 @@ export function setupHero() {
     
     
     <!-- CTA Section -->
-    <section class="cta-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/homepage_hero.png') center/cover !important;">
+    <section class="cta-section" style="background: transparent !important;">
       <div class="container">
         <div class="cta-content">
           <h2 class="fade-in-up">Ready to deploy?</h2>
