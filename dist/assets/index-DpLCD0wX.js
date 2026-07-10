@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const i of s)if(i.type==="childList")for(const a of i.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&n(a)}).observe(document,{childList:!0,subtree:!0});function o(s){const i={};return s.integrity&&(i.integrity=s.integrity),s.referrerPolicy&&(i.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?i.credentials="include":s.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function n(s){if(s.ep)return;s.ep=!0;const i=o(s);fetch(s.href,i)}})();function F(){const e=document.querySelector("#hero");e.innerHTML=`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))c(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const r of s.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&c(r)}).observe(document,{childList:!0,subtree:!0});function o(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function c(i){if(i.ep)return;i.ep=!0;const s=o(i);fetch(i.href,s)}})();function B(){const e=document.querySelector("#hero");e.innerHTML=`
     <section class="hero">
       <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #16213e 100%); z-index: 0;"></div>
       <div class="hero-overlay"></div>
@@ -134,7 +134,7 @@
         </div>
       </div>
     </section>
-  `,C(),T()}function C(){const e=document.querySelectorAll(".stat-number"),t=new IntersectionObserver(s=>{s.forEach(i=>{if(i.isIntersecting){const a=parseFloat(i.target.getAttribute("data-target")),d=a/(2e3/16);let c=0;const l=setInterval(()=>{c+=d,c>=a&&(c=a,clearInterval(l)),i.target.getAttribute("data-target")==="99.9"?i.target.textContent=c.toFixed(1)+"%":i.target.textContent=Math.floor(c),i.target.getAttribute("data-target")==="100"&&(i.target.textContent=Math.floor(c)+"%"),i.target.getAttribute("data-target")==="24"&&(i.target.textContent=Math.floor(c)+"/7")},16);t.unobserve(i.target)}})});e.forEach(s=>t.observe(s));const o=document.querySelector("#typewriter-motto");if(o){let r=function(){if(!document.body.contains(o))return;a===0&&(o.innerHTML='<span class="gradient-text"></span><span class="cursor">|</span>');const d=o.querySelector(".gradient-text"),c=o.querySelector(".cursor");if(a<s.length)d&&(d.innerHTML+=s.charAt(a)),a++,setTimeout(r,60);else if(a<s.length+i.length)c&&c.remove(),o.innerHTML+=i.charAt(a-s.length)+'<span class="cursor">|</span>',a++,setTimeout(r,60);else{const l=o.querySelector(".cursor");l&&l.classList.add("blink")}};var n=r;const s="Engineering Growth",i=" Through Technology.";let a=0;setTimeout(r,400)}}function T(){const e=new IntersectionObserver(t=>{t.forEach(o=>{o.isIntersecting&&o.target.classList.add("animate-in")})},{threshold:.1});document.querySelectorAll(".fade-in-up").forEach(t=>{e.observe(t)})}function D(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#hero").style.display="block",F()}function q(){const e=document.querySelector("#about");e.innerHTML=`
+  `,E(),M()}function E(){const e=document.querySelectorAll(".stat-number"),t=new IntersectionObserver(i=>{i.forEach(s=>{if(s.isIntersecting){const r=parseFloat(s.target.getAttribute("data-target")),m=r/(2e3/16);let n=0;const p=setInterval(()=>{n+=m,n>=r&&(n=r,clearInterval(p)),s.target.getAttribute("data-target")==="99.9"?s.target.textContent=n.toFixed(1)+"%":s.target.textContent=Math.floor(n),s.target.getAttribute("data-target")==="100"&&(s.target.textContent=Math.floor(n)+"%"),s.target.getAttribute("data-target")==="24"&&(s.target.textContent=Math.floor(n)+"/7")},16);t.unobserve(s.target)}})});e.forEach(i=>t.observe(i));const o=document.querySelector("#typewriter-motto");if(o){let d=function(){if(!document.body.contains(o))return;r===0&&(o.innerHTML='<span class="gradient-text"></span><span class="cursor">|</span>');const m=o.querySelector(".gradient-text"),n=o.querySelector(".cursor");if(r<i.length)m&&(m.innerHTML+=i.charAt(r)),r++,setTimeout(d,60);else if(r<i.length+s.length)n&&n.remove(),o.innerHTML+=s.charAt(r-i.length)+'<span class="cursor">|</span>',r++,setTimeout(d,60);else{const p=o.querySelector(".cursor");p&&p.classList.add("blink")}};var c=d;const i="Engineering Growth",s=" Through Technology.";let r=0;setTimeout(d,400)}}function M(){const e=new IntersectionObserver(t=>{t.forEach(o=>{o.isIntersecting&&o.target.classList.add("animate-in")})},{threshold:.1});document.querySelectorAll(".fade-in-up").forEach(t=>{e.observe(t)})}function L(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#hero").style.display="block",B()}function j(){const e=document.querySelector("#about");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/boardroom.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">About Rodstar Tech</h2>
@@ -176,62 +176,7 @@
         </div>
       </div>
     </section>
-  `}function P(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#about").style.display="block",q()}function A(){const e=document.querySelector("#services");e.innerHTML=`
-    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-      <div class="container">
-        <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Our Services</h2>
-        <p class="section-subtitle fade-in-up" style="font-size: clamp(0.95rem, 2vw, 1.25rem);">We offer comprehensive software development services to meet all your digital needs.</p>
-      </div>
-    </section>
-    <section class="services section" style="padding-top: 4rem;">
-      <div class="container">
-        
-        <div class="services-grid">
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Hosting" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>Enterprise Hosting</h3>
-            <p>Premium managed hosting environments featuring custom domain registration databases, dedicated enterprise emails, and high-availability servers structured for maximal uptime.</p>
-          </div>
-          
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Web Arch" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>Web Architecture</h3>
-            <p>High-end single page applications built inherently scalable with modern javascript environments. We create responsive, instantaneous, and cinematic web structures.</p>
-          </div>
-          
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Mobile Apps" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>Mobile App Deployment</h3>
-            <p>Native mobile applications structurally compiled for iOS and Android. Cross-platform engineering pipelines to deploy high-velocity user experiences directly to app stores.</p>
-          </div>
-          
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=150" alt="UX Design" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>UI/UX Systems</h3>
-            <p>Glassmorphism, high-contrast dark modes, and dynamic geometry. We engineer interface experiences that prioritize raw digital immersion and absolute conversion rates.</p>
-          </div>
-          
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/2387796/pexels-photo-2387796.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Cloud" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>Cloud Solutions</h3>
-            <p>Elastic infrastructure setups running parallel load balancing using AWS, Vercel, and hybrid structures. We scale your raw networking data infinitely.</p>
-          </div>
-          
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Custom Code" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>Custom Software Systems</h3>
-            <p>Tailored computational systems engineered explicitly for complex datasets. Ranging from Fintech POS ledgers, CRM algorithms to multi-node operational architecture.</p>
-          </div>
-          
-          <div class="service-card">
-            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=150" alt="DevOps" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
-            <h3>DevOps & CI/CD Pipelines</h3>
-            <p>Automated software delivery streams guaranteeing your production environments sync flawlessly directly with your active coding networks via zero-latency pipelines.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  `}function B(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#services").style.display="block",A()}function E(){const e=document.querySelector("#pricing");e.innerHTML=`
+  `}function z(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#about").style.display="block",j()}function O(){const e=document.querySelector("#pricing");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Our Pricing Plans</h2>
@@ -370,7 +315,7 @@
         </div>
       </div>
     </section>
-  `}function L(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#pricing").style.display="block",E()}function M(){const e=document.querySelector("#portfolio");e.innerHTML=`
+  `}function H(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#pricing").style.display="block",O()}function R(){const e=document.querySelector("#portfolio");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Our Portfolio</h2>
@@ -414,46 +359,84 @@
           <div class="portfolio-item">
             <div class="portfolio-image"></div>
             <div class="portfolio-content">
-              <h3>DevSoko</h3>
-              <p>A platform for freelancers to find clients and projects, with a focus on security and reliability.</p>
+              <h3>Moussad Realty</h3>
+              <p>A premium real estate platform for verified listings, property investments, and long-term stays in Mombasa & Kisumu, featuring secure bookings and real-time mapping.</p>
               <div class="portfolio-tags">
                 <span class="tag">React</span>
                 <span class="tag">TypeScript</span>
-                <span class="tag">Biometrics</span>
-                <span class="tag">Security</span>
+                <span class="tag">Real Estate</span>
+                <span class="tag">Geolocation</span>
+                <span class="tag">Map Integration</span>
+                <span class="tag">Booking</span>
               </div>
             </div>
           </div>
         </div>
     </section>
-  `}function j(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#portfolio").style.display="block",M()}function H(){const e=document.querySelector("#team");e.innerHTML=`
+  `}function I(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#portfolio").style.display="block",R()}function N(){const e=document.querySelector("#team");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/boardroom.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Meet Our Team</h2>
-        <p class="section-subtitle fade-in-up" style="font-size: clamp(0.95rem, 2vw, 1.25rem);">Our talented team of developers, designers, and project managers are here to bring your vision to life.</p>
+        <p class="section-subtitle fade-in-up" style="font-size: clamp(0.95rem, 2vw, 1.25rem);">Our talented team of developers, managers, and marketers are here to bring your vision to life.</p>
       </div>
     </section>
     <section class="team section" style="padding-top: 4rem;">
       <div class="container">
         
-        <div class="team-grid">
-          <div class="team-member">
-            <div class="member-avatar">RG</div>
-            <h3>Rodney Gilbert</h3>
-            <p class="role">CEO & Lead Developer</p>
-            <p>Full-stack developer with expertise in modern web technologies and team leadership. Passionate about creating innovative solutions.</p>
-          </div>
-          
-          <div class="team-member">
-            <div class="member-avatar">EF</div>
-            <h3>Eddy Frank</h3>
-            <p class="role">Senior Developer & Designer</p>
-            <p>Specializes in React, Vue.js, backend development, and modern CSS frameworks. Creates beautiful and responsive user interfaces.</p>
+        <div class="team-section-group" style="margin-bottom: 4rem;">
+          <h3 class="team-group-title" style="text-align: left; margin: 0 0 2rem; font-size: 1.5rem; font-weight: 600; color: white; border-left: 4px solid var(--primary-color); padding-left: 1rem; text-transform: uppercase; letter-spacing: 1px;">Leadership & Strategy</h3>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-avatar">
+                <img src="/Rodney-removebg-preview.png" alt="Rodney Gilbert" loading="lazy">
+              </div>
+              <h3>Rodney Gilbert</h3>
+              <p class="role">CEO & Lead Developer</p>
+              <p>Full-stack developer with expertise in modern web technologies and team leadership. Passionate about creating innovative solutions.</p>
+            </div>
+            
+            <div class="team-member">
+              <div class="member-avatar">
+                <img src="/ASTRALIA.jpg" alt="Astralia Otieno" loading="lazy">
+              </div>
+              <h3>Astralia Otieno</h3>
+              <p class="role">General Manager</p>
+              <p>Experienced manager directing operations, organizing project lifecycles, and ensuring high-quality client deliverables. Focused on team cohesion and efficiency.</p>
+            </div>
+
+            <div class="team-member">
+              <div class="member-avatar">
+                <img src="/BRAYO.jpg" alt="Brian Gacao" loading="lazy">
+              </div>
+              <h3>Brian Gacao</h3>
+              <p class="role">Business Developer</p>
+              <p>Identifying strategic business opportunities, cultivating key partnerships, and driving growth. Focused on building long-term client relations and expanding market reach.</p>
+            </div>
           </div>
         </div>
+
+        <div class="team-section-group">
+          <h3 class="team-group-title" style="text-align: left; margin: 0 0 2rem; font-size: 1.5rem; font-weight: 600; color: white; border-left: 4px solid var(--primary-color); padding-left: 1rem; text-transform: uppercase; letter-spacing: 1px;">Engineering & Growth</h3>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-avatar">SG</div>
+              <h3>Sweeney Greg</h3>
+              <p class="role">Backend Developer</p>
+              <p>Specializing in secure databases, server-side algorithms, and third-party API integrations. Passionate about building robust backend infrastructure that scales.</p>
+            </div>
+
+            <div class="team-member">
+              <div class="member-avatar">DK</div>
+              <h3>Daphny Kemi</h3>
+              <p class="role">Digital Marketing Intern</p>
+              <p>Assisting in marketing outreach, content strategies, and social media enhancement. Eager to drive brand awareness and digital growth.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
-  `}function z(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#team").style.display="block",H()}function O(){const e=document.querySelector("#contact");e.innerHTML=`
+  `}function W(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#team").style.display="block",N()}function _(){const e=document.querySelector("#contact");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/boardroom.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Get In Touch</h2>
@@ -505,22 +488,22 @@
             <div id="contactStatus" class="contact-status" aria-live="polite" aria-atomic="true"></div>
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" required placeholder="e.g. Rodney Gilbert">
             </div>
             
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
             </div>
             
             <div class="form-group">
               <label for="company">Company (Optional)</label>
-              <input type="text" id="company" name="company">
+              <input type="text" id="company" name="company" placeholder="e.g. Moussad Realty">
             </div>
             
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required>
+              <input type="text" id="subject" name="subject" required placeholder="e.g. Custom Software Development Inquiry">
             </div>
             
             <div class="form-group">
@@ -533,12 +516,12 @@
         </div>
       </div>
     </section>
-  `;const t=document.querySelector("#contactForm"),o=document.querySelector("#contactStatus"),n="https://formspree.io/f/xvgvayno";let s=null;function i(a,r="success",d=5e3){if(!o)return;s&&(clearTimeout(s),s=null),o.innerHTML=`
-      <div class="notification notification--${r}" role="status">
-        <div class="notification__content">${a}</div>
+  `;const t=document.querySelector("#contactForm"),o=document.querySelector("#contactStatus"),c="https://formspree.io/f/xvgvayno";let i=null;function s(r,d="success",m=5e3){if(!o)return;i&&(clearTimeout(i),i=null),o.innerHTML=`
+      <div class="notification notification--${d}" role="status">
+        <div class="notification__content">${r}</div>
         <button class="notification__close" aria-label="Dismiss notification">&times;</button>
       </div>
-    `,o.querySelector(".notification");const c=o.querySelector(".notification__close");function l(){o&&(o.innerHTML="",s&&(clearTimeout(s),s=null))}c&&c.addEventListener("click",l),d>0&&(s=setTimeout(l,d))}t.addEventListener("submit",async a=>{a.preventDefault();const r=t.querySelector('button[type="submit"]'),d=r.textContent;r.textContent="Sending...",r.disabled=!0;const c=new FormData(t),l=Object.fromEntries(c.entries());try{const p=await fetch(n,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(l)});if(p.ok)i("Thank you — your message has been sent!","success",6e3),t.reset();else{const u=await p.json().catch(()=>null);console.error("Formspree error",p.status,u),i("There was a problem sending your message. Please try again later.","error",8e3)}}catch(p){console.error("Network error while sending form",p),i("Network error. Please check your connection and try again.","error",8e3)}finally{r.textContent=d,r.disabled=!1}})}function R(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#contact").style.display="block",O()}function I(){const e=document.querySelector("#notFound");e&&(e.innerHTML=`
+    `,o.querySelector(".notification");const n=o.querySelector(".notification__close");function p(){o&&(o.innerHTML="",i&&(clearTimeout(i),i=null))}n&&n.addEventListener("click",p),m>0&&(i=setTimeout(p,m))}t.addEventListener("submit",async r=>{r.preventDefault();const d=t.querySelector('button[type="submit"]'),m=d.textContent;d.textContent="Sending...",d.disabled=!0;const n=new FormData(t),p=Object.fromEntries(n.entries());try{const y=await fetch(c,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(p)});if(y.ok)s("Thank you — your message has been sent!","success",6e3),t.reset();else{const u=await y.json().catch(()=>null);console.error("Formspree error",y.status,u),s("There was a problem sending your message. Please try again later.","error",8e3)}}catch(y){console.error("Network error while sending form",y),s("Network error. Please check your connection and try again.","error",8e3)}finally{d.textContent=m,d.disabled=!1}})}function G(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#contact").style.display="block",_()}function $(){const e=document.querySelector("#notFound");e&&(e.innerHTML=`
     <section class="not-found section">
       <div class="container">
         <div class="not-found-content">
@@ -569,7 +552,7 @@
         </div>
       </div>
     </section>
-  `)}function W(){I()}function N(){const e=document.querySelector("#privacy");e.innerHTML=`
+  `)}function U(){$()}function K(){const e=document.querySelector("#privacy");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/privacy.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Privacy Policy</h2>
@@ -597,7 +580,7 @@
         </div>
       </div>
     </section>
-  `}function U(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#privacy").style.display="block",window.scrollTo(0,0),N()}function $(){const e=document.querySelector("#terms");e.innerHTML=`
+  `}function V(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#privacy").style.display="block",window.scrollTo(0,0),K()}function Q(){const e=document.querySelector("#terms");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/terms.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Terms of Service</h2>
@@ -634,16 +617,16 @@
         </div>
       </div>
     </section>
-  `}function _(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#terms").style.display="block",window.scrollTo(0,0),$()}const G=[{title:"Laptops & Desktops",blurb:"Corporate-grade laptops, high-performance developer workstations, and ultrabooks from top-tier brands (HP, Dell, Lenovo, Apple).",tag:"Sourcing & Supply",icon:"💻",hue:"linear-gradient(135deg, rgba(0, 123, 255, 0.25), rgba(0, 0, 0, 0.6))"},{title:"Networking Devices",blurb:"Enterprise switches, high-speed routers, access points, network cabinets, and structured cabling solutions.",tag:"Infrastructure",icon:"🌐",hue:"linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 40, 80, 0.7))"},{title:"Computer Accessories",blurb:"Ergonomic keyboards, gaming/office mice, external SSDs, USB-C hubs, and productivity accessories.",tag:"Workspace",icon:"🔌",hue:"linear-gradient(135deg, rgba(91, 180, 255, 0.2), rgba(0, 0, 0, 0.6))"},{title:"Printers & Copiers",blurb:"Heavy-duty print stations, smart ink-tank printers, scanner-copier combos, and genuine toners/consumables.",tag:"Office Equipment",icon:"🖨️",hue:"linear-gradient(135deg, rgba(0, 86, 179, 0.3), rgba(0, 0, 0, 0.65))"},{title:"CCTV & Security",blurb:"Smart IP surveillance systems, HD cameras, biometric access control terminals, and electronic locks.",tag:"Security & Surveillance",icon:"🛡️",hue:"linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(26, 10, 46, 0.65))"},{title:"Other Tech & Backups",blurb:"Uninterruptible Power Supplies (UPS), voltage regulators, smart IoT accessories, and custom gadgets.",tag:"Power & IoT",icon:"⚡",hue:"linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(22, 33, 62, 0.7))"}];function K(){const e=new IntersectionObserver(t=>{t.forEach(o=>{o.isIntersecting&&o.target.classList.add("animate-in")})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".shop-page .fade-in-up").forEach(t=>e.observe(t))}function V(){const e=document.querySelector("#shop"),t=G.map(r=>`
+  `}function X(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#terms").style.display="block",window.scrollTo(0,0),Q()}const Y=[{title:"Laptops & Desktops",blurb:"Corporate-grade laptops, high-performance developer workstations, and ultrabooks from top-tier brands (HP, Dell, Lenovo, Apple).",tag:"Sourcing & Supply",icon:"💻",hue:"linear-gradient(135deg, rgba(0, 123, 255, 0.25), rgba(0, 0, 0, 0.6))"},{title:"Networking Devices",blurb:"Enterprise switches, high-speed routers, access points, network cabinets, and structured cabling solutions.",tag:"Infrastructure",icon:"🌐",hue:"linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 40, 80, 0.7))"},{title:"Computer Accessories",blurb:"Ergonomic keyboards, gaming/office mice, external SSDs, USB-C hubs, and productivity accessories.",tag:"Workspace",icon:"🔌",hue:"linear-gradient(135deg, rgba(91, 180, 255, 0.2), rgba(0, 0, 0, 0.6))"},{title:"Printers & Copiers",blurb:"Heavy-duty print stations, smart ink-tank printers, scanner-copier combos, and genuine toners/consumables.",tag:"Office Equipment",icon:"🖨️",hue:"linear-gradient(135deg, rgba(0, 86, 179, 0.3), rgba(0, 0, 0, 0.65))"},{title:"CCTV & Security",blurb:"Smart IP surveillance systems, HD cameras, biometric access control terminals, and electronic locks.",tag:"Security & Surveillance",icon:"🛡️",hue:"linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(26, 10, 46, 0.65))"},{title:"Other Tech & Backups",blurb:"Uninterruptible Power Supplies (UPS), voltage regulators, smart IoT accessories, and custom gadgets.",tag:"Power & IoT",icon:"⚡",hue:"linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(22, 33, 62, 0.7))"}],J=[{id:"mikrotik-rb951",name:"Mikrotik RB951",price:7500,category:"Routers & GPON",desc:"High performance wireless SOHO AP with a new generation Atheros CPU and robust processing power.",image:"/mikrotik_router.jpg"},{id:"f3-tenda",name:"F3 Tenda",price:950,category:"Routers & GPON",desc:"300Mbps wireless router designed for smart home networking life. Easy setup and high stability.",image:"/tenda_router.jpg"},{id:"cat6-indoor",name:"Cat 6 Indoor Cable",price:4e3,category:"Cables",desc:"High-speed, high-quality copper indoor network cable (305m roll) for local networking.",image:"/cat6_cable.png"},{id:"cat6-outdoor",name:"Cat 6 Outdoor Cable",price:6e3,category:"Cables",desc:"Weatherproof, double-shielded outdoor network cable (305m roll) for heavy-duty networking.",image:"/cat6_cable.png"},{id:"tape-small",name:"Insulating Tape (Small)",price:70,category:"Accessories & Management",desc:"Durable electrical insulating tape for wire wrapping and safe splicing.",image:"/electrical_tape.png"},{id:"tape-big",name:"Insulating Tape (Large)",price:130,category:"Accessories & Management",desc:"High-grade professional electrical insulating tape for heavy-duty wire protection.",image:"/electrical_tape.png"},{id:"adapter-small",name:"Adapter Box (Small)",price:300,category:"Accessories & Management",desc:"Small protective adapter casing/junction box for clean node connections.",image:"/adapter_box.png"},{id:"adapter-big",name:"Adapter Box (Big)",price:350,category:"Accessories & Management",desc:"Large weatherproof adapter box/junction box for enclosing connectors and splitters.",image:"/adapter_box.png"},{id:"gpon",name:"GPON ONU",price:1350,category:"Routers & GPON",desc:"Gigabit Passive Optical Network terminal for high-speed fiber-to-the-home internet access.",image:"/gpon_onu.jpg"},{id:"cable-tie-small",name:"Cable Ties (Small Size)",price:180,category:"Accessories & Management",desc:"Pack of small nylon cable zip ties for neat wire and cable management.",image:"/cable_ties.jpg"},{id:"cable-tie-big",name:"Cable Ties (Big Size)",price:250,category:"Accessories & Management",desc:"Pack of large, high-tensile strength nylon cable ties for securing cables.",image:"/cable_ties.jpg"},{id:"switch-8port",name:"Switch 8 Port",price:1200,category:"Switches",desc:"Compact 8-port Ethernet switch for fast desktop wired network expansion.",image:"/network_switch.jpg"},{id:"switch-gigaport",name:"Gigaport Switch",price:2450,category:"Switches",desc:"High-speed Gigabit Ethernet switch for zero-bottleneck data transfer across nodes.",image:"/network_switch_giga.jpg"},{id:"extension-standard",name:"Power Extension",price:450,category:"Accessories & Management",desc:"Multi-socket power extension strip with surge protection for office or home setups.",image:"/power_extension.jpg"},{id:"extension-10m",name:"Power Extension (10m)",price:1300,category:"Accessories & Management",desc:"Heavy-duty 10-meter long power extension cable with multiple sockets and surge protector.",image:"/power_extension_10m.jpg"}];function Z(){const e=new IntersectionObserver(t=>{t.forEach(o=>{o.isIntersecting&&o.target.classList.add("animate-in")})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".shop-page .fade-in-up").forEach(t=>e.observe(t))}function ee(){const e=document.querySelector("#shop"),t=Y.map(l=>`
     <article class="shop-category-card fade-in-up">
-      <div class="shop-card-visual" style="background: ${r.hue};">
-        <div class="shop-card-icon" aria-hidden="true">${r.icon}</div>
+      <div class="shop-card-visual" style="background: ${l.hue};">
+        <div class="shop-card-icon" aria-hidden="true">${l.icon}</div>
         <div class="shop-card-placeholder" aria-hidden="true"></div>
       </div>
-      <h3>${r.title}</h3>
-      <p>${r.blurb}</p>
+      <h3>${l.title}</h3>
+      <p>${l.blurb}</p>
       <div class="shop-card-meta">
-        <span class="shop-tag">${r.tag}</span>
+        <span class="shop-tag">${l.tag}</span>
         <span class="shop-tag" style="opacity:0.75;">Coming soon</span>
       </div>
     </article>
@@ -655,20 +638,36 @@
           <h1 class="shop-hero-title fade-in-up">Premium Tech Sourcing & Hardware</h1>
           <p class="shop-hero-lead fade-in-up">We supply digital gadgets, laptops, computer accessories, networking equipment, printers, and other tech products for businesses and individuals across Kenya. Partnering with top-tier suppliers to deliver quality at scale.</p>
           <div class="shop-hero-ctas fade-in-up">
-            <a href="#order-form-section" class="btn btn-primary">Place Urgent Order</a>
-            <a href="/contact" class="btn btn-outline nav-link">Contact Sourcing Team</a>
+            <a href="#catalog-section" class="btn btn-primary">Browse Catalog</a>
+            <a href="#order-form-section" class="btn btn-outline">Custom Sourcing Request</a>
           </div>
         </div>
       </section>
 
-      <section class="shop-construction section" aria-labelledby="shop-construction-heading">
+      <section class="shop-catalog section" id="catalog-section" aria-labelledby="shop-catalog-heading">
         <div class="container">
-          <div class="shop-construction-inner fade-in-up">
-            <div class="shop-construction-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg>
+          <div class="shop-section-head fade-in-up">
+            <h2 id="shop-catalog-heading">Available Stock & Hardware</h2>
+            <p>Browse our in-stock items ready for immediate sourcing and local delivery across Kenya.</p>
+          </div>
+          
+          <div class="shop-catalog-controls fade-in-up">
+            <div class="search-bar-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="productSearch" placeholder="Search hardware, brands, specs...">
             </div>
-            <h2 id="shop-construction-heading">Catalog Sourcing In Progress 📦</h2>
-            <p>Our online storefront and interactive product catalog are updating shortly. In the meantime, we are fully active in sourcing and supply operations. You can place urgent hardware, laptop, copier, or digital gadget requests directly below using our urgent order request form.</p>
+            
+            <div class="filter-buttons-wrapper">
+              <button class="filter-btn active" data-category="All">All</button>
+              <button class="filter-btn" data-category="Routers & GPON">Routers & GPON</button>
+              <button class="filter-btn" data-category="Cables">Cables</button>
+              <button class="filter-btn" data-category="Switches">Switches</button>
+              <button class="filter-btn" data-category="Accessories & Management">Accessories & Management</button>
+            </div>
+          </div>
+
+          <div class="shop-products-grid" id="product-grid">
+            <!-- Filtered products will render here -->
           </div>
         </div>
       </section>
@@ -679,7 +678,7 @@
             <div class="shop-catalog-info">
               <div class="shop-section-head fade-in-up" style="text-align: left; margin-bottom: 2rem;">
                 <h2 id="shop-workspace-heading">Sourcing Capabilities</h2>
-                <p>Browse our core categories. We handle everything from bulk business setups to custom individual accessories.</p>
+                <p>Browse our core capabilities. We handle everything from bulk business setups to custom individual accessories.</p>
               </div>
               <div class="shop-categories-grid">
                 ${t}
@@ -750,23 +749,43 @@
         </div>
       </section>
     </div>
-  `,K();const o=document.querySelector("#urgentOrderForm"),n=document.querySelector("#orderStatus"),s="https://formspree.io/f/xvgvayno";let i=null;function a(r,d="success",c=5e3){if(!n)return;i&&(clearTimeout(i),i=null),n.innerHTML=`
-      <div class="notification notification--${d}" role="status">
-        <div class="notification__content">${r}</div>
+  `;const o=document.querySelector("#product-grid"),c=document.querySelector("#productSearch"),i=document.querySelectorAll(".filter-btn");let s="All",r="";function d(){const l=J.filter(a=>{const h=s==="All"||a.category===s,g=a.name.toLowerCase().includes(r)||a.desc.toLowerCase().includes(r)||a.category.toLowerCase().includes(r);return h&&g});if(l.length===0){o.innerHTML=`
+        <div class="shop-no-results fade-in-up animate-in">
+          <p>No products found matching your search. Please submit a custom request below.</p>
+        </div>
+      `;return}o.innerHTML=l.map(a=>`
+      <article class="shop-product-card fade-in-up animate-in">
+        <div class="product-card-image-wrapper">
+          <img src="${a.image}" alt="${a.name}" loading="lazy">
+          <span class="product-category-tag">${a.category}</span>
+        </div>
+        <div class="product-card-body">
+          <h3>${a.name}</h3>
+          <p class="product-desc">${a.desc}</p>
+          <div class="product-card-footer">
+            <span class="product-price">KES ${a.price.toLocaleString()}</span>
+            <button class="btn btn-primary product-action-btn" data-name="${a.name}" data-price="${a.price}">Inquire / Order</button>
+          </div>
+        </div>
+      </article>
+    `).join(""),m()}function m(){document.querySelectorAll(".product-action-btn").forEach(l=>{l.addEventListener("click",a=>{const h=a.target.getAttribute("data-name"),g=a.target.getAttribute("data-price"),v=document.querySelector("#orderItems"),w=document.querySelector("#orderQuantity");if(v&&w){v.value=`Requested Product: ${h}
+Unit Price: KES ${parseInt(g).toLocaleString()}`,w.value="1";const b=document.querySelector("#order-form-section");if(b){b.scrollIntoView({behavior:"smooth"});const f=b.querySelector(".urgent-order-card");f&&(f.classList.add("highlight-pulse"),setTimeout(()=>{f.classList.remove("highlight-pulse")},2e3))}}})})}c.addEventListener("input",l=>{r=l.target.value.toLowerCase().trim(),d()}),i.forEach(l=>{l.addEventListener("click",()=>{i.forEach(a=>a.classList.remove("active")),l.classList.add("active"),s=l.getAttribute("data-category"),d()})}),d(),Z();const n=document.querySelector("#urgentOrderForm"),p=document.querySelector("#orderStatus"),y="https://formspree.io/f/xvgvayno";let u=null;function S(l,a="success",h=5e3){if(!p)return;u&&(clearTimeout(u),u=null),p.innerHTML=`
+      <div class="notification notification--${a}" role="status">
+        <div class="notification__content">${l}</div>
         <button class="notification__close" aria-label="Dismiss notification">&times;</button>
       </div>
-    `,n.querySelector(".notification");const l=n.querySelector(".notification__close");function p(){n&&(n.innerHTML="",i&&(clearTimeout(i),i=null))}l&&l.addEventListener("click",p),c>0&&(i=setTimeout(p,c))}o.addEventListener("submit",async r=>{r.preventDefault();const d=o.querySelector('button[type="submit"]'),c=d.textContent;d.textContent="Sending Request...",d.disabled=!0;const l=new FormData(o),p=l.get("phone"),u=l.get("company")||"N/A",h=l.get("urgency"),y=l.get("quantity"),f=l.get("location"),x=l.get("message"),k={name:l.get("name"),email:l.get("email"),subject:`Urgent Hardware Sourcing Request: ${h}`,company:u,phone:p,urgency:h,quantity:y,location:f,message:`
+    `,p.querySelector(".notification");const g=p.querySelector(".notification__close");function v(){p&&(p.innerHTML="",u&&(clearTimeout(u),u=null))}g&&g.addEventListener("click",v),h>0&&(u=setTimeout(v,h))}n.addEventListener("submit",async l=>{l.preventDefault();const a=n.querySelector('button[type="submit"]'),h=a.textContent;a.textContent="Sending Request...",a.disabled=!0;const g=new FormData(n),v=g.get("phone"),w=g.get("company")||"N/A",b=g.get("urgency"),f=g.get("quantity"),F=g.get("location"),D=g.get("message"),A={name:g.get("name"),email:g.get("email"),subject:`Urgent Hardware Sourcing Request: ${b}`,company:w,phone:v,urgency:b,quantity:f,location:F,message:`
 [URGENT SHOP ORDER REQUEST]
 ----------------------------------
-Company: ${u}
-Phone/WhatsApp: ${p}
-Urgency Level: ${h}
-Quantity Needed: ${y}
-Delivery Location: ${f}
+Company: ${w}
+Phone/WhatsApp: ${v}
+Urgency Level: ${b}
+Quantity Needed: ${f}
+Delivery Location: ${F}
 
 Requested Items & Specs:
-${x}
-      `.trim()};try{const m=await fetch(s,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(k)});if(m.ok)a("Thank you — your sourcing request has been submitted. Our team will contact you shortly!","success",7e3),o.reset();else{const S=await m.json().catch(()=>null);console.error("Formspree order error",m.status,S),a("There was a problem submitting your request. Please try again or contact us directly.","error",8e3)}}catch(m){console.error("Network error while submitting order",m),a("Network error. Please check your internet connection and try again.","error",8e3)}finally{d.textContent=c,d.disabled=!1}})}function Q(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#shop");e.style.display="block",V()}function X(){const e=document.querySelector("#development");e.innerHTML=`
+${D}
+      `.trim()};try{const x=await fetch(y,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(A)});if(x.ok)S("Thank you — your sourcing request has been submitted. Our team will contact you shortly!","success",7e3),n.reset();else{const P=await x.json().catch(()=>null);console.error("Formspree order error",x.status,P),S("There was a problem submitting your request. Please try again or contact us directly.","error",8e3)}}catch(x){console.error("Network error while submitting order",x),S("Network error. Please check your internet connection and try again.","error",8e3)}finally{a.textContent=h,a.disabled=!1}})}function te(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#shop");e.style.display="block",ee()}function ie(){const e=document.querySelector("#development");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.82)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Software Development</h2>
@@ -816,7 +835,92 @@ ${x}
         </div>
       </div>
     </section>
-  `}function Y(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#development").style.display="block",X()}function J(){const e=document.querySelector("#navigation");e.innerHTML=`
+  `}function oe(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#development").style.display="block",ie()}function se(){const e=document.querySelector("#services");e.innerHTML=`
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+      <div class="container">
+        <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Our Services</h2>
+        <p class="section-subtitle fade-in-up" style="font-size: clamp(0.95rem, 2vw, 1.25rem);">We offer comprehensive software development services to meet all your digital needs.</p>
+      </div>
+    </section>
+    <section class="services section" style="padding-top: 4rem;">
+      <div class="container">
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Hosting" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Enterprise Hosting</h3>
+            <p>Premium managed hosting environments featuring custom domain registration databases, dedicated enterprise emails, and high-availability servers structured for maximal uptime.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Web Arch" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Web Architecture</h3>
+            <p>High-end single page applications built inherently scalable with modern javascript environments. We create responsive, instantaneous, and cinematic web structures.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Mobile Apps" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Mobile App Deployment</h3>
+            <p>Native mobile applications structurally compiled for iOS and Android. Cross-platform engineering pipelines to deploy high-velocity user experiences directly to app stores.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=150" alt="UX Design" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>UI/UX Systems</h3>
+            <p>Glassmorphism, high-contrast dark modes, and dynamic geometry. We engineer interface experiences that prioritize raw digital immersion and absolute conversion rates.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/2387796/pexels-photo-2387796.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Cloud" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Cloud Solutions</h3>
+            <p>Elastic infrastructure setups running parallel load balancing using AWS, Vercel, and hybrid structures. We scale your raw networking data infinitely.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Custom Code" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Custom Software Systems</h3>
+            <p>Tailored computational systems engineered explicitly for complex datasets. Ranging from Fintech POS ledgers, CRM algorithms to multi-node operational architecture.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=150" alt="DevOps" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>DevOps & CI/CD Pipelines</h3>
+            <p>Automated software delivery streams guaranteeing your production environments sync flawlessly directly with your active coding networks via zero-latency pipelines.</p>
+          </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Digital Marketing" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Digital Marketing</h3>
+            <p>Strategic online marketing, search engine optimization (SEO), and social media campaigns designed to grow your brand and drive active user acquisition.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/2041627/pexels-photo-2041627.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data Entry" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Data Entry & Management</h3>
+            <p>Accurate, structured, and secure data entry services to keep your business records organized, up-to-date, and optimized for smooth operations.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data Analysis" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Data Analysis</h3>
+            <p>Deep-dive data processing, visual dashboard modeling, and statistical insights to help your business make data-backed strategic decisions.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data Science" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Data Science</h3>
+            <p>Predictive modeling, machine learning integration, and advanced analytical pipelines to transform raw data into intelligent automation.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Maintenance & Support" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Maintenance & Support</h3>
+            <p>Dedicated maintenance, regular updates, security patching, and hosting support for existing websites, portals, and software systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `}function ae(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#services").style.display="block",se()}function re(){const e=document.querySelector("#navigation");e.innerHTML=`
     <nav class="navbar">
       <div class="container">
         <div class="nav-container">
@@ -831,8 +935,8 @@ ${x}
                 <span class="nav-chevron" aria-hidden="true"></span>
               </a>
               <ul class="nav-dropdown-menu" role="menu">
-                <li role="none"><a href="/development" class="nav-link nav-dropdown-link" role="menuitem">Development</a></li>
-                <li role="none"><a href="/shop" class="nav-link nav-dropdown-link" role="menuitem">Shop</a></li>
+                <li role="none"><a href="/development" class="nav-link nav-dropdown-link" role="menuitem">Development & Services</a></li>
+                <li role="none"><a href="/shop" class="nav-link nav-dropdown-link" role="menuitem">Shop & Sourcing</a></li>
               </ul>
             </li>
             <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
@@ -840,6 +944,11 @@ ${x}
             <li><a href="/team" class="nav-link">Team</a></li>
             <li><a href="/pricing" class="nav-link">Pricing</a></li>
             <li><a href="/contact" class="nav-link">Contact</a></li>
+            <li>
+              <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+                <span class="theme-toggle-icon">☀️</span>
+              </button>
+            </li>
           </ul>
           <button type="button" class="mobile-menu-btn" aria-label="Open menu">☰</button>
           <div class="mobile-menu">
@@ -849,9 +958,8 @@ ${x}
                 <details class="nav-mobile-details">
                   <summary class="nav-mobile-summary">Services</summary>
                   <div class="nav-mobile-submenu">
-                    <a href="/services" class="nav-link">All services</a>
-                    <a href="/development" class="nav-link">Development</a>
-                    <a href="/shop" class="nav-link">Shop</a>
+                    <a href="/development" class="nav-link">Development & Services</a>
+                    <a href="/shop" class="nav-link">Shop & Sourcing</a>
                   </div>
                 </details>
               </li>
@@ -860,12 +968,18 @@ ${x}
               <li><a href="/team" class="nav-link">Team</a></li>
               <li><a href="/pricing" class="nav-link">Pricing</a></li>
               <li><a href="/contact" class="nav-link">Contact</a></li>
+              <li style="padding: 1rem 1rem 0.5rem; display: flex; justify-content: center;">
+                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+                  <span class="theme-toggle-icon" style="margin-right: 0.5rem;">☀️</span> Theme
+                </button>
+              </li>
             </ul>
           </div>
+
         </div>
       </div>
     </nav>
-  `}function Z(){const e=document.querySelector("#footer");e.innerHTML=`
+  `}function ne(){const e=document.querySelector("#footer");e.innerHTML=`
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -922,7 +1036,7 @@ ${x}
         </div>
       </div>
     </footer>
-  `}const v={"/":D,"/about":P,"/services":B,"/pricing":L,"/portfolio":j,"/team":z,"/contact":R,"/privacy":U,"/terms":_,"/shop":Q,"/development":Y},w=new Set(Object.keys(v));function ee(){const e=window.location.hash.replace(/^#/,"");if(e&&e!=="/")return;let t=window.location.pathname||"/";t=t.replace(/\/index\.html$/i,"")||"/",t.length>1&&t.endsWith("/")&&(t=t.slice(0,-1));const o="/".replace(/\/$/,"");if(o&&t.startsWith(o)&&(t=t.slice(o.length)||"/"),t.startsWith("/")||(t=`/${t}`),t==="/"||!w.has(t))return;const n="/".replace(/\/$/,""),s=n===""?"/":`${n}/`;window.history.replaceState(null,"",`${window.location.origin}${s}#${t}`)}function g(){ee();const e=window.location.hash.slice(1)||"/",t=e.startsWith("/")?e:"/"+e,o=v[t]||W,n=document.querySelector("#app");!v[t]?n.innerHTML=`
+  `}function le(){const e=document.body.classList.toggle("light-theme");localStorage.setItem("theme",e?"light":"dark"),ce(e)}function ce(e){document.querySelectorAll(".theme-toggle-icon").forEach(t=>{t.textContent=e?"🌙":"☀️",t.style.transform=e?"rotate(360deg)":"rotate(0deg)"})}document.addEventListener("click",e=>{e.target.closest(".theme-toggle-btn")&&le()});const C={"/":L,"/about":z,"/services":ae,"/pricing":H,"/portfolio":I,"/team":W,"/contact":G,"/privacy":V,"/terms":X,"/shop":te,"/development":oe},q=new Set(Object.keys(C));function de(){const e=window.location.hash.replace(/^#/,"");if(e&&e!=="/")return;let t=window.location.pathname||"/";t=t.replace(/\/index\.html$/i,"")||"/",t.length>1&&t.endsWith("/")&&(t=t.slice(0,-1));const o="/".replace(/\/$/,"");if(o&&t.startsWith(o)&&(t=t.slice(o.length)||"/"),t.startsWith("/")||(t=`/${t}`),t==="/"||!q.has(t))return;const c="/".replace(/\/$/,""),i=c===""?"/":`${c}/`;window.history.replaceState(null,"",`${window.location.origin}${i}#${t}`)}function k(){de();const e=window.location.hash.slice(1)||"/",t=e.startsWith("/")?e:"/"+e,o=C[t]||U,c=document.querySelector("#app");!C[t]?c.innerHTML=`
       <div class="app">
         <nav id="navigation"></nav>
         <main>
@@ -930,7 +1044,7 @@ ${x}
         </main>
         <footer id="footer"></footer>
       </div>
-    `:n.innerHTML=`
+    `:c.innerHTML=`
       <div class="app">
         <nav id="navigation"></nav>
         <main>
@@ -948,4 +1062,4 @@ ${x}
         </main>
         <footer id="footer"></footer>
       </div>
-    `,J(),Z(),o(),window.scrollTo(0,0),te(t),ie(t)}function te(e){var n,s;document.querySelectorAll(".nav-link").forEach(i=>i.classList.remove("active")),document.querySelectorAll(".nav-dropdown").forEach(i=>i.classList.remove("is-active-route")),new Set(["/services","/shop","/development"]).has(e)&&((n=document.querySelector(".nav-dropdown"))==null||n.classList.add("is-active-route"),(s=document.querySelector(".nav-dropdown-toggle"))==null||s.classList.add("active"));const o=document.querySelector(`.nav-link[href="${e}"]`);o&&o.classList.add("active")}const b={"/":"Rodstar Tech Devs - Professional Software Development","/about":"About Us | Rodstar Tech Devs","/services":"Services | Rodstar Tech Devs","/development":"Software Development | Rodstar Tech Devs","/pricing":"Pricing | Rodstar Tech Devs","/portfolio":"Portfolio | Rodstar Tech Devs","/team":"Team | Rodstar Tech Devs","/contact":"Contact | Rodstar Tech Devs","/privacy":"Privacy Policy | Rodstar Tech Devs","/terms":"Terms of Service | Rodstar Tech Devs","/shop":"Shop | Rodstar Tech Devs"};function ie(e){if(!w.has(e)){document.title="Page Not Found | Rodstar Tech Devs";return}document.title=b[e]||b["/"]}window.addEventListener("popstate",()=>{g()});window.addEventListener("hashchange",()=>{g()});document.addEventListener("click",e=>{if(e.target.matches(".nav-link")||e.target.closest(".nav-link")){e.preventDefault();const o=(e.target.matches(".nav-link")?e.target:e.target.closest(".nav-link")).getAttribute("href");o.startsWith("/")&&(window.location.hash=o)}});document.addEventListener("DOMContentLoaded",()=>{"requestIdleCallback"in window?requestIdleCallback(()=>{g()},{timeout:1e3}):setTimeout(()=>{g()},100)});document.addEventListener("click",e=>{e.target.closest(".mobile-menu-btn")&&(e.stopPropagation(),document.querySelector(".mobile-menu").classList.toggle("active")),e.target.closest(".mobile-menu .nav-link")&&document.querySelector(".mobile-menu").classList.remove("active")});
+    `,re(),ne(),o(),window.scrollTo(0,0),pe(t),ge(t)}function pe(e){var c,i;document.querySelectorAll(".nav-link").forEach(s=>s.classList.remove("active")),document.querySelectorAll(".nav-dropdown").forEach(s=>s.classList.remove("is-active-route")),new Set(["/services","/shop","/development"]).has(e)&&((c=document.querySelector(".nav-dropdown"))==null||c.classList.add("is-active-route"),(i=document.querySelector(".nav-dropdown-toggle"))==null||i.classList.add("active"));const o=document.querySelector(`.nav-link[href="${e}"]`);o&&o.classList.add("active")}const T={"/":"Rodstar Tech Devs - Professional Software Development","/about":"About Us | Rodstar Tech Devs","/services":"Services | Rodstar Tech Devs","/development":"Software Development | Rodstar Tech Devs","/pricing":"Pricing | Rodstar Tech Devs","/portfolio":"Portfolio | Rodstar Tech Devs","/team":"Team | Rodstar Tech Devs","/contact":"Contact | Rodstar Tech Devs","/privacy":"Privacy Policy | Rodstar Tech Devs","/terms":"Terms of Service | Rodstar Tech Devs","/shop":"Shop | Rodstar Tech Devs"};function ge(e){if(!q.has(e)){document.title="Page Not Found | Rodstar Tech Devs";return}document.title=T[e]||T["/"]}window.addEventListener("popstate",()=>{k()});window.addEventListener("hashchange",()=>{k()});document.addEventListener("click",e=>{if(e.target.matches(".nav-link")||e.target.closest(".nav-link")){e.preventDefault();const o=(e.target.matches(".nav-link")?e.target:e.target.closest(".nav-link")).getAttribute("href");o.startsWith("/")&&(window.location.hash=o)}});document.addEventListener("DOMContentLoaded",()=>{"requestIdleCallback"in window?requestIdleCallback(()=>{k()},{timeout:1e3}):setTimeout(()=>{k()},100)});document.addEventListener("click",e=>{e.target.closest(".mobile-menu-btn")&&(e.stopPropagation(),document.querySelector(".mobile-menu").classList.toggle("active")),e.target.closest(".mobile-menu .nav-link")&&document.querySelector(".mobile-menu").classList.remove("active")});

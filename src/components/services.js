@@ -53,6 +53,36 @@ export function setupServices() {
             <h3>DevOps & CI/CD Pipelines</h3>
             <p>Automated software delivery streams guaranteeing your production environments sync flawlessly directly with your active coding networks via zero-latency pipelines.</p>
           </div>
+          
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Digital Marketing" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Digital Marketing</h3>
+            <p>Strategic online marketing, search engine optimization (SEO), and social media campaigns designed to grow your brand and drive active user acquisition.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/2041627/pexels-photo-2041627.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data Entry" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Data Entry & Management</h3>
+            <p>Accurate, structured, and secure data entry services to keep your business records organized, up-to-date, and optimized for smooth operations.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data Analysis" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Data Analysis</h3>
+            <p>Deep-dive data processing, visual dashboard modeling, and statistical insights to help your business make data-backed strategic decisions.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Data Science" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Data Science</h3>
+            <p>Predictive modeling, machine learning integration, and advanced analytical pipelines to transform raw data into intelligent automation.</p>
+          </div>
+
+          <div class="service-card">
+            <img src="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Maintenance & Support" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid #007BFF; box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);" loading="lazy" decoding="async">
+            <h3>Maintenance & Support</h3>
+            <p>Dedicated maintenance, regular updates, security patching, and hosting support for existing websites, portals, and software systems.</p>
+          </div>
         </div>
       </div>
     </section>

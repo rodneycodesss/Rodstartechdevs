@@ -45,6 +45,129 @@ const categories = [
   },
 ]
 
+const products = [
+  {
+    id: 'mikrotik-rb951',
+    name: 'Mikrotik RB951',
+    price: 7500,
+    category: 'Routers & GPON',
+    desc: 'High performance wireless SOHO AP with a new generation Atheros CPU and robust processing power.',
+    image: '/mikrotik_router.jpg'
+  },
+  {
+    id: 'f3-tenda',
+    name: 'F3 Tenda',
+    price: 950,
+    category: 'Routers & GPON',
+    desc: '300Mbps wireless router designed for smart home networking life. Easy setup and high stability.',
+    image: '/tenda_router.jpg'
+  },
+  {
+    id: 'cat6-indoor',
+    name: 'Cat 6 Indoor Cable',
+    price: 4000,
+    category: 'Cables',
+    desc: 'High-speed, high-quality copper indoor network cable (305m roll) for local networking.',
+    image: '/cat6_cable.png'
+  },
+  {
+    id: 'cat6-outdoor',
+    name: 'Cat 6 Outdoor Cable',
+    price: 6000,
+    category: 'Cables',
+    desc: 'Weatherproof, double-shielded outdoor network cable (305m roll) for heavy-duty networking.',
+    image: '/cat6_cable.png'
+  },
+  {
+    id: 'tape-small',
+    name: 'Insulating Tape (Small)',
+    price: 70,
+    category: 'Accessories & Management',
+    desc: 'Durable electrical insulating tape for wire wrapping and safe splicing.',
+    image: '/electrical_tape.png'
+  },
+  {
+    id: 'tape-big',
+    name: 'Insulating Tape (Large)',
+    price: 130,
+    category: 'Accessories & Management',
+    desc: 'High-grade professional electrical insulating tape for heavy-duty wire protection.',
+    image: '/electrical_tape.png'
+  },
+  {
+    id: 'adapter-small',
+    name: 'Adapter Box (Small)',
+    price: 300,
+    category: 'Accessories & Management',
+    desc: 'Small protective adapter casing/junction box for clean node connections.',
+    image: '/adapter_box.png'
+  },
+  {
+    id: 'adapter-big',
+    name: 'Adapter Box (Big)',
+    price: 350,
+    category: 'Accessories & Management',
+    desc: 'Large weatherproof adapter box/junction box for enclosing connectors and splitters.',
+    image: '/adapter_box.png'
+  },
+  {
+    id: 'gpon',
+    name: 'GPON ONU',
+    price: 1350,
+    category: 'Routers & GPON',
+    desc: 'Gigabit Passive Optical Network terminal for high-speed fiber-to-the-home internet access.',
+    image: '/gpon_onu.jpg'
+  },
+  {
+    id: 'cable-tie-small',
+    name: 'Cable Ties (Small Size)',
+    price: 180,
+    category: 'Accessories & Management',
+    desc: 'Pack of small nylon cable zip ties for neat wire and cable management.',
+    image: '/cable_ties.jpg'
+  },
+  {
+    id: 'cable-tie-big',
+    name: 'Cable Ties (Big Size)',
+    price: 250,
+    category: 'Accessories & Management',
+    desc: 'Pack of large, high-tensile strength nylon cable ties for securing cables.',
+    image: '/cable_ties.jpg'
+  },
+  {
+    id: 'switch-8port',
+    name: 'Switch 8 Port',
+    price: 1200,
+    category: 'Switches',
+    desc: 'Compact 8-port Ethernet switch for fast desktop wired network expansion.',
+    image: '/network_switch.jpg'
+  },
+  {
+    id: 'switch-gigaport',
+    name: 'Gigaport Switch',
+    price: 2450,
+    category: 'Switches',
+    desc: 'High-speed Gigabit Ethernet switch for zero-bottleneck data transfer across nodes.',
+    image: '/network_switch_giga.jpg'
+  },
+  {
+    id: 'extension-standard',
+    name: 'Power Extension',
+    price: 450,
+    category: 'Accessories & Management',
+    desc: 'Multi-socket power extension strip with surge protection for office or home setups.',
+    image: '/power_extension.jpg'
+  },
+  {
+    id: 'extension-10m',
+    name: 'Power Extension (10m)',
+    price: 1300,
+    category: 'Accessories & Management',
+    desc: 'Heavy-duty 10-meter long power extension cable with multiple sockets and surge protector.',
+    image: '/power_extension_10m.jpg'
+  }
+]
+
 function addShopScrollAnimations() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -63,7 +186,7 @@ function addShopScrollAnimations() {
 export function setupShop() {
   const shop = document.querySelector('#shop')
 
-  const cardsHtml = categories
+  const capabilitiesHtml = categories
     .map(
       (c) => `
     <article class="shop-category-card fade-in-up">
@@ -90,20 +213,36 @@ export function setupShop() {
           <h1 class="shop-hero-title fade-in-up">Premium Tech Sourcing & Hardware</h1>
           <p class="shop-hero-lead fade-in-up">We supply digital gadgets, laptops, computer accessories, networking equipment, printers, and other tech products for businesses and individuals across Kenya. Partnering with top-tier suppliers to deliver quality at scale.</p>
           <div class="shop-hero-ctas fade-in-up">
-            <a href="#order-form-section" class="btn btn-primary">Place Urgent Order</a>
-            <a href="/contact" class="btn btn-outline nav-link">Contact Sourcing Team</a>
+            <a href="#catalog-section" class="btn btn-primary">Browse Catalog</a>
+            <a href="#order-form-section" class="btn btn-outline">Custom Sourcing Request</a>
           </div>
         </div>
       </section>
 
-      <section class="shop-construction section" aria-labelledby="shop-construction-heading">
+      <section class="shop-catalog section" id="catalog-section" aria-labelledby="shop-catalog-heading">
         <div class="container">
-          <div class="shop-construction-inner fade-in-up">
-            <div class="shop-construction-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg>
+          <div class="shop-section-head fade-in-up">
+            <h2 id="shop-catalog-heading">Available Stock & Hardware</h2>
+            <p>Browse our in-stock items ready for immediate sourcing and local delivery across Kenya.</p>
+          </div>
+          
+          <div class="shop-catalog-controls fade-in-up">
+            <div class="search-bar-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="productSearch" placeholder="Search hardware, brands, specs...">
             </div>
-            <h2 id="shop-construction-heading">Catalog Sourcing In Progress 📦</h2>
-            <p>Our online storefront and interactive product catalog are updating shortly. In the meantime, we are fully active in sourcing and supply operations. You can place urgent hardware, laptop, copier, or digital gadget requests directly below using our urgent order request form.</p>
+            
+            <div class="filter-buttons-wrapper">
+              <button class="filter-btn active" data-category="All">All</button>
+              <button class="filter-btn" data-category="Routers & GPON">Routers & GPON</button>
+              <button class="filter-btn" data-category="Cables">Cables</button>
+              <button class="filter-btn" data-category="Switches">Switches</button>
+              <button class="filter-btn" data-category="Accessories & Management">Accessories & Management</button>
+            </div>
+          </div>
+
+          <div class="shop-products-grid" id="product-grid">
+            <!-- Filtered products will render here -->
           </div>
         </div>
       </section>
@@ -114,10 +253,10 @@ export function setupShop() {
             <div class="shop-catalog-info">
               <div class="shop-section-head fade-in-up" style="text-align: left; margin-bottom: 2rem;">
                 <h2 id="shop-workspace-heading">Sourcing Capabilities</h2>
-                <p>Browse our core categories. We handle everything from bulk business setups to custom individual accessories.</p>
+                <p>Browse our core capabilities. We handle everything from bulk business setups to custom individual accessories.</p>
               </div>
               <div class="shop-categories-grid">
-                ${cardsHtml}
+                ${capabilitiesHtml}
               </div>
             </div>
 
@@ -187,6 +326,101 @@ export function setupShop() {
     </div>
   `
 
+  // Interactive Product Catalog Filtering
+  const productGrid = document.querySelector('#product-grid')
+  const searchInput = document.querySelector('#productSearch')
+  const filterButtons = document.querySelectorAll('.filter-btn')
+
+  let activeCategory = 'All'
+  let searchQuery = ''
+
+  function renderFilteredProducts() {
+    const filtered = products.filter(p => {
+      const matchesCategory = activeCategory === 'All' || p.category === activeCategory
+      const matchesSearch = p.name.toLowerCase().includes(searchQuery) || 
+                            p.desc.toLowerCase().includes(searchQuery) ||
+                            p.category.toLowerCase().includes(searchQuery)
+      return matchesCategory && matchesSearch
+    })
+
+    if (filtered.length === 0) {
+      productGrid.innerHTML = `
+        <div class="shop-no-results fade-in-up animate-in">
+          <p>No products found matching your search. Please submit a custom request below.</p>
+        </div>
+      `
+      return
+    }
+
+    productGrid.innerHTML = filtered.map(p => `
+      <article class="shop-product-card fade-in-up animate-in">
+        <div class="product-card-image-wrapper">
+          <img src="${p.image}" alt="${p.name}" loading="lazy">
+          <span class="product-category-tag">${p.category}</span>
+        </div>
+        <div class="product-card-body">
+          <h3>${p.name}</h3>
+          <p class="product-desc">${p.desc}</p>
+          <div class="product-card-footer">
+            <span class="product-price">KES ${p.price.toLocaleString()}</span>
+            <button class="btn btn-primary product-action-btn" data-name="${p.name}" data-price="${p.price}">Inquire / Order</button>
+          </div>
+        </div>
+      </article>
+    `).join('')
+
+    bindProductActionButtons()
+  }
+
+  function bindProductActionButtons() {
+    document.querySelectorAll('.product-action-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const name = e.target.getAttribute('data-name')
+        const price = e.target.getAttribute('data-price')
+        
+        const orderItemsField = document.querySelector('#orderItems')
+        const quantityField = document.querySelector('#orderQuantity')
+        
+        if (orderItemsField && quantityField) {
+          orderItemsField.value = `Requested Product: ${name}\nUnit Price: KES ${parseInt(price).toLocaleString()}`
+          quantityField.value = '1'
+          
+          const orderSection = document.querySelector('#order-form-section')
+          if (orderSection) {
+            orderSection.scrollIntoView({ behavior: 'smooth' })
+            
+            const orderCard = orderSection.querySelector('.urgent-order-card')
+            if (orderCard) {
+              orderCard.classList.add('highlight-pulse')
+              setTimeout(() => {
+                orderCard.classList.remove('highlight-pulse')
+              }, 2000)
+            }
+          }
+        }
+      })
+    })
+  }
+
+  // Bind Search Input
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value.toLowerCase().trim()
+    renderFilteredProducts()
+  })
+
+  // Bind Filter Buttons
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'))
+      btn.classList.add('active')
+      activeCategory = btn.getAttribute('data-category')
+      renderFilteredProducts()
+    })
+  })
+
+  // Initial render
+  renderFilteredProducts()
+
   addShopScrollAnimations()
 
   // Handle urgent order form submission
@@ -238,7 +472,6 @@ export function setupShop() {
 
     const formData = new FormData(form)
     
-    // Construct rich text message for Formspree to capture phone, location, urgency, and quantity clearly
     const phone = formData.get('phone')
     const company = formData.get('company') || 'N/A'
     const urgency = formData.get('urgency')
@@ -246,7 +479,6 @@ export function setupShop() {
     const location = formData.get('location')
     const message = formData.get('message')
 
-    // Formspree accepts regular form inputs. We submit all parameters
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),

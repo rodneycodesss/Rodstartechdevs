@@ -45,13 +45,15 @@ export function setupPortfolio() {
           <div class="portfolio-item">
             <div class="portfolio-image"></div>
             <div class="portfolio-content">
-              <h3>DevSoko</h3>
-              <p>A platform for freelancers to find clients and projects, with a focus on security and reliability.</p>
+              <h3>Moussad Realty</h3>
+              <p>A premium real estate platform for verified listings, property investments, and long-term stays in Mombasa & Kisumu, featuring secure bookings and real-time mapping.</p>
               <div class="portfolio-tags">
                 <span class="tag">React</span>
                 <span class="tag">TypeScript</span>
-                <span class="tag">Biometrics</span>
-                <span class="tag">Security</span>
+                <span class="tag">Real Estate</span>
+                <span class="tag">Geolocation</span>
+                <span class="tag">Map Integration</span>
+                <span class="tag">Booking</span>
               </div>
             </div>
           </div>

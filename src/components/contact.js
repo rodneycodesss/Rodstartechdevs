@@ -53,22 +53,22 @@ export function setupContact() {
             <div id="contactStatus" class="contact-status" aria-live="polite" aria-atomic="true"></div>
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" required placeholder="e.g. Rodney Gilbert">
             </div>
             
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
             </div>
             
             <div class="form-group">
               <label for="company">Company (Optional)</label>
-              <input type="text" id="company" name="company">
+              <input type="text" id="company" name="company" placeholder="e.g. Moussad Realty">
             </div>
             
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required>
+              <input type="text" id="subject" name="subject" required placeholder="e.g. Custom Software Development Inquiry">
             </div>
             
             <div class="form-group">

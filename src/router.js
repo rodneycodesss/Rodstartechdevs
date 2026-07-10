@@ -9,6 +9,7 @@ import { setupPrivacyPage } from './pages/privacy.js'
 import { setupTermsPage } from './pages/terms.js'
 import { setupShopPage } from './pages/shop.js'
 import { setupDevelopmentPage } from './pages/development.js'
+import { setupServicesPage } from './pages/services.js'
 import { setupNavigation } from './components/navigation.js'
 import { setupFooter } from './components/footer.js'
 import { initTheme } from './theme.js'
@@ -16,7 +17,7 @@ import { initTheme } from './theme.js'
 const routes = {
   '/': setupHomePage,
   '/about': setupAboutPage,
-  '/services': setupDevelopmentPage, // Map services page route directly to development page
+  '/services': setupServicesPage,
   '/pricing': setupPricingPage,
   '/portfolio': setupPortfolioPage,
   '/team': setupTeamPage,
