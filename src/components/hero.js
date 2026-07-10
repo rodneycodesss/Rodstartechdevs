@@ -5,7 +5,7 @@ export function setupHero() {
   
   hero.innerHTML = `
     <section class="hero">
-      <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #16213e 100%); z-index: 0;"></div>
+      <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 10, 46, 0.85) 50%, rgba(22, 33, 62, 0.8) 100%), url('/homepage_hero.png') center/cover no-repeat; z-index: 0;"></div>
       <div class="hero-overlay"></div>
       <div class="glow-orb-1" style="z-index: 2;\"></div>
       <div class="glow-orb-2" style="z-index: 2;\"></div>

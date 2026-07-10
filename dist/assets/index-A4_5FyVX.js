@@ -1,6 +1,6 @@
 (function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))m(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&m(c)}).observe(document,{childList:!0,subtree:!0});function o(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function m(i){if(i.ep)return;i.ep=!0;const s=o(i);fetch(i.href,s)}})();function L(){const e=document.querySelector("#hero");e.innerHTML=`
     <section class="hero">
-      <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #16213e 100%); z-index: 0;"></div>
+      <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 10, 46, 0.85) 50%, rgba(22, 33, 62, 0.8) 100%), url('/homepage_hero.png') center/cover no-repeat; z-index: 0;"></div>
       <div class="hero-overlay"></div>
       <div class="glow-orb-1" style="z-index: 2;"></div>
       <div class="glow-orb-2" style="z-index: 2;"></div>
