@@ -7,6 +7,7 @@ const categories = [
     tag: 'Sourcing & Supply',
     icon: '💻',
     hue: 'linear-gradient(135deg, rgba(0, 123, 255, 0.25), rgba(0, 0, 0, 0.6))',
+    image: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     title: 'Networking Devices',
@@ -14,6 +15,7 @@ const categories = [
     tag: 'Infrastructure',
     icon: '🌐',
     hue: 'linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 40, 80, 0.7))',
+    image: 'https://images.pexels.com/photos/442154/pexels-photo-442154.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     title: 'Computer Accessories',
@@ -21,6 +23,7 @@ const categories = [
     tag: 'Workspace',
     icon: '🔌',
     hue: 'linear-gradient(135deg, rgba(91, 180, 255, 0.2), rgba(0, 0, 0, 0.6))',
+    image: 'https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     title: 'Printers & Copiers',
@@ -28,6 +31,7 @@ const categories = [
     tag: 'Office Equipment',
     icon: '🖨️',
     hue: 'linear-gradient(135deg, rgba(0, 86, 179, 0.3), rgba(0, 0, 0, 0.65))',
+    image: 'https://images.pexels.com/photos/1683498/pexels-photo-1683498.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     title: 'CCTV & Security',
@@ -35,6 +39,7 @@ const categories = [
     tag: 'Security & Surveillance',
     icon: '🛡️',
     hue: 'linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(26, 10, 46, 0.65))',
+    image: 'https://images.pexels.com/photos/430205/pexels-photo-430205.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     title: 'Other Tech & Backups',
@@ -42,6 +47,7 @@ const categories = [
     tag: 'Power & IoT',
     icon: '⚡',
     hue: 'linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(22, 33, 62, 0.7))',
+    image: 'https://images.pexels.com/photos/45082/pexels-photo-45082.jpeg?auto=compress&cs=tinysrgb&w=400',
   },
 ]
 
@@ -190,9 +196,10 @@ export function setupShop() {
     .map(
       (c) => `
     <article class="shop-category-card fade-in-up">
-      <div class="shop-card-visual" style="background: ${c.hue};">
-        <div class="shop-card-icon" aria-hidden="true">${c.icon}</div>
-        <div class="shop-card-placeholder" aria-hidden="true"></div>
+      <div class="shop-card-visual" style="position: relative;">
+        <img src="${c.image}" alt="${c.title}" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; pointer-events: none;" loading="lazy">
+        <div style="position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.65)); pointer-events: none;"></div>
+        <div class="shop-card-icon" style="position: relative; z-index: 1;" aria-hidden="true">${c.icon}</div>
       </div>
       <h3>${c.title}</h3>
       <p>${c.blurb}</p>
