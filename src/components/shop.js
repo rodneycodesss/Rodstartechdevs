@@ -315,6 +315,14 @@ export function setupShop() {
 
                   <div class="form-group">
                     <label for="orderItems">Items & Specifications Requested</label>
+                    <div id="selectedItemsContainer" style="display: none; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; margin-bottom: 0.75rem;">
+                      <h4 style="font-size: 0.95rem; font-weight: 600; color: white; margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span>Selected Items</span>
+                        <button type="button" id="clearCartBtn" style="background: transparent; border: none; color: #ff4d4d; font-size: 0.8rem; cursor: pointer; padding: 0; text-decoration: underline;">Clear All</button>
+                      </h4>
+                      <ul id="selectedItemsList" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                      </ul>
+                    </div>
                     <textarea id="orderItems" name="message" required placeholder="List laptops, accessories, printers, specs, or models you need..."></textarea>
                   </div>
 
@@ -379,30 +387,120 @@ export function setupShop() {
     bindProductActionButtons()
   }
 
+  let selectedProducts = []
+
+  function updateCartUI() {
+    const container = document.querySelector('#selectedItemsContainer')
+    const list = document.querySelector('#selectedItemsList')
+    const orderItemsField = document.querySelector('#orderItems')
+    const quantityField = document.querySelector('#orderQuantity')
+
+    if (!container || !list || !orderItemsField || !quantityField) return
+
+    if (selectedProducts.length === 0) {
+      container.style.display = 'none'
+      list.innerHTML = ''
+      orderItemsField.value = ''
+      quantityField.value = ''
+      
+      // Update catalog button labels
+      document.querySelectorAll('.product-action-btn').forEach(btn => {
+        btn.textContent = 'Inquire / Order'
+      })
+      return
+    }
+
+    container.style.display = 'block'
+    list.innerHTML = selectedProducts.map(p => `
+      <li style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-light); background: rgba(255,255,255,0.02); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+        <span style="font-weight: 500;">${p.name} <span style="opacity: 0.7; font-size: 0.75rem;">(x${p.quantity})</span></span>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button type="button" class="cart-adjust-btn" data-name="${p.name}" data-action="decrease" style="width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold; line-height: 1;">-</button>
+          <button type="button" class="cart-adjust-btn" data-name="${p.name}" data-action="increase" style="width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: bold; line-height: 1;">+</button>
+          <button type="button" class="cart-remove-btn" data-name="${p.name}" style="background: transparent; border: none; color: #ff4d4d; cursor: pointer; font-size: 1.25rem; margin-left: 0.5rem; padding: 0; line-height: 1; display: inline-flex; align-items: center; justify-content: center;">&times;</button>
+        </div>
+      </li>
+    `).join('')
+
+    // Update Textarea and Quantity Input
+    const formattedText = `[Selected Hardware Items]\n=========================\n${selectedProducts.map((p, idx) => `${idx + 1}. ${p.name} - Qty: ${p.quantity} - Est. KES ${(p.price * p.quantity).toLocaleString()}`).join('\n')}\n\nTotal Estimated: KES ${selectedProducts.reduce((sum, p) => sum + p.price * p.quantity, 0).toLocaleString()}`
+    orderItemsField.value = formattedText
+    quantityField.value = selectedProducts.reduce((sum, p) => sum + p.quantity, 0)
+
+    // Bind item actions inside the cart list
+    list.querySelectorAll('.cart-adjust-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const name = e.target.getAttribute('data-name')
+        const action = e.target.getAttribute('data-action')
+        const item = selectedProducts.find(p => p.name === name)
+        if (item) {
+          if (action === 'increase') {
+            item.quantity += 1
+          } else if (action === 'decrease') {
+            item.quantity -= 1
+            if (item.quantity <= 0) {
+              selectedProducts = selectedProducts.filter(p => p.name !== name)
+            }
+          }
+          updateCartUI()
+        }
+      })
+    })
+
+    list.querySelectorAll('.cart-remove-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const name = e.target.getAttribute('data-name')
+        selectedProducts = selectedProducts.filter(p => p.name !== name)
+        updateCartUI()
+      })
+    })
+
+    // Update catalog buttons text/states
+    document.querySelectorAll('.product-action-btn').forEach(btn => {
+      const name = btn.getAttribute('data-name')
+      const inCart = selectedProducts.find(p => p.name === name)
+      if (inCart) {
+        btn.textContent = `In Cart (${inCart.quantity})`
+      } else {
+        btn.textContent = 'Inquire / Order'
+      }
+    })
+  }
+
+  // Clear Cart Btn
+  document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'clearCartBtn') {
+      selectedProducts = []
+      updateCartUI()
+    }
+  })
+
   function bindProductActionButtons() {
     document.querySelectorAll('.product-action-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const name = e.target.getAttribute('data-name')
         const price = e.target.getAttribute('data-price')
         
-        const orderItemsField = document.querySelector('#orderItems')
-        const quantityField = document.querySelector('#orderQuantity')
+        const existing = selectedProducts.find(p => p.name === name)
+        if (existing) {
+          existing.quantity += 1
+        } else {
+          selectedProducts.push({ name, price: parseInt(price), quantity: 1 })
+        }
         
-        if (orderItemsField && quantityField) {
-          orderItemsField.value = `Requested Product: ${name}\nUnit Price: KES ${parseInt(price).toLocaleString()}`
-          quantityField.value = '1'
+        updateCartUI()
+        
+        // Highlight form and scroll to it
+        const orderSection = document.querySelector('#order-form-section')
+        if (orderSection) {
+          orderSection.scrollIntoView({ behavior: 'smooth' })
           
-          const orderSection = document.querySelector('#order-form-section')
-          if (orderSection) {
-            orderSection.scrollIntoView({ behavior: 'smooth' })
-            
-            const orderCard = orderSection.querySelector('.urgent-order-card')
-            if (orderCard) {
-              orderCard.classList.add('highlight-pulse')
-              setTimeout(() => {
-                orderCard.classList.remove('highlight-pulse')
-              }, 2000)
-            }
+          const orderCard = orderSection.querySelector('.urgent-order-card')
+          if (orderCard) {
+            orderCard.classList.add('highlight-pulse')
+            setTimeout(() => {
+              orderCard.classList.remove('highlight-pulse')
+            }, 2000)
           }
         }
       })
@@ -522,6 +620,8 @@ ${message}
       if (res.ok) {
         showNotification('Thank you — your sourcing request has been submitted. Our team will contact you shortly!', 'success', 7000)
         form.reset()
+        selectedProducts = []
+        updateCartUI()
       } else {
         const payload = await res.json().catch(() => null)
         console.error('Formspree order error', res.status, payload)
