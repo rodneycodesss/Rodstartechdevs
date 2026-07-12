@@ -1,4 +1,4 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))m(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&m(c)}).observe(document,{childList:!0,subtree:!0});function o(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function m(i){if(i.ep)return;i.ep=!0;const s=o(i);fetch(i.href,s)}})();function L(){const e=document.querySelector("#hero");e.style.background="linear-gradient(180deg, rgba(10, 10, 26, 0.88) 0%, rgba(26, 10, 46, 0.92) 50%, rgba(10, 10, 26, 0.96) 100%), url('/homepage_hero.png') center/cover no-repeat",e.style.position="relative",e.innerHTML=`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))m(i);new MutationObserver(i=>{for(const s of i)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&m(c)}).observe(document,{childList:!0,subtree:!0});function o(i){const s={};return i.integrity&&(s.integrity=i.integrity),i.referrerPolicy&&(s.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?s.credentials="include":i.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function m(i){if(i.ep)return;i.ep=!0;const s=o(i);fetch(i.href,s)}})();function j(){const e=document.querySelector("#hero");e.style.background="linear-gradient(180deg, rgba(10, 10, 26, 0.88) 0%, rgba(26, 10, 46, 0.92) 50%, rgba(10, 10, 26, 0.96) 100%), url('/homepage_hero.png') center/cover no-repeat",e.style.position="relative",e.innerHTML=`
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="glow-orb-1" style="z-index: 2;"></div>
@@ -134,7 +134,7 @@
         </div>
       </div>
     </section>
-  `,j(),M()}function j(){const e=document.querySelectorAll(".stat-number"),t=new IntersectionObserver(i=>{i.forEach(s=>{if(s.isIntersecting){const c=parseFloat(s.target.getAttribute("data-target")),l=c/(2e3/16);let p=0;const v=setInterval(()=>{p+=l,p>=c&&(p=c,clearInterval(v)),s.target.getAttribute("data-target")==="99.9"?s.target.textContent=p.toFixed(1)+"%":s.target.textContent=Math.floor(p),s.target.getAttribute("data-target")==="100"&&(s.target.textContent=Math.floor(p)+"%"),s.target.getAttribute("data-target")==="24"&&(s.target.textContent=Math.floor(p)+"/7")},16);t.unobserve(s.target)}})});e.forEach(i=>t.observe(i));const o=document.querySelector("#typewriter-motto");if(o){let u=function(){if(!document.body.contains(o))return;c===0&&(o.innerHTML='<span class="gradient-text"></span><span class="cursor">|</span>');const l=o.querySelector(".gradient-text"),p=o.querySelector(".cursor");if(c<i.length)l&&(l.innerHTML+=i.charAt(c)),c++,setTimeout(u,60);else if(c<i.length+s.length)p&&p.remove(),o.innerHTML+=s.charAt(c-i.length)+'<span class="cursor">|</span>',c++,setTimeout(u,60);else{const v=o.querySelector(".cursor");v&&v.classList.add("blink")}};var m=u;const i="Engineering Growth",s=" Through Technology.";let c=0;setTimeout(u,400)}}function M(){const e=new IntersectionObserver(t=>{t.forEach(o=>{o.isIntersecting&&o.target.classList.add("animate-in")})},{threshold:.1});document.querySelectorAll(".fade-in-up").forEach(t=>{e.observe(t)})}function z(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#hero").style.display="block",L()}function I(){const e=document.querySelector("#about");e.innerHTML=`
+  `,L(),M()}function L(){const e=document.querySelectorAll(".stat-number"),t=new IntersectionObserver(i=>{i.forEach(s=>{if(s.isIntersecting){const c=parseFloat(s.target.getAttribute("data-target")),l=c/(2e3/16);let p=0;const v=setInterval(()=>{p+=l,p>=c&&(p=c,clearInterval(v)),s.target.getAttribute("data-target")==="99.9"?s.target.textContent=p.toFixed(1)+"%":s.target.textContent=Math.floor(p),s.target.getAttribute("data-target")==="100"&&(s.target.textContent=Math.floor(p)+"%"),s.target.getAttribute("data-target")==="24"&&(s.target.textContent=Math.floor(p)+"/7")},16);t.unobserve(s.target)}})});e.forEach(i=>t.observe(i));const o=document.querySelector("#typewriter-motto");if(o){let u=function(){if(!document.body.contains(o))return;c===0&&(o.innerHTML='<span class="gradient-text"></span><span class="cursor">|</span>');const l=o.querySelector(".gradient-text"),p=o.querySelector(".cursor");if(c<i.length)l&&(l.innerHTML+=i.charAt(c)),c++,setTimeout(u,60);else if(c<i.length+s.length)p&&p.remove(),o.innerHTML+=s.charAt(c-i.length)+'<span class="cursor">|</span>',c++,setTimeout(u,60);else{const v=o.querySelector(".cursor");v&&v.classList.add("blink")}};var m=u;const i="Engineering Growth",s=" Through Technology.";let c=0;setTimeout(u,400)}}function M(){const e=new IntersectionObserver(t=>{t.forEach(o=>{o.isIntersecting&&o.target.classList.add("animate-in")})},{threshold:.1});document.querySelectorAll(".fade-in-up").forEach(t=>{e.observe(t)})}function z(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#hero").style.display="block",j()}function I(){const e=document.querySelector("#about");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/boardroom.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">About Rodstar Tech</h2>
@@ -176,7 +176,7 @@
         </div>
       </div>
     </section>
-  `}function O(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#about").style.display="block",I()}function H(){const e=document.querySelector("#pricing");e.innerHTML=`
+  `}function H(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#about").style.display="block",I()}function O(){const e=document.querySelector("#pricing");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Our Pricing Plans</h2>
@@ -315,7 +315,7 @@
         </div>
       </div>
     </section>
-  `}function R(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#pricing").style.display="block",H()}function N(){const e=document.querySelector("#portfolio");e.innerHTML=`
+  `}function R(){document.querySelectorAll("main > section").forEach(e=>{e.style.display="none"}),document.querySelector("#pricing").style.display="block",O()}function N(){const e=document.querySelector("#portfolio");e.innerHTML=`
     <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/cloud.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
       <div class="container">
         <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Our Portfolio</h2>
@@ -397,9 +397,9 @@
             
             <div class="team-member">
               <div class="member-avatar">
-                <img src="/ASTRALIA.jpg" alt="Astralia Otieno" loading="lazy">
+                <img src="/ASTRALIA.jpg" alt="Astralia Akinyi" loading="lazy">
               </div>
-              <h3>Astralia Otieno</h3>
+              <h3>Astralia Akinyi</h3>
               <p class="role">General Manager</p>
               <p>Experienced manager directing operations, organizing project lifecycles, and ensuring high-quality client deliverables. Focused on team cohesion and efficiency.</p>
             </div>
@@ -419,14 +419,18 @@
           <h3 class="team-group-title" style="text-align: left; margin: 0 0 2rem; font-size: 1.5rem; font-weight: 600; color: white; border-left: 4px solid var(--primary-color); padding-left: 1rem; text-transform: uppercase; letter-spacing: 1px;">Engineering & Growth</h3>
           <div class="team-grid">
             <div class="team-member">
-              <div class="member-avatar">SG</div>
+              <div class="member-avatar">
+                <img src="/SWEENEY.jpg" alt="Sweeney Greg" loading="lazy">
+              </div>
               <h3>Sweeney Greg</h3>
               <p class="role">Backend Developer</p>
               <p>Specializing in secure databases, server-side algorithms, and third-party API integrations. Passionate about building robust backend infrastructure that scales.</p>
             </div>
 
             <div class="team-member">
-              <div class="member-avatar">DK</div>
+              <div class="member-avatar">
+                <img src="/DAPHNY.jpg" alt="Daphny Kemi" loading="lazy">
+              </div>
               <h3>Daphny Kemi</h3>
               <p class="role">Digital Marketing Intern</p>
               <p>Assisting in marketing outreach, content strategies, and social media enhancement. Eager to drive brand awareness and digital growth.</p>
@@ -1058,7 +1062,7 @@ ${S}
         </div>
       </div>
     </footer>
-  `}function de(){const e=document.body.classList.toggle("light-theme");localStorage.setItem("theme",e?"light":"dark"),pe(e)}function pe(e){document.querySelectorAll(".theme-toggle-icon").forEach(t=>{t.textContent=e?"🌙":"☀️",t.style.transform=e?"rotate(360deg)":"rotate(0deg)"})}document.addEventListener("click",e=>{e.target.closest(".theme-toggle-btn")&&de()});const A={"/":z,"/about":O,"/services":ne,"/pricing":R,"/portfolio":W,"/team":_,"/contact":U,"/privacy":X,"/terms":J,"/shop":oe,"/development":ae},P=new Set(Object.keys(A));function ge(){const e=window.location.hash.replace(/^#/,"");if(e&&e!=="/")return;let t=window.location.pathname||"/";t=t.replace(/\/index\.html$/i,"")||"/",t.length>1&&t.endsWith("/")&&(t=t.slice(0,-1));const o="/".replace(/\/$/,"");if(o&&t.startsWith(o)&&(t=t.slice(o.length)||"/"),t.startsWith("/")||(t=`/${t}`),t==="/"||!P.has(t))return;const m="/".replace(/\/$/,""),i=m===""?"/":`${m}/`;window.history.replaceState(null,"",`${window.location.origin}${i}#${t}`)}function F(){ge();const e=window.location.hash.slice(1)||"/",t=e.startsWith("/")?e:"/"+e,o=A[t]||Q,m=document.querySelector("#app");!A[t]?m.innerHTML=`
+  `}function de(){const e=document.body.classList.toggle("light-theme");localStorage.setItem("theme",e?"light":"dark"),pe(e)}function pe(e){document.querySelectorAll(".theme-toggle-icon").forEach(t=>{t.textContent=e?"🌙":"☀️",t.style.transform=e?"rotate(360deg)":"rotate(0deg)"})}document.addEventListener("click",e=>{e.target.closest(".theme-toggle-btn")&&de()});const A={"/":z,"/about":H,"/services":ne,"/pricing":R,"/portfolio":W,"/team":_,"/contact":U,"/privacy":X,"/terms":J,"/shop":oe,"/development":ae},P=new Set(Object.keys(A));function ge(){const e=window.location.hash.replace(/^#/,"");if(e&&e!=="/")return;let t=window.location.pathname||"/";t=t.replace(/\/index\.html$/i,"")||"/",t.length>1&&t.endsWith("/")&&(t=t.slice(0,-1));const o="/".replace(/\/$/,"");if(o&&t.startsWith(o)&&(t=t.slice(o.length)||"/"),t.startsWith("/")||(t=`/${t}`),t==="/"||!P.has(t))return;const m="/".replace(/\/$/,""),i=m===""?"/":`${m}/`;window.history.replaceState(null,"",`${window.location.origin}${i}#${t}`)}function F(){ge();const e=window.location.hash.slice(1)||"/",t=e.startsWith("/")?e:"/"+e,o=A[t]||Q,m=document.querySelector("#app");!A[t]?m.innerHTML=`
       <div class="app">
         <nav id="navigation"></nav>
         <main>
