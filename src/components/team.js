@@ -65,7 +65,7 @@ export function setupTeam() {
             <div class="holo-card-inner">
               <div class="holo-avatar-container">
                 <div class="avatar-holo-ring"></div>
-                <img src="/desmond.jpeg" alt="Desmond Migai" loading="lazy" class="team-avatar-img">
+                <img src="/Des.jpg" alt="Desmond Migai" loading="lazy" class="team-avatar-img">
               </div>
               <div class="team-status-pill">
                 <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>

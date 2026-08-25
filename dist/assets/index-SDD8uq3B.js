@@ -659,7 +659,7 @@
             <div class="holo-card-inner">
               <div class="holo-avatar-container">
                 <div class="avatar-holo-ring"></div>
-                <img src="/desmond.jpeg" alt="Desmond Migai" loading="lazy" class="team-avatar-img">
+                <img src="/Des.jpg" alt="Desmond Migai" loading="lazy" class="team-avatar-img">
               </div>
               <div class="team-status-pill">
                 <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>
@@ -740,63 +740,10 @@
               </button>
             </div>
           </div>
-
-          <!-- Daphny Kemi -->
-          <div class="team-holo-card glass-panel fade-in-up" data-dept="growth">
-            <div class="holo-card-inner">
-              <div class="holo-avatar-container">
-                <div class="avatar-holo-ring"></div>
-                <img src="/DAPHNY.jpg" alt="Daphny Kemi" loading="lazy" class="team-avatar-img">
-              </div>
-              <div class="team-status-pill">
-                <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>
-                ONLINE • DIGITAL MEDIA
-              </div>
-              <h3 class="team-name">Daphny Kemi</h3>
-              <p class="team-role">Digital Marketing Intern</p>
-              <p class="team-bio">
-                Assisting in marketing outreach, content strategies, and social media enhancement. Eager to drive brand awareness and digital growth across multi-channel platforms.
-              </p>
-
-              <div class="team-skills">
-                <span class="skill-tag">Digital Growth</span>
-                <span class="skill-tag">Content Strategy</span>
-                <span class="skill-tag">Social Media</span>
-              </div>
-
-              <button type="button" class="btn btn-outline btn-inspect-member" data-member="daphny">
-                Inspect Profile Matrix
-              </button>
-            </div>
+            
+              
           </div>
 
-          <!-- Astralia -->
-          <div class="team-holo-card glass-panel fade-in-up" data-dept="engineering growth">
-            <div class="holo-card-inner">
-              <div class="holo-avatar-container">
-                <div class="avatar-holo-ring"></div>
-                <img src="/ASTRALIA.jpg" alt="Astralia" loading="lazy" class="team-avatar-img" onerror="this.onerror=null; this.src='ASTRALIA.jpg';">
-              </div>
-              <div class="team-status-pill">
-                <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>
-                ONLINE • SOFTWARE ARCHITECT
-              </div>
-              <h3 class="team-name">Astralia</h3>
-              <p class="team-role">Systems & Web Engineer</p>
-              <p class="team-bio">
-                Designing sleek user interfaces, custom web applications, and responsive cloud services. Passionate about modern UI aesthetics and high-performance frontend architecture.
-              </p>
-
-              <div class="team-skills">
-                <span class="skill-tag">UI/UX Systems</span>
-                <span class="skill-tag">Web Engineering</span>
-                <span class="skill-tag">Cloud Services</span>
-              </div>
-
-              <button type="button" class="btn btn-outline btn-inspect-member" data-member="astralia">
-                Inspect Profile Matrix
-              </button>
-            </div>
           </div>
 
         </div>
@@ -1205,12 +1152,12 @@
 ${l.map((p,g)=>`${g+1}. ${p.name} - Qty: ${p.quantity} - Est. KES ${(p.price*p.quantity).toLocaleString()}`).join(`
 `)}
 
-Total Estimated: KES ${l.reduce((p,g)=>p+g.price*g.quantity,0).toLocaleString()}`;b.value=w,h.value=l.reduce((p,g)=>p+g.quantity,0),d.querySelectorAll(".cart-adjust-btn").forEach(p=>{p.addEventListener("click",g=>{const x=g.target.getAttribute("data-name"),S=g.target.getAttribute("data-action"),E=l.find(I=>I.name===x);E&&(S==="increase"?E.quantity+=1:S==="decrease"&&(E.quantity-=1,E.quantity<=0&&(l=l.filter(I=>I.name!==x))),c())})}),d.querySelectorAll(".cart-remove-btn").forEach(p=>{p.addEventListener("click",g=>{const x=g.target.getAttribute("data-name");l=l.filter(S=>S.name!==x),c()})}),document.querySelectorAll(".product-action-btn").forEach(p=>{const g=p.getAttribute("data-name"),x=l.find(S=>S.name===g);x?p.textContent=`In Cart (${x.quantity})`:p.textContent="Inquire / Order"})}document.addEventListener("click",m=>{m.target&&m.target.id==="clearCartBtn"&&(l=[],c())});function v(){document.querySelectorAll(".product-action-btn").forEach(m=>{m.addEventListener("click",d=>{const b=d.target.getAttribute("data-name"),h=d.target.getAttribute("data-price"),w=l.find(g=>g.name===b);w?w.quantity+=1:l.push({name:b,price:parseInt(h),quantity:1}),c();const p=document.querySelector("#order-form-section");if(p){p.scrollIntoView({behavior:"smooth"});const g=p.querySelector(".urgent-order-card");g&&(g.classList.add("highlight-pulse"),setTimeout(()=>{g.classList.remove("highlight-pulse")},2e3))}})})}r.addEventListener("input",m=>{n=m.target.value.toLowerCase().trim(),o()}),i.forEach(m=>{m.addEventListener("click",()=>{i.forEach(d=>d.classList.remove("active")),m.classList.add("active"),s=m.getAttribute("data-category"),o()})}),o(),ue();const y=document.querySelector("#urgentOrderForm"),u=document.querySelector("#orderStatus"),F="https://formspree.io/f/xvgvayno";let A=null;function R(m,d="success",b=5e3){if(!u)return;A&&(clearTimeout(A),A=null),u.innerHTML=`
+Total Estimated: KES ${l.reduce((p,g)=>p+g.price*g.quantity,0).toLocaleString()}`;b.value=w,h.value=l.reduce((p,g)=>p+g.quantity,0),d.querySelectorAll(".cart-adjust-btn").forEach(p=>{p.addEventListener("click",g=>{const x=g.target.getAttribute("data-name"),S=g.target.getAttribute("data-action"),E=l.find(D=>D.name===x);E&&(S==="increase"?E.quantity+=1:S==="decrease"&&(E.quantity-=1,E.quantity<=0&&(l=l.filter(D=>D.name!==x))),c())})}),d.querySelectorAll(".cart-remove-btn").forEach(p=>{p.addEventListener("click",g=>{const x=g.target.getAttribute("data-name");l=l.filter(S=>S.name!==x),c()})}),document.querySelectorAll(".product-action-btn").forEach(p=>{const g=p.getAttribute("data-name"),x=l.find(S=>S.name===g);x?p.textContent=`In Cart (${x.quantity})`:p.textContent="Inquire / Order"})}document.addEventListener("click",m=>{m.target&&m.target.id==="clearCartBtn"&&(l=[],c())});function v(){document.querySelectorAll(".product-action-btn").forEach(m=>{m.addEventListener("click",d=>{const b=d.target.getAttribute("data-name"),h=d.target.getAttribute("data-price"),w=l.find(g=>g.name===b);w?w.quantity+=1:l.push({name:b,price:parseInt(h),quantity:1}),c();const p=document.querySelector("#order-form-section");if(p){p.scrollIntoView({behavior:"smooth"});const g=p.querySelector(".urgent-order-card");g&&(g.classList.add("highlight-pulse"),setTimeout(()=>{g.classList.remove("highlight-pulse")},2e3))}})})}r.addEventListener("input",m=>{n=m.target.value.toLowerCase().trim(),o()}),i.forEach(m=>{m.addEventListener("click",()=>{i.forEach(d=>d.classList.remove("active")),m.classList.add("active"),s=m.getAttribute("data-category"),o()})}),o(),ue();const y=document.querySelector("#urgentOrderForm"),u=document.querySelector("#orderStatus"),F="https://formspree.io/f/xvgvayno";let A=null;function R(m,d="success",b=5e3){if(!u)return;A&&(clearTimeout(A),A=null),u.innerHTML=`
       <div class="notification notification--${d}" role="status">
         <div class="notification__content">${m}</div>
         <button class="notification__close" aria-label="Dismiss notification">&times;</button>
       </div>
-    `,u.querySelector(".notification");const h=u.querySelector(".notification__close");function w(){u&&(u.innerHTML="",A&&(clearTimeout(A),A=null))}h&&h.addEventListener("click",w),b>0&&(A=setTimeout(w,b))}y.addEventListener("submit",async m=>{m.preventDefault();const d=y.querySelector('button[type="submit"]'),b=d.textContent;d.textContent="Sending Request...",d.disabled=!0;const h=new FormData(y),w=h.get("phone"),p=h.get("company")||"N/A",g=h.get("urgency"),x=h.get("quantity"),S=h.get("location"),E=h.get("message"),I={name:h.get("name"),email:h.get("email"),subject:`Urgent Hardware Sourcing Request: ${g}`,company:p,phone:w,urgency:g,quantity:x,location:S,message:`
+    `,u.querySelector(".notification");const h=u.querySelector(".notification__close");function w(){u&&(u.innerHTML="",A&&(clearTimeout(A),A=null))}h&&h.addEventListener("click",w),b>0&&(A=setTimeout(w,b))}y.addEventListener("submit",async m=>{m.preventDefault();const d=y.querySelector('button[type="submit"]'),b=d.textContent;d.textContent="Sending Request...",d.disabled=!0;const h=new FormData(y),w=h.get("phone"),p=h.get("company")||"N/A",g=h.get("urgency"),x=h.get("quantity"),S=h.get("location"),E=h.get("message"),D={name:h.get("name"),email:h.get("email"),subject:`Urgent Hardware Sourcing Request: ${g}`,company:p,phone:w,urgency:g,quantity:x,location:S,message:`
 [URGENT SHOP ORDER REQUEST]
 ----------------------------------
 Company: ${p}
@@ -1221,7 +1168,7 @@ Delivery Location: ${S}
 
 Requested Items & Specs:
 ${E}
-      `.trim()};try{const D=await fetch(F,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(I)});if(D.ok)R("Thank you — your sourcing request has been submitted. Our team will contact you shortly!","success",7e3),y.reset(),l=[],c();else{const H=await D.json().catch(()=>null);console.error("Formspree order error",D.status,H),R("There was a problem submitting your request. Please try again or contact us directly.","error",8e3)}}catch(D){console.error("Network error while submitting order",D),R("Network error. Please check your internet connection and try again.","error",8e3)}finally{d.textContent=b,d.disabled=!1}})}function ve(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#shop");e.style.display="block",he()}function ye(){const e=document.querySelector("#development");e.innerHTML=`
+      `.trim()};try{const I=await fetch(F,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(D)});if(I.ok)R("Thank you — your sourcing request has been submitted. Our team will contact you shortly!","success",7e3),y.reset(),l=[],c();else{const H=await I.json().catch(()=>null);console.error("Formspree order error",I.status,H),R("There was a problem submitting your request. Please try again or contact us directly.","error",8e3)}}catch(I){console.error("Network error while submitting order",I),R("Network error. Please check your internet connection and try again.","error",8e3)}finally{d.textContent=b,d.disabled=!1}})}function ve(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#shop");e.style.display="block",he()}function ye(){const e=document.querySelector("#development");e.innerHTML=`
     <!-- Page Hero Banner -->
     <section class="page-hero" style="background: transparent; padding: 7rem 0 4rem; text-align: center; position: relative;">
       <div class="container" style="position: relative; z-index: 2;">
@@ -1787,7 +1734,7 @@ ${E}
 
       </div>
     </div>
-  `,Te())}function Te(){const e=document.querySelectorAll("#ai-sandbox-widget .sandbox-btn"),t=document.querySelector("#sandbox-output-log"),a={support:{log:['<div style="color: #64748B;">// Processing: Customer Support Agent Workflow...</div>','<div style="color: #F8FAFC;">Step 1: Parse User Natural Language Intent...</div>','<div style="color: #38BDF8;">Step 2: Query Knowledge Vector Base (RAG)...</div>','<div style="color: #00D4FF; font-weight: 600;">✔ Auto-Resolution Generated [Latency: 14.2ms]</div>']},finance:{log:['<div style="color: #64748B;">// Processing: Financial Risk Assessment Pipeline...</div>','<div style="color: #F8FAFC;">Step 1: Sanitize Ephemeral Payload Data...</div>','<div style="color: #38BDF8;">Step 2: Run Fraud Vector Classifier...</div>','<div style="color: #27C93F; font-weight: 600;">✔ Risk Score Calculated: 0.02 (APPROVED) [Latency: 18.5ms]</div>']},school:{log:['<div style="color: #64748B;">// Processing: School Portal Fee Automator...</div>','<div style="color: #F8FAFC;">Step 1: Sync Applegate Student Ledger...</div>','<div style="color: #38BDF8;">Step 2: Verify M-Pesa / Bank Webhook Transaction...</div>','<div style="color: #00D4FF; font-weight: 600;">✔ Digital Receipt Issued & Logged [Latency: 11.8ms]</div>']}};e.forEach(r=>{r.addEventListener("click",()=>{e.forEach(n=>n.classList.remove("active")),r.classList.add("active");const i=r.getAttribute("data-flow"),s=a[i];t&&s&&(t.innerHTML='<div style="color: #64748B;">// Initializing Mesh Connection...</div>',setTimeout(()=>{t.innerHTML=s.log.join("")},250))})})}function Ie(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#ai-hub");e&&(e.style.display="block"),Ce()}function De(){const e=document.querySelector("#support");e&&(e.innerHTML=`
+  `,Te())}function Te(){const e=document.querySelectorAll("#ai-sandbox-widget .sandbox-btn"),t=document.querySelector("#sandbox-output-log"),a={support:{log:['<div style="color: #64748B;">// Processing: Customer Support Agent Workflow...</div>','<div style="color: #F8FAFC;">Step 1: Parse User Natural Language Intent...</div>','<div style="color: #38BDF8;">Step 2: Query Knowledge Vector Base (RAG)...</div>','<div style="color: #00D4FF; font-weight: 600;">✔ Auto-Resolution Generated [Latency: 14.2ms]</div>']},finance:{log:['<div style="color: #64748B;">// Processing: Financial Risk Assessment Pipeline...</div>','<div style="color: #F8FAFC;">Step 1: Sanitize Ephemeral Payload Data...</div>','<div style="color: #38BDF8;">Step 2: Run Fraud Vector Classifier...</div>','<div style="color: #27C93F; font-weight: 600;">✔ Risk Score Calculated: 0.02 (APPROVED) [Latency: 18.5ms]</div>']},school:{log:['<div style="color: #64748B;">// Processing: School Portal Fee Automator...</div>','<div style="color: #F8FAFC;">Step 1: Sync Applegate Student Ledger...</div>','<div style="color: #38BDF8;">Step 2: Verify M-Pesa / Bank Webhook Transaction...</div>','<div style="color: #00D4FF; font-weight: 600;">✔ Digital Receipt Issued & Logged [Latency: 11.8ms]</div>']}};e.forEach(r=>{r.addEventListener("click",()=>{e.forEach(n=>n.classList.remove("active")),r.classList.add("active");const i=r.getAttribute("data-flow"),s=a[i];t&&s&&(t.innerHTML='<div style="color: #64748B;">// Initializing Mesh Connection...</div>',setTimeout(()=>{t.innerHTML=s.log.join("")},250))})})}function De(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#ai-hub");e&&(e.style.display="block"),Ce()}function Ie(){const e=document.querySelector("#support");e&&(e.innerHTML=`
     <div class="support-page page-hero">
       <div class="container">
         
@@ -1934,7 +1881,7 @@ ${E}
 
       </div>
     </div>
-  `,Fe(),Pe())}function Fe(){const e=document.querySelectorAll(".track-btn"),t=document.querySelectorAll(".support-track-content");e.forEach(a=>{a.addEventListener("click",()=>{e.forEach(i=>i.classList.remove("active")),a.classList.add("active");const r=a.getAttribute("data-target");t.forEach(i=>{i.id===r?i.style.display="block":i.style.display="none"})})})}function Pe(){const e=document.querySelector("#partnership-form"),t=document.querySelector("#partnership-status"),a="https://formspree.io/f/xvgvayno";e&&e.addEventListener("submit",async r=>{r.preventDefault();const i=e.querySelector('button[type="submit"]'),s=i.textContent;i.textContent="Submitting Proposal...",i.disabled=!0;const n=new FormData(e),o=Object.fromEntries(n.entries());try{(await fetch(a,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(o)})).ok?(t&&(t.style.display="block",t.style.color="#00D4FF",t.textContent="✔ Thank you! Your partnership proposal has been submitted successfully. Our executive team will review and reply within 24 hours."),e.reset()):t&&(t.style.display="block",t.style.color="#FF5F56",t.textContent="✖ There was an issue submitting your proposal. Please try again or email us directly at enquiries@rodstartechdevs.co.ke.")}catch(l){console.error("Formspree network error",l),t&&(t.style.display="block",t.style.color="#FF5F56",t.textContent="✖ Network connection error. Please check your internet connection and try again.")}finally{i.textContent=s,i.disabled=!1}})}function Re(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#support");e&&(e.style.display="block"),De()}function Le(){const e=document.querySelector("#navigation");e.innerHTML=`
+  `,Fe(),Pe())}function Fe(){const e=document.querySelectorAll(".track-btn"),t=document.querySelectorAll(".support-track-content");e.forEach(a=>{a.addEventListener("click",()=>{e.forEach(i=>i.classList.remove("active")),a.classList.add("active");const r=a.getAttribute("data-target");t.forEach(i=>{i.id===r?i.style.display="block":i.style.display="none"})})})}function Pe(){const e=document.querySelector("#partnership-form"),t=document.querySelector("#partnership-status"),a="https://formspree.io/f/xvgvayno";e&&e.addEventListener("submit",async r=>{r.preventDefault();const i=e.querySelector('button[type="submit"]'),s=i.textContent;i.textContent="Submitting Proposal...",i.disabled=!0;const n=new FormData(e),o=Object.fromEntries(n.entries());try{(await fetch(a,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(o)})).ok?(t&&(t.style.display="block",t.style.color="#00D4FF",t.textContent="✔ Thank you! Your partnership proposal has been submitted successfully. Our executive team will review and reply within 24 hours."),e.reset()):t&&(t.style.display="block",t.style.color="#FF5F56",t.textContent="✖ There was an issue submitting your proposal. Please try again or email us directly at enquiries@rodstartechdevs.co.ke.")}catch(l){console.error("Formspree network error",l),t&&(t.style.display="block",t.style.color="#FF5F56",t.textContent="✖ Network connection error. Please check your internet connection and try again.")}finally{i.textContent=s,i.disabled=!1}})}function Re(){document.querySelectorAll("main > section").forEach(t=>{t.style.display="none"});const e=document.querySelector("#support");e&&(e.style.display="block"),Ie()}function Le(){const e=document.querySelector("#navigation");e.innerHTML=`
     <nav class="navbar" id="main-navbar">
       <div class="container">
         <div class="nav-container">
@@ -2135,7 +2082,7 @@ ${E}
         </div>
       </div>
     </footer>
-  `,ze()}function ze(){const e=document.querySelector("#interactive-footer"),t=document.querySelector("#footer-spotlight-canvas");if(!e||!t)return;const a=t.getContext("2d");let r=t.width=e.clientWidth,i=t.height=e.clientHeight,s=r/2,n=i/2,o=r/2,l=i/2,c=!1;function v(){!e||!t||(r=t.width=e.clientWidth,i=t.height=e.clientHeight)}window.addEventListener("resize",v),e.addEventListener("mousemove",u=>{const F=e.getBoundingClientRect();o=u.clientX-F.left,l=u.clientY-F.top,c=!0}),e.addEventListener("mouseleave",()=>{c=!1});function y(){if(document.body.contains(t)){if(s+=(o-s)*.08,n+=(l-n)*.08,a.clearRect(0,0,r,i),c||Math.abs(o-s)>1){const u=a.createRadialGradient(s,n,0,s,n,380);u.addColorStop(0,"rgba(0, 212, 255, 0.22)"),u.addColorStop(.4,"rgba(0, 82, 255, 0.12)"),u.addColorStop(.8,"rgba(3, 7, 18, 0.05)"),u.addColorStop(1,"transparent"),a.fillStyle=u,a.fillRect(0,0,r,i)}requestAnimationFrame(y)}}y()}function Oe(){const e=document.body.classList.toggle("light-theme");localStorage.setItem("theme",e?"light":"dark"),Ne(e)}function Ne(e){document.querySelectorAll(".theme-toggle-icon").forEach(t=>{t.textContent=e?"🌙":"☀️",t.style.transform=e?"rotate(360deg)":"rotate(0deg)"})}document.addEventListener("click",e=>{e.target.closest(".theme-toggle-btn")&&Oe()});const L={"/":V,"/about":Y,"/services":we,"/pricing":X,"/portfolio":J,"/team":ae,"/contact":oe,"/privacy":ce,"/terms":pe,"/shop":ve,"/development":fe,"/blog":Ee,"/ai-hub":Ie,"/support":Re},N=new Set(Object.keys(L));function Be(){const e=window.location.hash.replace(/^#/,"");if(e&&e!=="/")return;let t=window.location.pathname||"/";t=t.replace(/\/index\.html$/i,"")||"/",t.length>1&&t.endsWith("/")&&(t=t.slice(0,-1));const a="/".replace(/\/$/,"");if(a&&t.startsWith(a)&&(t=t.slice(a.length)||"/"),t.startsWith("/")||(t=`/${t}`),t==="/"||!N.has(t))return;const r="/".replace(/\/$/,""),i=r===""?"/":`${r}/`;window.history.replaceState(null,"",`${window.location.origin}${i}#${t}`)}function q(){Be();const e=window.location.hash.slice(1)||"/",t=e.startsWith("/")?e:"/"+e,a=L[t]||re,r=document.querySelector("#app");!L[t]?r.innerHTML=`
+  `,ze()}function ze(){const e=document.querySelector("#interactive-footer"),t=document.querySelector("#footer-spotlight-canvas");if(!e||!t)return;const a=t.getContext("2d");let r=t.width=e.clientWidth,i=t.height=e.clientHeight,s=r/2,n=i/2,o=r/2,l=i/2,c=!1;function v(){!e||!t||(r=t.width=e.clientWidth,i=t.height=e.clientHeight)}window.addEventListener("resize",v),e.addEventListener("mousemove",u=>{const F=e.getBoundingClientRect();o=u.clientX-F.left,l=u.clientY-F.top,c=!0}),e.addEventListener("mouseleave",()=>{c=!1});function y(){if(document.body.contains(t)){if(s+=(o-s)*.08,n+=(l-n)*.08,a.clearRect(0,0,r,i),c||Math.abs(o-s)>1){const u=a.createRadialGradient(s,n,0,s,n,380);u.addColorStop(0,"rgba(0, 212, 255, 0.22)"),u.addColorStop(.4,"rgba(0, 82, 255, 0.12)"),u.addColorStop(.8,"rgba(3, 7, 18, 0.05)"),u.addColorStop(1,"transparent"),a.fillStyle=u,a.fillRect(0,0,r,i)}requestAnimationFrame(y)}}y()}function Oe(){const e=document.body.classList.toggle("light-theme");localStorage.setItem("theme",e?"light":"dark"),Ne(e)}function Ne(e){document.querySelectorAll(".theme-toggle-icon").forEach(t=>{t.textContent=e?"🌙":"☀️",t.style.transform=e?"rotate(360deg)":"rotate(0deg)"})}document.addEventListener("click",e=>{e.target.closest(".theme-toggle-btn")&&Oe()});const L={"/":V,"/about":Y,"/services":we,"/pricing":X,"/portfolio":J,"/team":ae,"/contact":oe,"/privacy":ce,"/terms":pe,"/shop":ve,"/development":fe,"/blog":Ee,"/ai-hub":De,"/support":Re},N=new Set(Object.keys(L));function Be(){const e=window.location.hash.replace(/^#/,"");if(e&&e!=="/")return;let t=window.location.pathname||"/";t=t.replace(/\/index\.html$/i,"")||"/",t.length>1&&t.endsWith("/")&&(t=t.slice(0,-1));const a="/".replace(/\/$/,"");if(a&&t.startsWith(a)&&(t=t.slice(a.length)||"/"),t.startsWith("/")||(t=`/${t}`),t==="/"||!N.has(t))return;const r="/".replace(/\/$/,""),i=r===""?"/":`${r}/`;window.history.replaceState(null,"",`${window.location.origin}${i}#${t}`)}function q(){Be();const e=window.location.hash.slice(1)||"/",t=e.startsWith("/")?e:"/"+e,a=L[t]||re,r=document.querySelector("#app");!L[t]?r.innerHTML=`
       <div class="app">
         <!-- Global All-Round AI Background Video Layer -->
         <video class="global-video-bg" autoplay loop muted playsinline>
