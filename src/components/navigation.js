@@ -1,3 +1,5 @@
+import './styles/navigation.css'
+
 export function setupNavigation() {
   const navigation = document.querySelector('#navigation')
 
@@ -6,10 +8,10 @@ export function setupNavigation() {
       <div class="container">
         <div class="nav-container">
           <a href="/" class="logo">
-            <img src="/RODSTAR.png" alt="Rodstar Tech Devs" width="120" height="120" style="height: 38px; width: auto; object-fit: contain;" loading="eager" fetchpriority="high">
+            <img src="/RODSTAR.png" alt="Rodstar Tech Devs" width="120" height="120" style="height: 36px; width: auto; object-fit: contain;" loading="eager" fetchpriority="high">
           </a>
           
-          <!-- Streamlined Desktop Navigation (Uncluttered Layout) -->
+          <!-- Floating Glassmorphism Desktop Navigation -->
           <ul class="nav-menu">
             <li><a href="/" class="nav-link">Home</a></li>
             
@@ -50,7 +52,7 @@ export function setupNavigation() {
             <li><a href="/contact" class="nav-link">Contact</a></li>
 
             <li>
-              <button type="button" class="btn btn-tour" data-action="start-tour" style="padding: 0.35rem 0.9rem; font-size: 0.82rem; min-height: 36px;">
+              <button type="button" class="btn btn-tour" data-action="start-tour" style="padding: 0.35rem 0.9rem; font-size: 0.82rem; min-height: 34px;">
                 <span class="pulse-dot" style="width:6px;height:6px;"></span> AI Tour
               </button>
             </li>
@@ -111,4 +113,27 @@ export function setupNavigation() {
       </div>
     </nav>
   `
+
+  initNavbarScrollHide()
+}
+
+function initNavbarScrollHide() {
+  const navbar = document.querySelector('#main-navbar')
+  if (!navbar) return
+
+  let lastScrollY = window.scrollY
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY
+
+    // Hide floating navbar on scroll downwards (past 70px)
+    if (currentScrollY > lastScrollY && currentScrollY > 70) {
+      navbar.classList.add('navbar-hidden')
+    } else {
+      // Reveal floating navbar on scroll upwards or at top
+      navbar.classList.remove('navbar-hidden')
+    }
+
+    lastScrollY = currentScrollY
+  }, { passive: true })
 }
