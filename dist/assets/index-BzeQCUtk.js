@@ -1958,11 +1958,6 @@ ${E}
                 <span class="pulse-dot" style="width:6px;height:6px;"></span> AI Tour
               </button>
             </li>
-            <li>
-              <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
-                <span class="theme-toggle-icon">☀️</span>
-              </button>
-            </li>
           </ul>
 
           <button type="button" class="mobile-menu-btn" aria-label="Open menu">☰</button>
@@ -2001,11 +1996,6 @@ ${E}
               <li style="padding: 0.75rem 1rem;">
                 <button type="button" class="btn btn-tour" data-action="start-tour" style="width:100%; justify-content:center;">
                   <span class="pulse-dot"></span> Start AI Platform Tour
-                </button>
-              </li>
-              <li style="padding: 0.5rem 1rem 0.5rem; display: flex; justify-content: center;">
-                <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
-                  <span class="theme-toggle-icon" style="margin-right: 0.5rem;">☀️</span> Theme
                 </button>
               </li>
             </ul>
