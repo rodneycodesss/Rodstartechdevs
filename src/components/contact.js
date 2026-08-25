@@ -2,13 +2,19 @@ export function setupContact() {
   const contact = document.querySelector('#contact')
   
   contact.innerHTML = `
-    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/boardroom.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-      <div class="container">
-        <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Get In Touch</h2>
-        <p class="section-subtitle fade-in-up" style="font-size: clamp(0.95rem, 2vw, 1.25rem);">Ready to build something extraordinary? Let's talk.</p>
+    <!-- Page Hero Banner -->
+    <section class="page-hero" style="background: transparent; padding: 7rem 0 4rem; text-align: center; position: relative;">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="ai-badge-pill fade-in-up">
+          <span class="pulse-dot"></span> DIRECT INQUIRY & CONSULTATION
+        </div>
+        <h2 class="section-title fade-in-up gradient-text" style="font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 1rem;">Let's Build Something Extraordinary</h2>
+        <p class="section-subtitle fade-in-up" style="max-width: 700px; color: var(--text-light);">
+          Connect with our senior software engineers and cloud architects to discuss your custom project requirements.
+        </p>
       </div>
     </section>
-    <section class="contact section" style="padding-top: 4rem;">
+    <section class="contact section" style="padding-top: 3rem;">
       <div class="container">
         
         <div class="contact-content">

@@ -1,92 +1,109 @@
 .footer {
-  background: #050505 !important;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.6) !important;
-  padding: 6rem 0 2rem;
+  background: rgba(3, 7, 18, 0.95) !important;
+  border-top: 1px solid rgba(0, 212, 255, 0.25) !important;
+  color: var(--text-light) !important;
+  padding: 5rem 0 2rem;
   position: relative;
+  overflow: hidden;
   z-index: 10;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(0, 212, 255, 0.2);
 }
+
+.footer-spotlight-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .footer-content { 
   display: grid; 
   grid-template-columns: 2fr 1fr 1fr 1.5fr; 
-  gap: 4rem; 
+  gap: 3.5rem; 
+  position: relative;
+  z-index: 2;
 }
+
 .footer h3 { 
-  color: white !important; 
+  color: #ffffff !important; 
   font-size: 0.9rem; 
+  font-weight: 700;
   text-transform: uppercase; 
   letter-spacing: 2px; 
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1.4rem; 
 }
+
 .footer p {
   margin-bottom: 1rem;
   line-height: 1.6;
 }
-.footer a, .footer p { 
-  color: rgba(255,255,255,0.6) !important; 
+
+.footer-section a:not(.social-icon):not(.whatsapp-btn) { 
+  color: var(--text-light) !important; 
   text-decoration: none; 
-  transition: color 0.3s; 
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
   display: block; 
+  font-size: 0.92rem;
+  margin-bottom: 0.75rem;
 }
-.footer a:hover { color: #007BFF !important; }
-.footer-bottom { 
-  border-top: 1px solid rgba(255,255,255,0.05); 
-  margin-top: 5rem; 
-  padding-top: 2rem; 
-  text-align: center; 
-  font-size: 0.9rem; 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+
+.footer-section a:not(.social-icon):not(.whatsapp-btn):hover { 
+  color: #00D4FF !important; 
+  transform: translateX(4px);
 }
-.whatsapp-btn { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 0.5rem; 
-  background: rgba(37, 211, 102, 0.1) !important; 
-  color: #25D366 !important; 
-  padding: 0.5rem 1rem !important; 
-  border-radius: 50px; 
-  border: 1px solid rgba(37, 211, 102, 0.2); 
-  width: fit-content;
-  margin-top: 0.5rem;
-}
-.whatsapp-btn:hover { 
-  background: rgba(37, 211, 102, 0.2) !important; 
-}
-.footer-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white !important;
-  margin-bottom: 1rem;
-  display: block;
-}
+
 .social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0.75rem !important;
+  margin-top: 1.25rem !important;
+  flex-wrap: wrap !important;
 }
+
 .social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white !important;
-  transition: all 0.3s;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 82, 255, 0.15) !important;
+  border: 1px solid rgba(0, 212, 255, 0.35) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-decoration: none !important;
 }
+
+.social-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
 .social-icon:hover {
-  background: #007BFF;
-  transform: translateY(-3px);
+  background: #0052FF !important;
+  border-color: #00D4FF !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
 }
+
 @media (max-width: 992px) {
   .footer-content { grid-template-columns: 1fr 1fr; gap: 3rem; }
 }
+
 @media (max-width: 576px) {
+  .footer { padding: 4rem 0 2rem; }
   .footer-content { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
 }

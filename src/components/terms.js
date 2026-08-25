@@ -2,16 +2,22 @@ export function setupTerms() {
   const terms = document.querySelector('#terms')
   
   terms.innerHTML = `
-    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('/terms.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-      <div class="container">
-        <h2 class="section-title fade-in-up" style="font-size: clamp(1.5rem, 5vw, 3.5rem); margin-bottom: 1rem; color: white !important;">Terms of Service</h2>
-        <p class="section-subtitle fade-in-up" style="font-size: clamp(0.95rem, 2vw, 1.25rem);">Standard client agreements and operational policies.</p>
+    <!-- Page Hero Banner -->
+    <section class="page-hero" style="background: transparent; padding: 7rem 0 4rem; text-align: center; position: relative;">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="ai-badge-pill fade-in-up">
+          <span class="pulse-dot"></span> OPERATIONAL GOVERNANCE & AGREEMENTS
+        </div>
+        <h2 class="section-title fade-in-up gradient-text" style="font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 1rem;">Terms of Service</h2>
+        <p class="section-subtitle fade-in-up" style="max-width: 700px; color: var(--text-light);">
+          Standard client agreements, engineering milestones, hosting policies, and intellectual property governance.
+        </p>
       </div>
     </section>
     
-    <section class="section" style="padding-top: 4rem;">
+    <section class="section" style="padding-top: 3rem;">
       <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <div class="legal-content" style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+        <div class="legal-content glass-panel" style="padding: 3rem 2.5rem;">
           <h3 style="color: white; margin-bottom: 1rem; margin-top: 2rem;">1. Scope of Services</h3>
           <p style="margin-bottom: 1.5rem;">Rodstar Tech Devs provides custom software development, web and mobile applications, UI/UX design, e-commerce platform deployment, Web3 architecture, and technical consulting. Specific deliverables, features, and timeline boundaries are established exclusively per independent Statement of Work (SOW) agreements.</p>
           

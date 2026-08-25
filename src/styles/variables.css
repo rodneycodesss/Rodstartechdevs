@@ -1,50 +1,65 @@
 :root {
-  --primary-color: #007BFF;
-  --primary-dark: #0056b3;
-  --secondary-color: #5bb4ff;
+  --primary-color: #0052FF;
+  --primary-dark: #0036B3;
+  --secondary-color: #0070F3;
   --accent-color: #00D4FF;
   --text-dark: #ffffff;
-  --text-light: rgba(255, 255, 255, 0.7);
-  --bg-light: #0d0d0d;
-  --bg-white: #000000;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.8);
+  --text-light: rgba(240, 246, 252, 0.78);
+  --bg-navy-deep: #030712;
+  --bg-navy-main: #060D1E;
+  --bg-navy-card: rgba(10, 22, 51, 0.65);
+  --bg-light: #060D1E;
+  --bg-white: #030712;
+  --border-color: rgba(0, 119, 255, 0.18);
+  --border-glow: rgba(0, 212, 255, 0.35);
+  --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 20px 40px -5px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 82, 255, 0.25);
   
-  /* Additional theme-aware styling tokens */
-  --card-bg: rgba(255, 255, 255, 0.02);
-  --card-border: rgba(255, 255, 255, 0.05);
-  --input-bg: rgba(255, 255, 255, 0.03);
+  /* Glassmorphism & Theme-aware styling tokens */
+  --card-bg: rgba(10, 22, 51, 0.65);
+  --card-border: rgba(0, 119, 255, 0.2);
+  --glass-blur: blur(20px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(6, 13, 30, 0.7);
   --input-color: #ffffff;
-  --input-border: rgba(255, 255, 255, 0.1);
-  --navbar-bg: rgba(0, 0, 0, 0.85);
-  --hero-bg: #000000;
-  --select-option-bg: #0d0d0d;
-  --theme-toggle-color: #ffc107;
+  --input-border: rgba(0, 119, 255, 0.25);
+  --navbar-bg: rgba(3, 7, 18, 0.85);
+  --hero-bg: #030712;
+  --select-option-bg: #060D1E;
+  --theme-toggle-color: #00D4FF;
+  --overlay-bg: radial-gradient(circle at 50% 30%, rgba(0, 82, 255, 0.22) 0%, rgba(3, 7, 18, 0.65) 60%, rgba(3, 7, 18, 0.88) 100%);
   --body-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Optimized Light Mode Theme Variables */
 body.light-theme {
-  --primary-color: #005ce6;
-  --primary-dark: #004499;
-  --secondary-color: #007BFF;
-  --accent-color: #0099ff;
-  --text-dark: #0f172a;
+  --primary-color: #0052FF;
+  --primary-dark: #0036B3;
+  --secondary-color: #0066FF;
+  --accent-color: #0088FF;
+  --text-dark: #0F172A;
   --text-light: #475569;
-  --bg-light: #f8fafc;
-  --bg-white: #ffffff;
-  --border-color: rgba(15, 23, 42, 0.08);
-  --shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.1);
+  --bg-navy-deep: #F8FAFC;
+  --bg-navy-main: #FFFFFF;
+  --bg-navy-card: rgba(255, 255, 255, 0.88);
+  --bg-light: #F1F5F9;
+  --bg-white: #FFFFFF;
+  --border-color: rgba(0, 82, 255, 0.18);
+  --border-glow: rgba(0, 82, 255, 0.35);
+  --shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 35px -5px rgba(15, 23, 42, 0.12), 0 0 25px rgba(0, 82, 255, 0.1);
   
-  /* Light mode theme overrides */
-  --card-bg: rgba(15, 23, 42, 0.02);
-  --card-border: rgba(15, 23, 42, 0.08);
-  --input-bg: rgba(15, 23, 42, 0.02);
-  --input-color: #0f172a;
-  --input-border: rgba(15, 23, 42, 0.15);
-  --navbar-bg: rgba(255, 255, 255, 0.85);
-  --hero-bg: #f8fafc;
-  --select-option-bg: #ffffff;
-  --theme-toggle-color: #6366f1;
+  /* Light mode glass tokens */
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: rgba(0, 82, 255, 0.18);
+  --glass-blur: blur(20px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 82, 255, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+  --input-bg: rgba(248, 250, 252, 0.9);
+  --input-color: #0F172A;
+  --input-border: rgba(0, 82, 255, 0.25);
+  --navbar-bg: rgba(255, 255, 255, 0.92);
+  --hero-bg: #F8FAFC;
+  --select-option-bg: #FFFFFF;
+  --theme-toggle-color: #0052FF;
+  --overlay-bg: radial-gradient(circle at 50% 30%, rgba(0, 82, 255, 0.08) 0%, rgba(248, 250, 252, 0.82) 65%, rgba(248, 250, 252, 0.95) 100%);
 }

@@ -214,11 +214,13 @@ export function setupShop() {
 
   shop.innerHTML = `
     <div class="shop-page">
-      <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('/home_network.png') center/cover; padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div class="container">
-          <p class="shop-hero-badge fade-in-up">Rodstar Hardware · Supply & Sourcing</p>
-          <h1 class="shop-hero-title fade-in-up">Premium Tech Sourcing & Hardware</h1>
-          <p class="shop-hero-lead fade-in-up">We supply digital gadgets, laptops, computer accessories, networking equipment, printers, and other tech products for businesses and individuals across Kenya. Partnering with top-tier suppliers to deliver quality at scale.</p>
+      <section class="page-hero" style="background: transparent; padding: 7rem 0 4rem; text-align: center; position: relative;">
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="ai-badge-pill fade-in-up" style="margin-bottom: 1rem;">
+            <span class="pulse-dot"></span> HARDWARE & SOLUTIONS CATALOG
+          </div>
+          <h1 class="shop-hero-title fade-in-up gradient-text" style="font-size: clamp(2rem, 4.5vw, 3.5rem); margin-bottom: 1rem;">Premium Tech Sourcing & Hardware</h1>
+          <p class="shop-hero-lead fade-in-up" style="max-width: 720px; margin: 0 auto 2rem; color: var(--text-light);">We supply digital gadgets, laptops, computer accessories, networking equipment, printers, and other tech products for businesses and individuals across Kenya.</p>
           <div class="shop-hero-ctas fade-in-up">
             <a href="#catalog-section" class="btn btn-primary">Browse Catalog</a>
             <a href="#order-form-section" class="btn btn-outline">Custom Sourcing Request</a>

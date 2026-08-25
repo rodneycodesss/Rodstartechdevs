@@ -1663,11 +1663,27 @@ input:focus, textarea:focus {
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.2) !important;
 }
 
-/* ==================== PAGE HERO SECTION RESPONSIVENESS ==================== */
 .page-hero {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0 3rem;
+}
+
+/* Universal Page Glass Panels & Cards */
+.glass-panel, .service-card, .pricing-card, .portfolio-card, .shop-product-card, .team-holo-card, .contact-card, .terms-content, .privacy-content {
+  background: rgba(6, 13, 30, 0.75) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(0, 212, 255, 0.25) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(0, 212, 255, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.glass-panel:hover, .service-card:hover, .pricing-card:hover, .portfolio-card:hover, .shop-product-card:hover, .team-holo-card:hover {
+  border-color: #00D4FF !important;
+  box-shadow: 0 20px 45px rgba(0, 82, 255, 0.3), 0 0 25px rgba(0, 212, 255, 0.3) !important;
+  transform: translateY(-4px) !important;
 }
 
 @media (max-width: 1024px) {
@@ -2035,3 +2051,203 @@ html {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
+
+/* 3D Holographic Team Hub Styles */
+.team-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.team-filter-btn {
+  background: rgba(6, 13, 30, 0.7);
+  border: 1px solid rgba(0, 119, 255, 0.25);
+  color: var(--text-light);
+  padding: 0.55rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-filter-btn:hover, .team-filter-btn.active {
+  background: #0052FF;
+  border-color: #00D4FF;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.team-holo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  perspective: 1000px;
+}
+
+.team-holo-card {
+  padding: 2.2rem 1.6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+}
+
+.team-holo-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.holo-avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.2rem;
+}
+
+.avatar-holo-ring {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 2px dashed #00D4FF;
+  animation: rotate-ring 12s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes rotate-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.team-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 82, 255, 0.5);
+  box-shadow: 0 0 25px rgba(0, 82, 255, 0.4);
+}
+
+.team-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  background: rgba(0, 82, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: #00D4FF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-size: 0.9rem;
+  color: #00D4FF;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.team-bio {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.team-skills {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.skill-tag {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-inspect-member {
+  width: 100%;
+  font-size: 0.85rem;
+  padding: 0.6rem 1rem;
+}
+
+/* Member Inspection Modal Drawer */
+.member-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 10005;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.member-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.member-modal-card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(6, 13, 30, 0.95) !important;
+  border: 1px solid #00D4FF !important;
+  padding: 2.5rem 2rem;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 212, 255, 0.3);
+}
+
+.member-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.member-modal-close:hover { color: #00D4FF; }

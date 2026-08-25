@@ -2,54 +2,104 @@ export function setupNavigation() {
   const navigation = document.querySelector('#navigation')
 
   navigation.innerHTML = `
-    <nav class="navbar">
+    <nav class="navbar" id="main-navbar">
       <div class="container">
         <div class="nav-container">
           <a href="/" class="logo">
             <img src="/RODSTAR.png" alt="Rodstar Tech Devs" width="120" height="120" style="height: 38px; width: auto; object-fit: contain;" loading="eager" fetchpriority="high">
           </a>
+          
+          <!-- Streamlined Desktop Navigation (Uncluttered Layout) -->
           <ul class="nav-menu">
             <li><a href="/" class="nav-link">Home</a></li>
+            
+            <!-- Solutions & AI Dropdown -->
             <li class="nav-dropdown">
-              <a href="/services" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                Services
+              <a href="/ai-hub" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                Solutions & AI
                 <span class="nav-chevron" aria-hidden="true"></span>
               </a>
               <ul class="nav-dropdown-menu" role="menu">
-                <li role="none"><a href="/development" class="nav-link nav-dropdown-link" role="menuitem">Development & Services</a></li>
-                <li role="none"><a href="/shop" class="nav-link nav-dropdown-link" role="menuitem">Shop & Sourcing</a></li>
+                <li role="none">
+                  <a href="/ai-hub" class="nav-link nav-dropdown-link" role="menuitem" style="color: #00D4FF; font-weight: 700;">
+                    🤖 Rodstar AI Hub
+                  </a>
+                </li>
+                <li role="none"><a href="/development" class="nav-link nav-dropdown-link" role="menuitem">⚡ Development & Services</a></li>
+                <li role="none"><a href="/shop" class="nav-link nav-dropdown-link" role="menuitem">🛒 Hardware Shop & Sourcing</a></li>
+                <li role="none"><a href="/services" class="nav-link nav-dropdown-link" role="menuitem">☁️ Cloud Infrastructure</a></li>
               </ul>
             </li>
-            <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
-            <li><a href="/about" class="nav-link">About</a></li>
-            <li><a href="/team" class="nav-link">Team</a></li>
+
+            <!-- Company & PR Dropdown -->
+            <li class="nav-dropdown">
+              <a href="/about" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                Company & PR
+                <span class="nav-chevron" aria-hidden="true"></span>
+              </a>
+              <ul class="nav-dropdown-menu" role="menu">
+                <li role="none"><a href="/about" class="nav-link nav-dropdown-link" role="menuitem">🏢 About Us</a></li>
+                <li role="none"><a href="/team" class="nav-link nav-dropdown-link" role="menuitem">👥 Engineering Team</a></li>
+                <li role="none"><a href="/portfolio" class="nav-link nav-dropdown-link" role="menuitem">📁 Portfolio & Case Studies</a></li>
+                <li role="none"><a href="/blog" class="nav-link nav-dropdown-link" role="menuitem">📰 The Neural Ledger (Blog)</a></li>
+                <li role="none"><a href="/support" class="nav-link nav-dropdown-link" role="menuitem" style="color:#27C93F; font-weight:700;">💚 Support & Partner</a></li>
+              </ul>
+            </li>
+
             <li><a href="/pricing" class="nav-link">Pricing</a></li>
             <li><a href="/contact" class="nav-link">Contact</a></li>
+
+            <li>
+              <button type="button" class="btn btn-tour" data-action="start-tour" style="padding: 0.35rem 0.9rem; font-size: 0.82rem; min-height: 36px;">
+                <span class="pulse-dot" style="width:6px;height:6px;"></span> AI Tour
+              </button>
+            </li>
             <li>
               <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
                 <span class="theme-toggle-icon">☀️</span>
               </button>
             </li>
           </ul>
+
           <button type="button" class="mobile-menu-btn" aria-label="Open menu">☰</button>
+          
+          <!-- Full Mobile Menu (Preserves All Page Direct Links) -->
           <div class="mobile-menu">
             <ul class="nav-menu">
               <li><a href="/" class="nav-link">Home</a></li>
+              <li><a href="/ai-hub" class="nav-link" style="color:#00D4FF; font-weight:700;">🤖 Rodstar AI Hub</a></li>
+              <li><a href="/support" class="nav-link" style="color:#27C93F; font-weight:700;">💚 Support & Partner</a></li>
               <li class="nav-mobile-dropdown">
                 <details class="nav-mobile-details">
-                  <summary class="nav-mobile-summary">Services</summary>
+                  <summary class="nav-mobile-summary">Solutions & Services</summary>
                   <div class="nav-mobile-submenu">
+                    <a href="/ai-hub" class="nav-link">Rodstar AI Hub</a>
                     <a href="/development" class="nav-link">Development & Services</a>
-                    <a href="/shop" class="nav-link">Shop & Sourcing</a>
+                    <a href="/shop" class="nav-link">Hardware Shop & Sourcing</a>
+                    <a href="/services" class="nav-link">Cloud Infrastructure</a>
                   </div>
                 </details>
               </li>
-              <li><a href="/portfolio" class="nav-link">Portfolio</a></li>
-              <li><a href="/about" class="nav-link">About</a></li>
-              <li><a href="/team" class="nav-link">Team</a></li>
-              <li><a href="/pricing" class="nav-link">Pricing</a></li>
-              <li><a href="/contact" class="nav-link">Contact</a></li>
-              <li style="padding: 1rem 1rem 0.5rem; display: flex; justify-content: center;">
+              <li class="nav-mobile-dropdown">
+                <details class="nav-mobile-details">
+                  <summary class="nav-mobile-summary">Company & PR Insights</summary>
+                  <div class="nav-mobile-submenu">
+                    <a href="/blog" class="nav-link">The Neural Ledger (Blog)</a>
+                    <a href="/support" class="nav-link">Support & Partner With Us</a>
+                    <a href="/about" class="nav-link">About Us</a>
+                    <a href="/team" class="nav-link">Engineering Team</a>
+                    <a href="/portfolio" class="nav-link">Portfolio Showcase</a>
+                  </div>
+                </details>
+              </li>
+              <li><a href="/pricing" class="nav-link">Pricing & Plans</a></li>
+              <li><a href="/contact" class="nav-link">Contact Sales</a></li>
+              <li style="padding: 0.75rem 1rem;">
+                <button type="button" class="btn btn-tour" data-action="start-tour" style="width:100%; justify-content:center;">
+                  <span class="pulse-dot"></span> Start AI Platform Tour
+                </button>
+              </li>
+              <li style="padding: 0.5rem 1rem 0.5rem; display: flex; justify-content: center;">
                 <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
                   <span class="theme-toggle-icon" style="margin-right: 0.5rem;">☀️</span> Theme
                 </button>

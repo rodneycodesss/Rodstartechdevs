@@ -1,0 +1,169 @@
+.support-page {
+  padding-bottom: 5rem;
+}
+
+/* Track Switcher Tabs */
+.track-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem 0 4rem;
+  flex-wrap: wrap;
+}
+
+.track-btn {
+  padding: 0.85rem 1.8rem;
+  border-radius: 100px;
+  background: rgba(0, 82, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.track-btn:hover, .track-btn.active {
+  background: #0052FF;
+  border-color: #00D4FF;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Support Payment Methods Grid */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.payment-card {
+  padding: 2.2rem 1.8rem;
+  border-radius: 16px;
+  position: relative;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.payment-card:hover {
+  border-color: #00D4FF !important;
+  box-shadow: 0 15px 40px rgba(0, 82, 255, 0.25), 0 0 25px rgba(0, 212, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.payment-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 82, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.25);
+}
+
+.payment-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.payment-detail {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #00D4FF;
+  margin: 0.8rem 0;
+  padding: 0.6rem;
+  background: rgba(3, 7, 18, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 119, 255, 0.2);
+  letter-spacing: 1px;
+}
+
+/* Partnership Form Layout */
+.partnership-card {
+  padding: 3.5rem 3rem;
+  border: 1px solid rgba(0, 212, 255, 0.35) !important;
+  background: rgba(6, 13, 30, 0.9) !important;
+  border-radius: 20px;
+  max-width: 850px;
+  margin: 0 auto 4rem;
+}
+
+.partnership-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form-group-full {
+  grid-column: span 2;
+}
+
+.support-input, .support-select, .support-textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 119, 255, 0.25);
+  background: rgba(3, 7, 18, 0.85);
+  color: #ffffff;
+  font-size: 0.92rem;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.support-input:focus, .support-select:focus, .support-textarea:focus {
+  border-color: #00D4FF;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.25);
+}
+
+.support-select option {
+  background: #060D1E;
+  color: #ffffff;
+}
+
+/* Impact Stories Grid */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+
+.impact-card {
+  padding: 2rem 1.6rem;
+  border-radius: 16px;
+}
+
+.impact-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.impact-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .partnership-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group-full {
+    grid-column: span 1;
+  }
+  .partnership-card {
+    padding: 2.5rem 1.5rem;
+  }
+}

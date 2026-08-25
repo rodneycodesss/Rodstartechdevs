@@ -10,6 +10,9 @@ import { setupTermsPage } from './pages/terms.js'
 import { setupShopPage } from './pages/shop.js'
 import { setupDevelopmentPage } from './pages/development.js'
 import { setupServicesPage } from './pages/services.js'
+import { setupBlogPage } from './pages/blog.js'
+import { setupAiHubPage } from './pages/ai-hub.js'
+import { setupSupportPage } from './pages/support.js'
 import { setupNavigation } from './components/navigation.js'
 import { setupFooter } from './components/footer.js'
 import { initTheme } from './theme.js'
@@ -26,6 +29,9 @@ const routes = {
   '/terms': setupTermsPage,
   '/shop': setupShopPage,
   '/development': setupDevelopmentPage,
+  '/blog': setupBlogPage,
+  '/ai-hub': setupAiHubPage,
+  '/support': setupSupportPage,
 }
 
 const KNOWN_PATHNAMES = new Set(Object.keys(routes))
@@ -75,6 +81,13 @@ export function router() {
     // 404 page has its own layout
     app.innerHTML = `
       <div class="app">
+        <!-- Global All-Round AI Background Video Layer -->
+        <video class="global-video-bg" autoplay loop muted playsinline>
+          <source src="https://cdn.pixabay.com/video/2019/04/16/22888-331623910_large.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-and-data-43285-large.mp4" type="video/mp4">
+        </video>
+        <div class="global-video-overlay"></div>
+
         <nav id="navigation"></nav>
         <main>
           <section id="notFound"></section>
@@ -83,9 +96,16 @@ export function router() {
       </div>
     `
   } else {
-    // Standard page layout
+    // Standard page layout with continuous AI background video layer
     app.innerHTML = `
       <div class="app">
+        <!-- Global All-Round AI Background Video Layer -->
+        <video class="global-video-bg" autoplay loop muted playsinline>
+          <source src="https://cdn.pixabay.com/video/2019/04/16/22888-331623910_large.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-and-data-43285-large.mp4" type="video/mp4">
+        </video>
+        <div class="global-video-overlay"></div>
+
         <nav id="navigation"></nav>
         <main>
           <section id="hero"></section>
@@ -99,6 +119,9 @@ export function router() {
           <section id="terms"></section>
           <section id="development"></section>
           <section id="shop"></section>
+          <section id="blog"></section>
+          <section id="ai-hub"></section>
+          <section id="support"></section>
         </main>
         <footer id="footer"></footer>
       </div>
@@ -124,10 +147,18 @@ function updateActiveNavLink(path) {
   document.querySelectorAll('.nav-link').forEach((link) => link.classList.remove('active'))
   document.querySelectorAll('.nav-dropdown').forEach((dd) => dd.classList.remove('is-active-route'))
 
-  const servicesGroup = new Set(['/services', '/shop', '/development'])
-  if (servicesGroup.has(path)) {
-    document.querySelector('.nav-dropdown')?.classList.add('is-active-route')
-    document.querySelector('.nav-dropdown-toggle')?.classList.add('active')
+  const dropdowns = document.querySelectorAll('.nav-dropdown')
+  const solutionsGroup = new Set(['/services', '/shop', '/development', '/ai-hub'])
+  const companyGroup = new Set(['/about', '/team', '/portfolio', '/blog', '/support'])
+
+  if (solutionsGroup.has(path) && dropdowns[0]) {
+    dropdowns[0].classList.add('is-active-route')
+    dropdowns[0].querySelector('.nav-dropdown-toggle')?.classList.add('active')
+  }
+
+  if (companyGroup.has(path) && dropdowns[1]) {
+    dropdowns[1].classList.add('is-active-route')
+    dropdowns[1].querySelector('.nav-dropdown-toggle')?.classList.add('active')
   }
 
   const currentLink = document.querySelector(`.nav-link[href="${path}"]`)
@@ -148,6 +179,9 @@ const PAGE_TITLES = {
   '/privacy': 'Privacy Policy | Rodstar Tech Devs',
   '/terms': 'Terms of Service | Rodstar Tech Devs',
   '/shop': 'Shop | Rodstar Tech Devs',
+  '/blog': 'The Neural Ledger | Rodstar Tech Devs',
+  '/ai-hub': 'Rodstar AI Hub | Autonomous Enterprise Intelligence',
+  '/support': 'Support & Partner | Rodstar Tech Devs',
 }
 
 function updateDocumentTitle(path) {
@@ -159,25 +193,4 @@ function updateDocumentTitle(path) {
 }
 
 // Handle browser back/forward buttons
-window.addEventListener('popstate', () => {
-  router()
-})
-
-// Handle hash change for navigation
-window.addEventListener('hashchange', () => {
-  router()
-})
-
-// Handle navigation clicks
-document.addEventListener('click', (e) => {
-  if (e.target.matches('.nav-link') || e.target.closest('.nav-link')) {
-    e.preventDefault()
-    const link = e.target.matches('.nav-link') ? e.target : e.target.closest('.nav-link')
-    const href = link.getAttribute('href')
-    
-    if (href.startsWith('/')) {
-      // Use hash-based navigation for production
-      window.location.hash = href
-    }
-  }
-}) 
+window.addEventListener('hashchange', router)
