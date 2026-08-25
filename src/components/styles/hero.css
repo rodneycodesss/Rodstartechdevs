@@ -610,6 +610,14 @@
     padding: 0.65rem 0.85rem;
     font-size: 0.82rem;
   }
+  .ceo-glass-card {
+    padding: 2rem 1.4rem !important;
+    border-radius: 16px;
+  }
+  .ceo-avatar-wrapper {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -635,9 +643,41 @@
   .companies-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .ceo-glass-card {
+    padding: 1.5rem 1rem !important;
+    border-radius: 14px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .ceo-quote-title {
+    font-size: 1.2rem !important;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+  }
+  .ceo-quote-text {
+    font-size: 0.88rem !important;
+    padding-left: 0.75rem;
+    border-left: 2px solid #00D4FF;
+    border-top: none !important;
+    padding-top: 0 !important;
+    line-height: 1.55;
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+  .ceo-meta {
+    text-align: center;
+  }
+  .ceo-content-col .btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    padding: 0.65rem 0.8rem !important;
+    font-size: 0.82rem !important;
+  }
 }
 
-/* Ultra-Small Mobile Screens (320px - 374px) */
+/* Ultra-Small Mobile Screens (320px - 374px e.g. iPhone SE / Galaxy Fold) */
 @media (max-width: 374px) {
   .hero-main-block {
     padding-top: 3.2rem;
@@ -651,5 +691,18 @@
   }
   .company-badge {
     justify-content: center;
+  }
+  .ceo-glass-card {
+    padding: 1.2rem 0.85rem !important;
+  }
+  .ceo-avatar-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+  .ceo-quote-title {
+    font-size: 1.1rem !important;
+  }
+  .ceo-quote-text {
+    font-size: 0.84rem !important;
   }
 }
