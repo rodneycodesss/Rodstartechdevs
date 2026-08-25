@@ -104,28 +104,31 @@ export function setupHero() {
       </div>
     </section>
 
-    <!-- 2. Companies Worked With Section (Includes Applegate School) -->
+    <!-- 2. Companies & Enterprise Partners Worked With -->
     <section class="companies-section section">
       <div class="container">
         <p class="companies-title fade-in-up">TRUSTED BY INDUSTRY LEADERS, SCHOOLS & INNOVATIVE ENTERPRISES</p>
         <div class="companies-grid fade-in-up">
           <div class="company-badge glass-panel">
-            <span class="company-icon">🏫</span> Applegate School
+            <span class="company-icon">🏫</span> Applegate Christian School - Kakamega
+          </div>
+          <div class="company-badge glass-panel">
+            <span class="company-icon">🏨</span> Alma Guest House - Mbita
+          </div>
+          <div class="company-badge glass-panel">
+            <span class="company-icon">🏝️</span> The Isle Cottages - Mbita
           </div>
           <div class="company-badge glass-panel">
             <span class="company-icon">🏢</span> Moussad Realty
           </div>
           <div class="company-badge glass-panel">
-            <span class="company-icon">🎓</span> ElimuNexus LMS
+            <span class="company-icon">💎</span> NusuFi
           </div>
           <div class="company-badge glass-panel">
-            <span class="company-icon">💎</span> NusuFi Financial
+            <span class="company-icon">🎓</span> ElimuNexus
           </div>
           <div class="company-badge glass-panel">
-            <span class="company-icon">⚡</span> Astral Tech
-          </div>
-          <div class="company-badge glass-panel">
-            <span class="company-icon">🌐</span> Global Edge Cloud
+            <span class="company-icon">⚖️</span> HakiAfya AI
           </div>
         </div>
       </div>

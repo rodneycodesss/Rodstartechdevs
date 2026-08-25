@@ -95,28 +95,31 @@
       </div>
     </section>
 
-    <!-- 2. Companies Worked With Section (Includes Applegate School) -->
+    <!-- 2. Companies & Enterprise Partners Worked With -->
     <section class="companies-section section">
       <div class="container">
         <p class="companies-title fade-in-up">TRUSTED BY INDUSTRY LEADERS, SCHOOLS & INNOVATIVE ENTERPRISES</p>
         <div class="companies-grid fade-in-up">
           <div class="company-badge glass-panel">
-            <span class="company-icon">🏫</span> Applegate School
+            <span class="company-icon">🏫</span> Applegate Christian School - Kakamega
+          </div>
+          <div class="company-badge glass-panel">
+            <span class="company-icon">🏨</span> Alma Guest House - Mbita
+          </div>
+          <div class="company-badge glass-panel">
+            <span class="company-icon">🏝️</span> The Isle Cottages - Mbita
           </div>
           <div class="company-badge glass-panel">
             <span class="company-icon">🏢</span> Moussad Realty
           </div>
           <div class="company-badge glass-panel">
-            <span class="company-icon">🎓</span> ElimuNexus LMS
+            <span class="company-icon">💎</span> NusuFi
           </div>
           <div class="company-badge glass-panel">
-            <span class="company-icon">💎</span> NusuFi Financial
+            <span class="company-icon">🎓</span> ElimuNexus
           </div>
           <div class="company-badge glass-panel">
-            <span class="company-icon">⚡</span> Astral Tech
-          </div>
-          <div class="company-badge glass-panel">
-            <span class="company-icon">🌐</span> Global Edge Cloud
+            <span class="company-icon">⚖️</span> HakiAfya AI
           </div>
         </div>
       </div>
@@ -2156,7 +2159,7 @@ ${E}
         </main>
         <footer id="footer"></footer>
       </div>
-    `,Le(),qe(),a(),window.scrollTo(0,0),Be(t),He(t)}function Be(e){var s,n;document.querySelectorAll(".nav-link").forEach(o=>o.classList.remove("active")),document.querySelectorAll(".nav-dropdown").forEach(o=>o.classList.remove("is-active-route"));const t=document.querySelectorAll(".nav-dropdown"),a=new Set(["/services","/shop","/development","/ai-hub"]),r=new Set(["/about","/team","/portfolio","/blog","/support"]);a.has(e)&&t[0]&&(t[0].classList.add("is-active-route"),(s=t[0].querySelector(".nav-dropdown-toggle"))==null||s.classList.add("active")),r.has(e)&&t[1]&&(t[1].classList.add("is-active-route"),(n=t[1].querySelector(".nav-dropdown-toggle"))==null||n.classList.add("active"));const i=document.querySelector(`.nav-link[href="${e}"]`);i&&i.classList.add("active")}const O={"/":"Rodstar Tech Devs - Professional Software Development","/about":"About Us | Rodstar Tech Devs","/services":"Services | Rodstar Tech Devs","/development":"Software Development | Rodstar Tech Devs","/pricing":"Pricing | Rodstar Tech Devs","/portfolio":"Portfolio | Rodstar Tech Devs","/team":"Team | Rodstar Tech Devs","/contact":"Contact | Rodstar Tech Devs","/privacy":"Privacy Policy | Rodstar Tech Devs","/terms":"Terms of Service | Rodstar Tech Devs","/shop":"Shop | Rodstar Tech Devs","/blog":"The Neural Ledger | Rodstar Tech Devs","/ai-hub":"Rodstar AI Hub | Autonomous Enterprise Intelligence","/support":"Support & Partner | Rodstar Tech Devs"};function He(e){if(!N.has(e)){document.title="Page Not Found | Rodstar Tech Devs";return}document.title=O[e]||O["/"]}window.addEventListener("hashchange",q);const P=[{element:"#navigation",title:"1. Brand & Navigation Bar",description:"Explore Rodstar Tech Devs navigation. Fast access to AI services, software development, team hub, hardware shop, and instant AI tour."},{element:"#typewriter-motto",title:"2. Next-Gen Engineering Vision",description:"We build enterprise software, high-availability web hosting, corporate emails, and bespoke AI platforms designed for scale."},{element:"#hero-ai-console",title:"3. Interactive AI Console",description:"Test live AI architectural blueprints, system health, and calculate instant deployment latency right inside our live terminal widget."},{element:".ceo-say-section",title:"4. Executive CEO Statement",description:"Hear from Rodney Gilbert (Founder & CEO) on our engineering philosophy: technology should eliminate friction and amplify growth."},{element:".testimonials-section",title:"5. Verified Client Satisfaction",description:"Read reviews from enterprise partners including Applegate School, Moussad Realty, ElimuNexus LMS, and NusuFi Financial."}];let C=0,k=null,f=null,T=null;function je(){C=0,Ge(),M(C)}function Ge(){let e=document.querySelector(".driver-popover-overlay"),t=document.querySelector(".driver-tooltip-card");if(e&&t){k=e,f=t,k.classList.add("active"),f.style.display="block";return}k=document.createElement("div"),k.className="driver-popover-overlay active",f=document.createElement("div"),f.className="driver-tooltip-card",f.style.display="block",document.body.appendChild(k),document.body.appendChild(f),k.addEventListener("click",a=>{a.target===k&&z()})}function M(e){if(e>=P.length||e<0){z();return}const t=P[e],a=document.querySelector(t.element);T&&T.classList.remove("spotlight-active-element"),a?(a.scrollIntoView({behavior:"smooth",block:"center"}),a.classList.add("spotlight-active-element"),T=a,setTimeout(()=>{if(!document.body.contains(a))return;const r=a.getBoundingClientRect(),i=Math.min(360,window.innerWidth-32);let s=r.bottom+16,n=r.left+r.width/2-i/2;s+220>window.innerHeight&&(s=Math.max(16,r.top-230)),n<16&&(n=16),n+i>window.innerWidth-16&&(n=window.innerWidth-i-16),f.style.top=`${Math.max(20,s)}px`,f.style.left=`${n}px`,f.style.width=`${i}px`,f.style.display="block",f.innerHTML=`
+    `,Le(),qe(),a(),window.scrollTo(0,0),Be(t),He(t)}function Be(e){var s,n;document.querySelectorAll(".nav-link").forEach(o=>o.classList.remove("active")),document.querySelectorAll(".nav-dropdown").forEach(o=>o.classList.remove("is-active-route"));const t=document.querySelectorAll(".nav-dropdown"),a=new Set(["/services","/shop","/development","/ai-hub"]),r=new Set(["/about","/team","/portfolio","/blog","/support"]);a.has(e)&&t[0]&&(t[0].classList.add("is-active-route"),(s=t[0].querySelector(".nav-dropdown-toggle"))==null||s.classList.add("active")),r.has(e)&&t[1]&&(t[1].classList.add("is-active-route"),(n=t[1].querySelector(".nav-dropdown-toggle"))==null||n.classList.add("active"));const i=document.querySelector(`.nav-link[href="${e}"]`);i&&i.classList.add("active")}const O={"/":"Rodstar Tech Devs - Professional Software Development","/about":"About Us | Rodstar Tech Devs","/services":"Services | Rodstar Tech Devs","/development":"Software Development | Rodstar Tech Devs","/pricing":"Pricing | Rodstar Tech Devs","/portfolio":"Portfolio | Rodstar Tech Devs","/team":"Team | Rodstar Tech Devs","/contact":"Contact | Rodstar Tech Devs","/privacy":"Privacy Policy | Rodstar Tech Devs","/terms":"Terms of Service | Rodstar Tech Devs","/shop":"Shop | Rodstar Tech Devs","/blog":"The Neural Ledger | Rodstar Tech Devs","/ai-hub":"Rodstar AI Hub | Autonomous Enterprise Intelligence","/support":"Support & Partner | Rodstar Tech Devs"};function He(e){if(!N.has(e)){document.title="Page Not Found | Rodstar Tech Devs";return}document.title=O[e]||O["/"]}window.addEventListener("hashchange",q);const P=[{element:"#navigation",title:"1. Brand & Navigation Bar",description:"Explore Rodstar Tech Devs navigation. Fast access to AI services, software development, team hub, hardware shop, and instant AI tour."},{element:"#typewriter-motto",title:"2. Next-Gen Engineering Vision",description:"We build enterprise software, high-availability web hosting, corporate emails, and bespoke AI platforms designed for scale."},{element:"#hero-ai-console",title:"3. Interactive AI Console",description:"Test live AI architectural blueprints, system health, and calculate instant deployment latency right inside our live terminal widget."},{element:".ceo-say-section",title:"4. Executive CEO Statement",description:"Hear from Rodney Gilbert (Founder & CEO) on our engineering philosophy: technology should eliminate friction and amplify growth."},{element:".testimonials-section",title:"5. Verified Client Satisfaction",description:"Read reviews from enterprise partners including Applegate Christian School, Alma Guest House, The Isle Cottages, Moussad Realty, NusuFi, ElimuNexus, and HakiAfya AI."}];let C=0,k=null,f=null,T=null;function je(){C=0,Ge(),M(C)}function Ge(){let e=document.querySelector(".driver-popover-overlay"),t=document.querySelector(".driver-tooltip-card");if(e&&t){k=e,f=t,k.classList.add("active"),f.style.display="block";return}k=document.createElement("div"),k.className="driver-popover-overlay active",f=document.createElement("div"),f.className="driver-tooltip-card",f.style.display="block",document.body.appendChild(k),document.body.appendChild(f),k.addEventListener("click",a=>{a.target===k&&z()})}function M(e){if(e>=P.length||e<0){z();return}const t=P[e],a=document.querySelector(t.element);T&&T.classList.remove("spotlight-active-element"),a?(a.scrollIntoView({behavior:"smooth",block:"center"}),a.classList.add("spotlight-active-element"),T=a,setTimeout(()=>{if(!document.body.contains(a))return;const r=a.getBoundingClientRect(),i=Math.min(360,window.innerWidth-32);let s=r.bottom+16,n=r.left+r.width/2-i/2;s+220>window.innerHeight&&(s=Math.max(16,r.top-230)),n<16&&(n=16),n+i>window.innerWidth-16&&(n=window.innerWidth-i-16),f.style.top=`${Math.max(20,s)}px`,f.style.left=`${n}px`,f.style.width=`${i}px`,f.style.display="block",f.innerHTML=`
         <div class="driver-tooltip-header">
           <span class="driver-tooltip-title">${t.title}</span>
           <span class="driver-step-badge">${e+1}/${P.length}</span>

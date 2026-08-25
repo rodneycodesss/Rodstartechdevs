@@ -25,7 +25,7 @@ export const TOUR_STEPS = [
   {
     element: '.testimonials-section',
     title: '5. Verified Client Satisfaction',
-    description: 'Read reviews from enterprise partners including Applegate School, Moussad Realty, ElimuNexus LMS, and NusuFi Financial.'
+    description: 'Read reviews from enterprise partners including Applegate Christian School, Alma Guest House, The Isle Cottages, Moussad Realty, NusuFi, ElimuNexus, and HakiAfya AI.'
   }
 ]
 
