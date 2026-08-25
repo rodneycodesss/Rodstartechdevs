@@ -176,6 +176,35 @@ export function setupTeam() {
             </div>
           </div>
 
+          <!-- Astralia -->
+          <div class="team-holo-card glass-panel fade-in-up" data-dept="engineering growth">
+            <div class="holo-card-inner">
+              <div class="holo-avatar-container">
+                <div class="avatar-holo-ring"></div>
+                <img src="/ASTRALIA.jpg" alt="Astralia" loading="lazy" class="team-avatar-img" onerror="this.onerror=null; this.src='ASTRALIA.jpg';">
+              </div>
+              <div class="team-status-pill">
+                <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>
+                ONLINE • SOFTWARE ARCHITECT
+              </div>
+              <h3 class="team-name">Astralia</h3>
+              <p class="team-role">Systems & Web Engineer</p>
+              <p class="team-bio">
+                Designing sleek user interfaces, custom web applications, and responsive cloud services. Passionate about modern UI aesthetics and high-performance frontend architecture.
+              </p>
+
+              <div class="team-skills">
+                <span class="skill-tag">UI/UX Systems</span>
+                <span class="skill-tag">Web Engineering</span>
+                <span class="skill-tag">Cloud Services</span>
+              </div>
+
+              <button type="button" class="btn btn-outline btn-inspect-member" data-member="astralia">
+                Inspect Profile Matrix
+              </button>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -312,6 +341,18 @@ function setupMemberModal() {
         { label: "Campaign Growth", val: "+140%" },
         { label: "Reach", val: "Multi-Channel" },
         { label: "Core Focus", val: "Digital Strategy" }
+      ]
+    },
+    astralia: {
+      name: "Astralia",
+      role: "Systems & Web Engineer",
+      avatar: "/ASTRALIA.jpg",
+      status: "● ACTIVE - UI/UX SYSTEMS",
+      bio: "Astralia designs sleek user interfaces, custom web applications, and responsive cloud services, crafting high-performance frontend systems for enterprise platforms.",
+      metrics: [
+        { label: "Design Systems", val: "100%" },
+        { label: "UI Performance", val: "Sub-50ms" },
+        { label: "Core Focus", val: "UI/UX & Web Apps" }
       ]
     }
   }

@@ -8,7 +8,7 @@ export function setupNavigation() {
       <div class="container">
         <div class="nav-container">
           <a href="/" class="logo">
-            <img src="/RODSTAR.png" alt="Rodstar Tech Devs" width="120" height="120" style="height: 36px; width: auto; object-fit: contain;" loading="eager" fetchpriority="high">
+            <img src="/RODSTAR.png" alt="Rodstar Tech Devs" width="120" height="36" style="height: 36px; width: auto; object-fit: contain; display: block;" onerror="this.onerror=null; this.src='RODSTAR.png';" loading="eager" fetchpriority="high">
           </a>
           
           <!-- Floating Glassmorphism Desktop Navigation -->
