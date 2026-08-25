@@ -146,63 +146,10 @@ export function setupTeam() {
               </button>
             </div>
           </div>
-
-          <!-- Daphny Kemi -->
-          <div class="team-holo-card glass-panel fade-in-up" data-dept="growth">
-            <div class="holo-card-inner">
-              <div class="holo-avatar-container">
-                <div class="avatar-holo-ring"></div>
-                <img src="/DAPHNY.jpg" alt="Daphny Kemi" loading="lazy" class="team-avatar-img">
-              </div>
-              <div class="team-status-pill">
-                <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>
-                ONLINE • DIGITAL MEDIA
-              </div>
-              <h3 class="team-name">Daphny Kemi</h3>
-              <p class="team-role">Digital Marketing Intern</p>
-              <p class="team-bio">
-                Assisting in marketing outreach, content strategies, and social media enhancement. Eager to drive brand awareness and digital growth across multi-channel platforms.
-              </p>
-
-              <div class="team-skills">
-                <span class="skill-tag">Digital Growth</span>
-                <span class="skill-tag">Content Strategy</span>
-                <span class="skill-tag">Social Media</span>
-              </div>
-
-              <button type="button" class="btn btn-outline btn-inspect-member" data-member="daphny">
-                Inspect Profile Matrix
-              </button>
-            </div>
+            
+              
           </div>
 
-          <!-- Astralia -->
-          <div class="team-holo-card glass-panel fade-in-up" data-dept="engineering growth">
-            <div class="holo-card-inner">
-              <div class="holo-avatar-container">
-                <div class="avatar-holo-ring"></div>
-                <img src="/ASTRALIA.jpg" alt="Astralia" loading="lazy" class="team-avatar-img" onerror="this.onerror=null; this.src='ASTRALIA.jpg';">
-              </div>
-              <div class="team-status-pill">
-                <span class="pulse-dot" style="background:#00D4FF;box-shadow:0 0 8px #00D4FF;"></span>
-                ONLINE • SOFTWARE ARCHITECT
-              </div>
-              <h3 class="team-name">Astralia</h3>
-              <p class="team-role">Systems & Web Engineer</p>
-              <p class="team-bio">
-                Designing sleek user interfaces, custom web applications, and responsive cloud services. Passionate about modern UI aesthetics and high-performance frontend architecture.
-              </p>
-
-              <div class="team-skills">
-                <span class="skill-tag">UI/UX Systems</span>
-                <span class="skill-tag">Web Engineering</span>
-                <span class="skill-tag">Cloud Services</span>
-              </div>
-
-              <button type="button" class="btn btn-outline btn-inspect-member" data-member="astralia">
-                Inspect Profile Matrix
-              </button>
-            </div>
           </div>
 
         </div>
