@@ -432,16 +432,48 @@ body.light-theme .urgent-order-card {
   border-color: var(--card-border) !important;
 }
 
-@media (max-width: 768px) {
-  .contact-info, .contact-form, .pricing-card, .feature-card, .team-member, .portfolio-item, .contact-item, .shop-category-card, .shop-inquiry-card { padding: 1.5rem !important; }
-}
-
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
   color: var(--text-light) !important;
   opacity: 0.65;
 }
+
+/* Comprehensive Responsive Breakpoint Governance */
+
+/* Prevent iOS Safari auto-zoom on input focus for screens < 768px */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  .container {
+    padding: 0 1rem !important;
+  }
+}
+
+/* Ultra-Small Screens (320px - 374px) */
+@media (max-width: 374px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 0.75rem !important;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Ensure images and media never overflow container width */
+img, video, canvas, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 

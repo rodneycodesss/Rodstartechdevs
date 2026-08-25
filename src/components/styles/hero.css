@@ -602,4 +602,54 @@
   .cta-buttons .btn {
     width: 100%;
   }
+  .companies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.85rem;
+  }
+  .company-badge {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.6rem, 7.5vw, 2.5rem);
+  }
+  .hero-subtext {
+    font-size: 0.92rem;
+  }
+  .hero-terminal-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .terminal-window {
+    width: 100%;
+  }
+  .terminal-body {
+    padding: 0.85rem;
+  }
+  .terminal-body pre {
+    font-size: 0.76rem;
+  }
+  .companies-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Ultra-Small Mobile Screens (320px - 374px) */
+@media (max-width: 374px) {
+  .hero-main-block {
+    padding-top: 3.2rem;
+    padding-bottom: 2rem;
+  }
+  .hero-title {
+    font-size: 1.45rem;
+  }
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+  .company-badge {
+    justify-content: center;
+  }
 }

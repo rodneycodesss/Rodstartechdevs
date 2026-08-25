@@ -164,6 +164,37 @@
     grid-column: span 1;
   }
   .partnership-card {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem;
+  }
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+  }
+  .track-switcher {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .track-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-card {
+    padding: 1.6rem 1.2rem;
+  }
+  .impact-card {
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+/* Ultra-Small Mobile Devices (320px - 374px) */
+@media (max-width: 374px) {
+  .track-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
+  .payment-title {
+    font-size: 1.15rem;
   }
 }

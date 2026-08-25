@@ -280,6 +280,11 @@ body.light-theme .mobile-menu {
   .mobile-menu-btn {
     display: block;
   }
+
+  .mobile-menu {
+    top: 65px;
+    max-height: calc(100vh - 65px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -302,9 +307,45 @@ body.light-theme .mobile-menu {
     font-size: 1.25rem;
   }
 
+  .mobile-menu {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+  }
+
   .mobile-menu .nav-link {
     padding: 0.6rem 1rem;
     font-size: 0.95rem;
+  }
+}
+
+/* Ultra-Small Mobile Devices (320px - 374px e.g. Galaxy Fold, iPhone SE 1st Gen) */
+@media (max-width: 374px) {
+  .navbar {
+    top: 0.35rem;
+    width: 98%;
+    border-radius: 12px;
+  }
+
+  .nav-container {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .logo img {
+    height: 25px !important;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.15rem;
+  }
+
+  .mobile-menu {
+    top: 52px;
+    max-height: calc(100vh - 52px);
+  }
+
+  .mobile-menu .nav-link {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.88rem;
   }
 }
 
