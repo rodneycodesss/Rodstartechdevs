@@ -1,17 +1,18 @@
 {
-  "name": "rodstar-tech-devs",
+  "name": "rodstar-tech-devs-monorepo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.0.0"
+    "dev": "cd frontend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "seed": "cd backend && npm run seed",
+    "test:stk": "node backend/scripts/testStkPush.js",
+    "test:rtdb": "node app.js"
   },
   "dependencies": {
-    "lucide": "^0.300.0"
+    "firebase": "^12.19.0"
   }
 }
